@@ -2664,7 +2664,8 @@ local script = UI["c5"]
 			if(script.isUniversal == true) then
 				AddTab("rbxassetid://15117873611", script.title, script.script)
 			else
-				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
+				--AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
+			        AddTab("rbxassetid://15117873611", script.title, script.script)
 			end
 
 		end
