@@ -3016,7 +3016,7 @@ local function SCRIPT_ce()
 		local scriptFrame = f3.ExecutorPage.SearchPage.mAIN
 		local newList = scriptFrame.Folder.ui:Clone()
 
-		local execute = newList.exe
+		local execute = newList.load.ImageButton
 		local scname = newList.scriptname
 		local img = newList.ImageLabel
 
@@ -3024,7 +3024,7 @@ local function SCRIPT_ce()
 		newList.Parent = scriptFrame
 		newList.Visible = true
 
-		img.Image = "rbxassetid://" .. imageId
+		img.Image = img.Image = "rbxassetid://" .. imageId
 
 		scname.Text = scriptname
 
