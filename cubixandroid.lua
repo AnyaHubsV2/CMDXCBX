@@ -3013,12 +3013,10 @@ local function SCRIPT_ce()
 	local btn = f3.ExecutorPage.UP.Search
 
 	local function AddTab(imageId, scriptname, source)
-	
 		local scriptFrame = f3.ExecutorPage.SearchPage.mAIN
-		local hub = scriptFrame.Folder.ui
-		local newList = hub:Clone()
+		local newList = scriptFrame.Folder.ui:Clone()
 
-		local execute = newList.load.ImageButton
+		local execute = newList.exe
 		local scname = newList.scriptname
 		local img = newList.ImageLabel
 
@@ -3026,7 +3024,7 @@ local function SCRIPT_ce()
 		newList.Parent = scriptFrame
 		newList.Visible = true
 
-		img.Image = img.Image = "rbxassetid://" .. imageId
+		img.Image = "rbxassetid://" .. imageId
 
 		scname.Text = scriptname
 
