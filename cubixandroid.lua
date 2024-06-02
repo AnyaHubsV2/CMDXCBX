@@ -2583,7 +2583,7 @@ local function SCRIPT_cd()
 		end
 
 		local KeyWordSearch = script.Parent.Parent.TextBox.Text
-		local url = "https://scriptblox.com/api/script/search?q="..string.gsub(KeyWordSearch)
+		local url = "https://scriptblox.com/api/script/search?q="..KeyWordSearch
 		local response = game:HttpGetAsync(url)
 		local http = game:GetService("HttpService")
 		local decoded = http:JSONDecode(response)
