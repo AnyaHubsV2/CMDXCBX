@@ -2559,9 +2559,10 @@ G2L_MODULES[UI["129"]] = {
 		local module = {}
 
 		local function AddTab(imageId, scriptname, source)
-			local scriptFrame = script.Parent.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN
+			local scriptFrame = game.CoreGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN
 			local newList99 = scriptFrame.Folder.ui
-			local newList = newList99
+			local newList = newList99:Clone()
+
 			local execute = newList.exe
 			local scname = newList.scriptname
 			local img = newList.ImageLabel
@@ -2980,7 +2981,6 @@ local function SCRIPT_ce()
 		local frameSize = scrollingFrame.AbsoluteSize
 
 		if frameSize.X < thresholdX and frameSize.Y < thresholdY then
-			print("Screen is smaller than thresholds. Reducing text size.")
 
 			for _, descendant in ipairs(scrollingFrame:GetDescendants()) do
 				if descendant:IsA("TextLabel") or descendant:IsA("TextBox") then
@@ -2988,8 +2988,6 @@ local function SCRIPT_ce()
 				end
 			end
 		else
-			print("Screen is larger than thresholds.")
-			print("Screen Size:", frameSize.X, "x", frameSize.Y)
 		end
 	end
 
@@ -3049,10 +3047,6 @@ local function SCRIPT_ce()
 			Lines.Text = Lines.Text .. i .. "\n"
 		end
 	end
-
-
-	print("bugs founded (0)!")
-
 	for i,v in pairs(exeframe.ExecutorPage.ScrollingFrame:GetDescendants()) do
 		if v:IsA("TextBox") or v:IsA("TextLabel") then 
 			v.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json")
