@@ -3039,7 +3039,7 @@ local function SCRIPT_ce()
 			return response.Body
 		else
 			warn("HTTP Request failed: " .. (response and response.StatusCode or "unknown error"))
-			return nil
+			return coroutine
 		end
 	end
 
