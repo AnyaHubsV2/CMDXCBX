@@ -3010,7 +3010,7 @@ local function SCRIPT_ce()
 	end
 
 	--search script
-	local btn = f3.Cloud.Execute.Buttons.ImageButton
+	local btn = f3.ExecutorPage.UP.Search
 
 	local function AddTab(imageId, scriptname, source)
 		local scriptFrame = f3.ExecutorPage.SearchPage.mAIN
@@ -3041,7 +3041,7 @@ local function SCRIPT_ce()
 			end
 		end
 
-		local KeyWordSearch = f3.Cloud.TextBox.Text
+		local KeyWordSearch = f3.ExecutorPage.UP.TextBox.Text
 		local url = "https://scriptblox.com/api/script/search?q="..string.gsub(KeyWordSearch, " ", "%%20")
 		local response = game:HttpGetAsync(url)
 		local http = game:GetService("HttpService")
