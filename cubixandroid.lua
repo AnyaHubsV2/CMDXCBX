@@ -2558,7 +2558,7 @@ local function SCRIPT_cd()
 		local newList99 = scriptFrame.Folder.ui:Clone()
 		local newList = newList99:Clone()
 
-		local execute = newList.load
+		local execute = newList.load.ImageButton
 		local scname = newList.scriptname
 		local img = newList.ImageLabel
 
