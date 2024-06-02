@@ -3013,8 +3013,10 @@ local function SCRIPT_ce()
 	local btn = f3.ExecutorPage.UP.Search
 
 	local function AddTab(imageId, scriptname, source)
+	
 		local scriptFrame = f3.ExecutorPage.SearchPage.mAIN
-		local newList = scriptFrame.Folder.ui:Clone()
+		local hub = scriptFrame.Folder.ui
+		local newList = hub:Clone()
 
 		local execute = newList.load.ImageButton
 		local scname = newList.scriptname
