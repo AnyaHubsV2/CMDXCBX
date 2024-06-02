@@ -2552,8 +2552,6 @@ task.spawn(SCRIPT_4d)
 local function SCRIPT_cd()
 	local script = UI["cd"]
 	local btn = script.Parent
-	local cooldown = false
-	local maxTabs = 20
 
 	local function AddTab(imageId, scriptname, source)
 		local scriptFrame = script.Parent.Parent.Parent.SearchPage.mAIN
@@ -2578,9 +2576,6 @@ local function SCRIPT_cd()
 	end
 
 	btn.MouseButton1Click:Connect(function()
-		if cooldown then return end
-		cooldown = true
-
 		for _, child in ipairs(script.Parent.Parent.Parent.SearchPage.mAIN:GetChildren()) do
 			if child:IsA("Frame") then
 				child:Destroy()
@@ -2592,25 +2587,17 @@ local function SCRIPT_cd()
 		local response = game:HttpGetAsync(url)
 		local http = game:GetService("HttpService")
 		local decoded = http:JSONDecode(response)
-		local tabCount = 0
-
 		for _, scriptData in pairs(decoded.result.scripts) do
-			if tabCount >= maxTabs then
-				break
-			end
-
 			if scriptData.scriptType == "free" and not scriptData.isPatched then
 				if scriptData.isUniversal then
+					wait(0.3)
 					AddTab(17383983244, scriptData.title, scriptData.script)
 				else
+					wait(0.3)
 					AddTab(scriptData.game.gameId, scriptData.title, scriptData.script)
 				end
-				tabCount = tabCount + 1
 			end
 		end
-
-		wait(0.5) -- Cooldown period
-		cooldown = false
 	end)
 
 end
