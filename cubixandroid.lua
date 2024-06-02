@@ -1,10 +1,10 @@
 -- // GUI TO LUA \\ --
 
--- // INSTANCES: 296 | SCRIPTS: 7 | MODULES: 0 \\ --
+-- // INSTANCES: 297 | SCRIPTS: 7 | MODULES: 1 \\ --
 
 local UI = {}
 
--- // ServerStorage.Cubix \\ --
+-- // StarterGui.Cubix \\ --
 UI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"))
 UI["1"]["IgnoreGuiInset"] = true
 UI["1"]["Enabled"] = false
@@ -12,7 +12,7 @@ UI["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets
 UI["1"]["Name"] = [[Cubix]]
 UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
 
--- // ServerStorage.Cubix.down \\ --
+-- // StarterGui.Cubix.down \\ --
 UI["2"] = Instance.new("Frame", UI["1"])
 UI["2"]["ZIndex"] = 999999999
 UI["2"]["BorderSizePixel"] = 0
@@ -22,7 +22,7 @@ UI["2"]["Position"] = UDim2.new(0, 0, 0.92356, 0)
 UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["2"]["Name"] = [[down]]
 
--- // ServerStorage.Cubix.down.Executor \\ --
+-- // StarterGui.Cubix.down.Executor \\ --
 UI["3"] = Instance.new("Frame", UI["2"])
 UI["3"]["ZIndex"] = 999
 UI["3"]["BorderSizePixel"] = 0
@@ -33,7 +33,7 @@ UI["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["3"]["Name"] = [[Executor]]
 UI["3"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.down.Executor.ImageButton \\ --
+-- // StarterGui.Cubix.down.Executor.ImageButton \\ --
 UI["4"] = Instance.new("ImageButton", UI["3"])
 UI["4"]["BorderSizePixel"] = 0
 UI["4"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
@@ -43,15 +43,15 @@ UI["4"]["BackgroundTransparency"] = 1
 UI["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["4"]["Position"] = UDim2.new(0.1, 0, 0.1, 0)
 
--- // ServerStorage.Cubix.down.Executor.UICorner \\ --
+-- // StarterGui.Cubix.down.Executor.UICorner \\ --
 UI["5"] = Instance.new("UICorner", UI["3"])
 UI["5"]["CornerRadius"] = UDim.new(0.3, 0)
 
--- // ServerStorage.Cubix.down.Executor.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.down.Executor.UIAspectRatioConstraint \\ --
 UI["6"] = Instance.new("UIAspectRatioConstraint", UI["3"])
 UI["6"]["AspectRatio"] = 1.04775
 
--- // ServerStorage.Cubix.down.ScriptHub \\ --
+-- // StarterGui.Cubix.down.ScriptHub \\ --
 UI["7"] = Instance.new("Frame", UI["2"])
 UI["7"]["ZIndex"] = 999
 UI["7"]["BorderSizePixel"] = 0
@@ -62,11 +62,11 @@ UI["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["7"]["Name"] = [[ScriptHub]]
 UI["7"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.down.ScriptHub.UICorner \\ --
+-- // StarterGui.Cubix.down.ScriptHub.UICorner \\ --
 UI["8"] = Instance.new("UICorner", UI["7"])
 UI["8"]["CornerRadius"] = UDim.new(0.3, 0)
 
--- // ServerStorage.Cubix.down.ScriptHub.ImageButton \\ --
+-- // StarterGui.Cubix.down.ScriptHub.ImageButton \\ --
 UI["9"] = Instance.new("ImageButton", UI["7"])
 UI["9"]["BorderSizePixel"] = 0
 UI["9"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
@@ -76,11 +76,11 @@ UI["9"]["BackgroundTransparency"] = 1
 UI["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["9"]["Position"] = UDim2.new(0.19549, 0, 0.17611, 0)
 
--- // ServerStorage.Cubix.down.ScriptHub.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.down.ScriptHub.UIAspectRatioConstraint \\ --
 UI["a"] = Instance.new("UIAspectRatioConstraint", UI["7"])
 UI["a"]["AspectRatio"] = 1.05109
 
--- // ServerStorage.Cubix.down.ScriptCloud \\ --
+-- // StarterGui.Cubix.down.ScriptCloud \\ --
 UI["b"] = Instance.new("Frame", UI["2"])
 UI["b"]["ZIndex"] = 999
 UI["b"]["BorderSizePixel"] = 0
@@ -91,11 +91,11 @@ UI["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["b"]["Name"] = [[ScriptCloud]]
 UI["b"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.down.ScriptCloud.UICorner \\ --
+-- // StarterGui.Cubix.down.ScriptCloud.UICorner \\ --
 UI["c"] = Instance.new("UICorner", UI["b"])
 UI["c"]["CornerRadius"] = UDim.new(0.3, 0)
 
--- // ServerStorage.Cubix.down.ScriptCloud.ImageButton \\ --
+-- // StarterGui.Cubix.down.ScriptCloud.ImageButton \\ --
 UI["d"] = Instance.new("ImageButton", UI["b"])
 UI["d"]["BorderSizePixel"] = 0
 UI["d"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
@@ -105,11 +105,11 @@ UI["d"]["BackgroundTransparency"] = 1
 UI["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["d"]["Position"] = UDim2.new(0, 0, 0.1, 0)
 
--- // ServerStorage.Cubix.down.ScriptCloud.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.down.ScriptCloud.UIAspectRatioConstraint \\ --
 UI["e"] = Instance.new("UIAspectRatioConstraint", UI["b"])
 UI["e"]["AspectRatio"] = 1.04775
 
--- // ServerStorage.Cubix.down.Settings \\ --
+-- // StarterGui.Cubix.down.Settings \\ --
 UI["f"] = Instance.new("Frame", UI["2"])
 UI["f"]["BorderSizePixel"] = 0
 UI["f"]["BackgroundColor3"] = Color3.fromRGB(24, 20, 30)
@@ -119,11 +119,11 @@ UI["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["f"]["Name"] = [[Settings]]
 UI["f"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.down.Settings.UICorner \\ --
+-- // StarterGui.Cubix.down.Settings.UICorner \\ --
 UI["10"] = Instance.new("UICorner", UI["f"])
 UI["10"]["CornerRadius"] = UDim.new(0.3, 0)
 
--- // ServerStorage.Cubix.down.Settings.ImageButton \\ --
+-- // StarterGui.Cubix.down.Settings.ImageButton \\ --
 UI["11"] = Instance.new("ImageButton", UI["f"])
 UI["11"]["BorderSizePixel"] = 0
 UI["11"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
@@ -133,11 +133,11 @@ UI["11"]["BackgroundTransparency"] = 1
 UI["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["11"]["Position"] = UDim2.new(0.1, 0, 0.1, 0)
 
--- // ServerStorage.Cubix.down.Folder \\ --
+-- // StarterGui.Cubix.down.Folder \\ --
 UI["12"] = Instance.new("Folder", UI["2"])
 
 
--- // ServerStorage.Cubix.down.Folder.Frame \\ --
+-- // StarterGui.Cubix.down.Folder.Frame \\ --
 UI["13"] = Instance.new("Frame", UI["12"])
 UI["13"]["BorderSizePixel"] = 0
 UI["13"]["BackgroundColor3"] = Color3.fromRGB(22, 18, 28)
@@ -145,11 +145,11 @@ UI["13"]["Size"] = UDim2.new(0.03323, 0, 0.75, 0)
 UI["13"]["Position"] = UDim2.new(0.00631, 0, 0.11856, 0)
 UI["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.Cubix.down.Folder.Frame.UICorner \\ --
+-- // StarterGui.Cubix.down.Folder.Frame.UICorner \\ --
 UI["14"] = Instance.new("UICorner", UI["13"])
 UI["14"]["CornerRadius"] = UDim.new(0.3, 0)
 
--- // ServerStorage.Cubix.down.Folder.Frame.TextLabel \\ --
+-- // StarterGui.Cubix.down.Folder.Frame.TextLabel \\ --
 UI["15"] = Instance.new("TextLabel", UI["13"])
 UI["15"]["TextWrapped"] = true
 UI["15"]["BorderSizePixel"] = 0
@@ -164,11 +164,11 @@ UI["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["15"]["Text"] = [[Cubix Android]]
 UI["15"]["Position"] = UDim2.new(1.31335, 0, 0.28538, 0)
 
--- // ServerStorage.Cubix.down.Folder.Frame.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.down.Folder.Frame.TextLabel.UITextSizeConstraint \\ --
 UI["16"] = Instance.new("UITextSizeConstraint", UI["15"])
 UI["16"]["MaxTextSize"] = 20
 
--- // ServerStorage.Cubix.down.Folder.Frame.ImageButton \\ --
+-- // StarterGui.Cubix.down.Folder.Frame.ImageButton \\ --
 UI["17"] = Instance.new("ImageButton", UI["13"])
 UI["17"]["BorderSizePixel"] = 0
 UI["17"]["BackgroundColor3"] = Color3.fromRGB(22, 18, 28)
@@ -178,7 +178,7 @@ UI["17"]["BackgroundTransparency"] = 1
 UI["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["17"]["Position"] = UDim2.new(-0.533, 0, -0.089, 0)
 
--- // ServerStorage.Cubix.down.Console \\ --
+-- // StarterGui.Cubix.down.Console \\ --
 UI["18"] = Instance.new("Frame", UI["2"])
 UI["18"]["ZIndex"] = 999
 UI["18"]["BorderSizePixel"] = 0
@@ -189,11 +189,11 @@ UI["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["18"]["Name"] = [[Console]]
 UI["18"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.down.Console.UICorner \\ --
+-- // StarterGui.Cubix.down.Console.UICorner \\ --
 UI["19"] = Instance.new("UICorner", UI["18"])
 UI["19"]["CornerRadius"] = UDim.new(0.3, 0)
 
--- // ServerStorage.Cubix.down.Console.ImageButton \\ --
+-- // StarterGui.Cubix.down.Console.ImageButton \\ --
 UI["1a"] = Instance.new("ImageButton", UI["18"])
 UI["1a"]["BorderSizePixel"] = 0
 UI["1a"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
@@ -203,11 +203,11 @@ UI["1a"]["BackgroundTransparency"] = 1
 UI["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["1a"]["Position"] = UDim2.new(0.19549, 0, 0.17611, 0)
 
--- // ServerStorage.Cubix.down.Console.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.down.Console.UIAspectRatioConstraint \\ --
 UI["1b"] = Instance.new("UIAspectRatioConstraint", UI["18"])
 UI["1b"]["AspectRatio"] = 1.05109
 
--- // ServerStorage.Cubix.Frame \\ --
+-- // StarterGui.Cubix.Frame \\ --
 UI["1c"] = Instance.new("Frame", UI["1"])
 UI["1c"]["BorderSizePixel"] = 0
 UI["1c"]["BackgroundColor3"] = Color3.fromRGB(22, 18, 28)
@@ -215,11 +215,11 @@ UI["1c"]["Size"] = UDim2.new(0.0384, 0, 0.06454, 0)
 UI["1c"]["Position"] = UDim2.new(0.94797, 0, 0.15741, 0)
 UI["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.Cubix.Frame.UICorner \\ --
+-- // StarterGui.Cubix.Frame.UICorner \\ --
 UI["1d"] = Instance.new("UICorner", UI["1c"])
 UI["1d"]["CornerRadius"] = UDim.new(0.3, 0)
 
--- // ServerStorage.Cubix.Frame.ImageButton \\ --
+-- // StarterGui.Cubix.Frame.ImageButton \\ --
 UI["1e"] = Instance.new("ImageButton", UI["1c"])
 UI["1e"]["BorderSizePixel"] = 0
 UI["1e"]["BackgroundColor3"] = Color3.fromRGB(22, 18, 28)
@@ -229,15 +229,15 @@ UI["1e"]["BackgroundTransparency"] = 1
 UI["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["1e"]["Position"] = UDim2.new(-0.533, 0, -0.089, 0)
 
--- // ServerStorage.Cubix.Frame.ImageButton.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.Frame.ImageButton.UIAspectRatioConstraint \\ --
 UI["1f"] = Instance.new("UIAspectRatioConstraint", UI["1e"])
 UI["1f"]["AspectRatio"] = 1.70628
 
--- // ServerStorage.Cubix.Frame.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.Frame.UIAspectRatioConstraint \\ --
 UI["20"] = Instance.new("UIAspectRatioConstraint", UI["1c"])
 UI["20"]["AspectRatio"] = 0.97242
 
--- // ServerStorage.Cubix.UI \\ --
+-- // StarterGui.Cubix.UI \\ --
 UI["21"] = Instance.new("Frame", UI["1"])
 UI["21"]["ZIndex"] = 99999999
 UI["21"]["BorderSizePixel"] = 0
@@ -247,7 +247,7 @@ UI["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["21"]["Name"] = [[UI]]
 UI["21"]["BackgroundTransparency"] = 0.1
 
--- // ServerStorage.Cubix.UI.Executor \\ --
+-- // StarterGui.Cubix.UI.Executor \\ --
 UI["22"] = Instance.new("Frame", UI["21"])
 UI["22"]["Visible"] = false
 UI["22"]["BorderSizePixel"] = 0
@@ -258,7 +258,7 @@ UI["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["22"]["Name"] = [[Executor]]
 UI["22"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.Executor.Executor \\ --
+-- // StarterGui.Cubix.UI.Executor.Executor \\ --
 UI["23"] = Instance.new("Frame", UI["22"])
 UI["23"]["BorderSizePixel"] = 0
 UI["23"]["BackgroundColor3"] = Color3.fromRGB(24, 19, 30)
@@ -267,11 +267,11 @@ UI["23"]["Position"] = UDim2.new(0.00786, 0, 0.00025, 0)
 UI["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["23"]["Name"] = [[Executor]]
 
--- // ServerStorage.Cubix.UI.Executor.Executor.UICorner \\ --
+-- // StarterGui.Cubix.UI.Executor.Executor.UICorner \\ --
 UI["24"] = Instance.new("UICorner", UI["23"])
 UI["24"]["CornerRadius"] = UDim.new(0.15, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Executor.TextLabel \\ --
+-- // StarterGui.Cubix.UI.Executor.Executor.TextLabel \\ --
 UI["25"] = Instance.new("TextLabel", UI["23"])
 UI["25"]["TextWrapped"] = true
 UI["25"]["BorderSizePixel"] = 0
@@ -286,11 +286,11 @@ UI["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["25"]["Text"] = [[Script Editor]]
 UI["25"]["Position"] = UDim2.new(0.38314, 0, 0.14754, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Executor.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.Executor.TextLabel.UITextSizeConstraint \\ --
 UI["26"] = Instance.new("UITextSizeConstraint", UI["25"])
 UI["26"]["MaxTextSize"] = 20
 
--- // ServerStorage.Cubix.UI.Executor.Executor.Shadow \\ --
+-- // StarterGui.Cubix.UI.Executor.Executor.Shadow \\ --
 UI["27"] = Instance.new("Frame", UI["23"])
 UI["27"]["BorderSizePixel"] = 0
 UI["27"]["BackgroundColor3"] = Color3.fromRGB(24, 19, 30)
@@ -298,7 +298,7 @@ UI["27"]["Size"] = UDim2.new(1, 0, 0.09726, 0)
 UI["27"]["Position"] = UDim2.new(-0, 0, 0.91803, 0)
 UI["27"]["Name"] = [[Shadow]]
 
--- // ServerStorage.Cubix.UI.Executor.Buttons \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons \\ --
 UI["28"] = Instance.new("Frame", UI["22"])
 UI["28"]["ZIndex"] = 9
 UI["28"]["BorderSizePixel"] = 0
@@ -308,11 +308,11 @@ UI["28"]["Position"] = UDim2.new(1.02478, 0, 0.24143, 0)
 UI["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["28"]["Name"] = [[Buttons]]
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.UICorner \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.UICorner \\ --
 UI["29"] = Instance.new("UICorner", UI["28"])
 UI["29"]["CornerRadius"] = UDim.new(0.15, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Execute \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Execute \\ --
 UI["2a"] = Instance.new("Frame", UI["28"])
 UI["2a"]["BorderSizePixel"] = 0
 UI["2a"]["BackgroundColor3"] = Color3.fromRGB(24, 14, 37)
@@ -321,11 +321,11 @@ UI["2a"]["Position"] = UDim2.new(0.08232, 0, 0.02678, 0)
 UI["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["2a"]["Name"] = [[Execute]]
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Execute.UICorner \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Execute.UICorner \\ --
 UI["2b"] = Instance.new("UICorner", UI["2a"])
 UI["2b"]["CornerRadius"] = UDim.new(0.34, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Execute.TextLabel \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Execute.TextLabel \\ --
 UI["2c"] = Instance.new("TextLabel", UI["2a"])
 UI["2c"]["TextWrapped"] = true
 UI["2c"]["BorderSizePixel"] = 0
@@ -340,11 +340,11 @@ UI["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["2c"]["Text"] = [[Execute]]
 UI["2c"]["Position"] = UDim2.new(1.09464, 0, 0.23684, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Execute.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Execute.TextLabel.UITextSizeConstraint \\ --
 UI["2d"] = Instance.new("UITextSizeConstraint", UI["2c"])
 UI["2d"]["MaxTextSize"] = 13
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Execute.ImageButton \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Execute.ImageButton \\ --
 UI["2e"] = Instance.new("ImageButton", UI["2a"])
 UI["2e"]["BorderSizePixel"] = 0
 UI["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -355,7 +355,7 @@ UI["2e"]["BackgroundTransparency"] = 1
 UI["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["2e"]["Position"] = UDim2.new(-0.056, 0, -0.105, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Execute.TextButton \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Execute.TextButton \\ --
 UI["2f"] = Instance.new("TextButton", UI["2a"])
 UI["2f"]["BorderSizePixel"] = 0
 UI["2f"]["TextSize"] = 14
@@ -368,7 +368,7 @@ UI["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["2f"]["Text"] = [[]]
 UI["2f"]["Position"] = UDim2.new(-0.01198, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Clear \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Clear \\ --
 UI["30"] = Instance.new("Frame", UI["28"])
 UI["30"]["BorderSizePixel"] = 0
 UI["30"]["BackgroundColor3"] = Color3.fromRGB(24, 14, 37)
@@ -377,11 +377,11 @@ UI["30"]["Position"] = UDim2.new(0.08232, 0, 0.2324, 0)
 UI["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["30"]["Name"] = [[Clear]]
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Clear.UICorner \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Clear.UICorner \\ --
 UI["31"] = Instance.new("UICorner", UI["30"])
 UI["31"]["CornerRadius"] = UDim.new(0.34, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Clear.TextLabel \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Clear.TextLabel \\ --
 UI["32"] = Instance.new("TextLabel", UI["30"])
 UI["32"]["TextWrapped"] = true
 UI["32"]["BorderSizePixel"] = 0
@@ -396,11 +396,11 @@ UI["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["32"]["Text"] = [[Clear]]
 UI["32"]["Position"] = UDim2.new(1.09464, 0, 0.23684, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Clear.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Clear.TextLabel.UITextSizeConstraint \\ --
 UI["33"] = Instance.new("UITextSizeConstraint", UI["32"])
 UI["33"]["MaxTextSize"] = 13
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Clear.ImageButton \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Clear.ImageButton \\ --
 UI["34"] = Instance.new("ImageButton", UI["30"])
 UI["34"]["BorderSizePixel"] = 0
 UI["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -410,7 +410,7 @@ UI["34"]["BackgroundTransparency"] = 1
 UI["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["34"]["Position"] = UDim2.new(0.079, 0, 0.132, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Clear.TextButton \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Clear.TextButton \\ --
 UI["35"] = Instance.new("TextButton", UI["30"])
 UI["35"]["BorderSizePixel"] = 0
 UI["35"]["TextSize"] = 14
@@ -423,7 +423,7 @@ UI["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["35"]["Text"] = [[]]
 UI["35"]["Position"] = UDim2.new(-0.01198, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Paste \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Paste \\ --
 UI["36"] = Instance.new("Frame", UI["28"])
 UI["36"]["BorderSizePixel"] = 0
 UI["36"]["BackgroundColor3"] = Color3.fromRGB(24, 14, 37)
@@ -432,11 +432,11 @@ UI["36"]["Position"] = UDim2.new(0.08232, 0, 0.623, 0)
 UI["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["36"]["Name"] = [[Paste]]
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Paste.UICorner \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Paste.UICorner \\ --
 UI["37"] = Instance.new("UICorner", UI["36"])
 UI["37"]["CornerRadius"] = UDim.new(0.34, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Paste.TextLabel \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Paste.TextLabel \\ --
 UI["38"] = Instance.new("TextLabel", UI["36"])
 UI["38"]["TextWrapped"] = true
 UI["38"]["BorderSizePixel"] = 0
@@ -451,11 +451,11 @@ UI["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["38"]["Text"] = [[Paste]]
 UI["38"]["Position"] = UDim2.new(1.09464, 0, 0.23684, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Paste.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Paste.TextLabel.UITextSizeConstraint \\ --
 UI["39"] = Instance.new("UITextSizeConstraint", UI["38"])
 UI["39"]["MaxTextSize"] = 13
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Paste.ImageButton \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Paste.ImageButton \\ --
 UI["3a"] = Instance.new("ImageButton", UI["36"])
 UI["3a"]["BorderSizePixel"] = 0
 UI["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -465,7 +465,7 @@ UI["3a"]["BackgroundTransparency"] = 1
 UI["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["3a"]["Position"] = UDim2.new(0.079, 0, 0.132, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Paste.TextButton \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Paste.TextButton \\ --
 UI["3b"] = Instance.new("TextButton", UI["36"])
 UI["3b"]["BorderSizePixel"] = 0
 UI["3b"]["TextSize"] = 14
@@ -478,7 +478,7 @@ UI["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["3b"]["Text"] = [[]]
 UI["3b"]["Position"] = UDim2.new(-0.01198, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Clipbaord \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Clipbaord \\ --
 UI["3c"] = Instance.new("Frame", UI["28"])
 UI["3c"]["BorderSizePixel"] = 0
 UI["3c"]["BackgroundColor3"] = Color3.fromRGB(24, 14, 37)
@@ -487,11 +487,11 @@ UI["3c"]["Position"] = UDim2.new(0.08232, 0, 0.80941, 0)
 UI["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["3c"]["Name"] = [[Clipbaord]]
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Clipbaord.UICorner \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Clipbaord.UICorner \\ --
 UI["3d"] = Instance.new("UICorner", UI["3c"])
 UI["3d"]["CornerRadius"] = UDim.new(0.34, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Clipbaord.TextLabel \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Clipbaord.TextLabel \\ --
 UI["3e"] = Instance.new("TextLabel", UI["3c"])
 UI["3e"]["TextWrapped"] = true
 UI["3e"]["BorderSizePixel"] = 0
@@ -506,11 +506,11 @@ UI["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["3e"]["Text"] = [[Clipbaord]]
 UI["3e"]["Position"] = UDim2.new(1.09464, 0, 0.23684, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Clipbaord.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Clipbaord.TextLabel.UITextSizeConstraint \\ --
 UI["3f"] = Instance.new("UITextSizeConstraint", UI["3e"])
 UI["3f"]["MaxTextSize"] = 13
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Clipbaord.ImageButton \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Clipbaord.ImageButton \\ --
 UI["40"] = Instance.new("ImageButton", UI["3c"])
 UI["40"]["BorderSizePixel"] = 0
 UI["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -520,7 +520,7 @@ UI["40"]["BackgroundTransparency"] = 1
 UI["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["40"]["Position"] = UDim2.new(0.079, 0, 0.132, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Clipbaord.TextButton \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Clipbaord.TextButton \\ --
 UI["41"] = Instance.new("TextButton", UI["3c"])
 UI["41"]["BorderSizePixel"] = 0
 UI["41"]["TextSize"] = 14
@@ -533,7 +533,7 @@ UI["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["41"]["Text"] = [[]]
 UI["41"]["Position"] = UDim2.new(-0.01198, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Copy \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Copy \\ --
 UI["42"] = Instance.new("Frame", UI["28"])
 UI["42"]["BorderSizePixel"] = 0
 UI["42"]["BackgroundColor3"] = Color3.fromRGB(24, 14, 37)
@@ -542,11 +542,11 @@ UI["42"]["Position"] = UDim2.new(0.08232, 0, 0.42683, 0)
 UI["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["42"]["Name"] = [[Copy]]
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Copy.UICorner \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Copy.UICorner \\ --
 UI["43"] = Instance.new("UICorner", UI["42"])
 UI["43"]["CornerRadius"] = UDim.new(0.34, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Copy.TextLabel \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Copy.TextLabel \\ --
 UI["44"] = Instance.new("TextLabel", UI["42"])
 UI["44"]["TextWrapped"] = true
 UI["44"]["BorderSizePixel"] = 0
@@ -561,11 +561,11 @@ UI["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["44"]["Text"] = [[Copy]]
 UI["44"]["Position"] = UDim2.new(1.09464, 0, 0.23684, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Copy.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Copy.TextLabel.UITextSizeConstraint \\ --
 UI["45"] = Instance.new("UITextSizeConstraint", UI["44"])
 UI["45"]["MaxTextSize"] = 13
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Copy.ImageButton \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Copy.ImageButton \\ --
 UI["46"] = Instance.new("ImageButton", UI["42"])
 UI["46"]["BorderSizePixel"] = 0
 UI["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -575,7 +575,7 @@ UI["46"]["BackgroundTransparency"] = 1
 UI["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["46"]["Position"] = UDim2.new(0.079, 0, 0.132, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.Copy.TextButton \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.Copy.TextButton \\ --
 UI["47"] = Instance.new("TextButton", UI["42"])
 UI["47"]["BorderSizePixel"] = 0
 UI["47"]["TextSize"] = 14
@@ -588,13 +588,13 @@ UI["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["47"]["Text"] = [[]]
 UI["47"]["Position"] = UDim2.new(-0.01198, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.Buttons.UIStroke \\ --
+-- // StarterGui.Cubix.UI.Executor.Buttons.UIStroke \\ --
 UI["48"] = Instance.new("UIStroke", UI["28"])
 UI["48"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["48"]["Thickness"] = 4
 UI["48"]["Color"] = Color3.fromRGB(26, 16, 35)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage \\ --
 UI["49"] = Instance.new("Frame", UI["22"])
 UI["49"]["BorderSizePixel"] = 0
 UI["49"]["BackgroundColor3"] = Color3.fromRGB(17, 11, 23)
@@ -603,11 +603,11 @@ UI["49"]["Position"] = UDim2.new(0.00808, 0, 0.09646, 0)
 UI["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["49"]["Name"] = [[ExecutorPage]]
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.UICorner \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.UICorner \\ --
 UI["4a"] = Instance.new("UICorner", UI["49"])
 
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame \\ --
 UI["4b"] = Instance.new("ScrollingFrame", UI["49"])
 UI["4b"]["Active"] = true
 UI["4b"]["BorderSizePixel"] = 0
@@ -619,7 +619,7 @@ UI["4b"]["Position"] = UDim2.new(0, 0, 0.00205, 0)
 UI["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["4b"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame \\ --
 UI["4c"] = Instance.new("Frame", UI["4b"])
 UI["4c"]["Visible"] = false
 UI["4c"]["BorderSizePixel"] = 0
@@ -628,11 +628,11 @@ UI["4c"]["Size"] = UDim2.new(0.17, 0, 2, 0)
 UI["4c"]["Position"] = UDim2.new(0.803, 0, 0, 0)
 UI["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.LocalScript \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.LocalScript \\ --
 UI["4d"] = Instance.new("LocalScript", UI["4c"])
 
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Tokens_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Tokens_ \\ --
 UI["4e"] = Instance.new("TextLabel", UI["4c"])
 UI["4e"]["TextWrapped"] = true
 UI["4e"]["ZIndex"] = 5
@@ -650,11 +650,11 @@ UI["4e"]["Text"] = [[]]
 UI["4e"]["Name"] = [[Tokens_]]
 UI["4e"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Tokens_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Tokens_.UITextSizeConstraint \\ --
 UI["4f"] = Instance.new("UITextSizeConstraint", UI["4e"])
 UI["4f"]["MaxTextSize"] = 5
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Strings_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Strings_ \\ --
 UI["50"] = Instance.new("TextLabel", UI["4c"])
 UI["50"]["TextWrapped"] = true
 UI["50"]["ZIndex"] = 5
@@ -672,11 +672,11 @@ UI["50"]["Text"] = [[]]
 UI["50"]["Name"] = [[Strings_]]
 UI["50"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Strings_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Strings_.UITextSizeConstraint \\ --
 UI["51"] = Instance.new("UITextSizeConstraint", UI["50"])
 UI["51"]["MaxTextSize"] = 5
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.RemoteHighlight_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.RemoteHighlight_ \\ --
 UI["52"] = Instance.new("TextLabel", UI["4c"])
 UI["52"]["TextWrapped"] = true
 UI["52"]["ZIndex"] = 5
@@ -694,11 +694,11 @@ UI["52"]["Text"] = [[]]
 UI["52"]["Name"] = [[RemoteHighlight_]]
 UI["52"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.RemoteHighlight_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.RemoteHighlight_.UITextSizeConstraint \\ --
 UI["53"] = Instance.new("UITextSizeConstraint", UI["52"])
 UI["53"]["MaxTextSize"] = 5
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Numbers_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Numbers_ \\ --
 UI["54"] = Instance.new("TextLabel", UI["4c"])
 UI["54"]["TextWrapped"] = true
 UI["54"]["ZIndex"] = 5
@@ -716,11 +716,11 @@ UI["54"]["Text"] = [[]]
 UI["54"]["Name"] = [[Numbers_]]
 UI["54"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Numbers_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Numbers_.UITextSizeConstraint \\ --
 UI["55"] = Instance.new("UITextSizeConstraint", UI["54"])
 UI["55"]["MaxTextSize"] = 5
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Keywords_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Keywords_ \\ --
 UI["56"] = Instance.new("TextLabel", UI["4c"])
 UI["56"]["TextWrapped"] = true
 UI["56"]["ZIndex"] = 5
@@ -738,11 +738,11 @@ UI["56"]["Text"] = [[]]
 UI["56"]["Name"] = [[Keywords_]]
 UI["56"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Keywords_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Keywords_.UITextSizeConstraint \\ --
 UI["57"] = Instance.new("UITextSizeConstraint", UI["56"])
 UI["57"]["MaxTextSize"] = 5
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Globals_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Globals_ \\ --
 UI["58"] = Instance.new("TextLabel", UI["4c"])
 UI["58"]["TextWrapped"] = true
 UI["58"]["ZIndex"] = 5
@@ -760,11 +760,11 @@ UI["58"]["Text"] = [[]]
 UI["58"]["Name"] = [[Globals_]]
 UI["58"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Globals_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Globals_.UITextSizeConstraint \\ --
 UI["59"] = Instance.new("UITextSizeConstraint", UI["58"])
 UI["59"]["MaxTextSize"] = 5
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Comments_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Comments_ \\ --
 UI["5a"] = Instance.new("TextLabel", UI["4c"])
 UI["5a"]["TextWrapped"] = true
 UI["5a"]["ZIndex"] = 5
@@ -782,11 +782,11 @@ UI["5a"]["Text"] = [[]]
 UI["5a"]["Name"] = [[Comments_]]
 UI["5a"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Comments_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.Comments_.UITextSizeConstraint \\ --
 UI["5b"] = Instance.new("UITextSizeConstraint", UI["5a"])
 UI["5b"]["MaxTextSize"] = 5
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.lol \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.lol \\ --
 UI["5c"] = Instance.new("TextLabel", UI["4c"])
 UI["5c"]["TextWrapped"] = true
 UI["5c"]["BorderSizePixel"] = 0
@@ -805,11 +805,11 @@ UI["5c"]["Text"] = [[]]
 UI["5c"]["Name"] = [[lol]]
 UI["5c"]["Position"] = UDim2.new(0.00065, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.lol.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.lol.UITextSizeConstraint \\ --
 UI["5d"] = Instance.new("UITextSizeConstraint", UI["5c"])
 UI["5d"]["MaxTextSize"] = 5
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source \\ --
 UI["5e"] = Instance.new("TextBox", UI["4b"])
 UI["5e"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["5e"]["PlaceholderColor3"] = Color3.fromRGB(151, 134, 154)
@@ -830,11 +830,11 @@ UI["5e"]["Position"] = UDim2.new(0.043, 0, 0, 0)
 UI["5e"]["Text"] = [[]]
 UI["5e"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup \\ --
 UI["5f"] = Instance.new("Folder", UI["5e"])
 UI["5f"]["Name"] = [[backup]]
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Numbers_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Numbers_ \\ --
 UI["60"] = Instance.new("TextLabel", UI["5f"])
 UI["60"]["TextWrapped"] = true
 UI["60"]["ZIndex"] = 4
@@ -852,11 +852,11 @@ UI["60"]["Text"] = [[]]
 UI["60"]["Name"] = [[Numbers_]]
 UI["60"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Numbers_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Numbers_.UITextSizeConstraint \\ --
 UI["61"] = Instance.new("UITextSizeConstraint", UI["60"])
 UI["61"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Tokens_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Tokens_ \\ --
 UI["62"] = Instance.new("TextLabel", UI["5f"])
 UI["62"]["TextWrapped"] = true
 UI["62"]["ZIndex"] = 5
@@ -874,11 +874,11 @@ UI["62"]["Text"] = [[]]
 UI["62"]["Name"] = [[Tokens_]]
 UI["62"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Tokens_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Tokens_.UITextSizeConstraint \\ --
 UI["63"] = Instance.new("UITextSizeConstraint", UI["62"])
 UI["63"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Strings_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Strings_ \\ --
 UI["64"] = Instance.new("TextLabel", UI["5f"])
 UI["64"]["TextWrapped"] = true
 UI["64"]["ZIndex"] = 5
@@ -896,11 +896,11 @@ UI["64"]["Text"] = [[]]
 UI["64"]["Name"] = [[Strings_]]
 UI["64"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Strings_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Strings_.UITextSizeConstraint \\ --
 UI["65"] = Instance.new("UITextSizeConstraint", UI["64"])
 UI["65"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.RemoteHighlight_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.RemoteHighlight_ \\ --
 UI["66"] = Instance.new("TextLabel", UI["5f"])
 UI["66"]["TextWrapped"] = true
 UI["66"]["ZIndex"] = 5
@@ -918,11 +918,11 @@ UI["66"]["Text"] = [[]]
 UI["66"]["Name"] = [[RemoteHighlight_]]
 UI["66"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.RemoteHighlight_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.RemoteHighlight_.UITextSizeConstraint \\ --
 UI["67"] = Instance.new("UITextSizeConstraint", UI["66"])
 UI["67"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Keywords_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Keywords_ \\ --
 UI["68"] = Instance.new("TextLabel", UI["5f"])
 UI["68"]["TextWrapped"] = true
 UI["68"]["ZIndex"] = 5
@@ -940,11 +940,11 @@ UI["68"]["Text"] = [[]]
 UI["68"]["Name"] = [[Keywords_]]
 UI["68"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Keywords_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Keywords_.UITextSizeConstraint \\ --
 UI["69"] = Instance.new("UITextSizeConstraint", UI["68"])
 UI["69"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Globals_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Globals_ \\ --
 UI["6a"] = Instance.new("TextLabel", UI["5f"])
 UI["6a"]["TextWrapped"] = true
 UI["6a"]["ZIndex"] = 5
@@ -962,11 +962,11 @@ UI["6a"]["Text"] = [[]]
 UI["6a"]["Name"] = [[Globals_]]
 UI["6a"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Globals_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Globals_.UITextSizeConstraint \\ --
 UI["6b"] = Instance.new("UITextSizeConstraint", UI["6a"])
 UI["6b"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Comments_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Comments_ \\ --
 UI["6c"] = Instance.new("TextLabel", UI["5f"])
 UI["6c"]["TextWrapped"] = true
 UI["6c"]["ZIndex"] = 5
@@ -983,11 +983,11 @@ UI["6c"]["ClipsDescendants"] = true
 UI["6c"]["Text"] = [[]]
 UI["6c"]["Name"] = [[Comments_]]
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Comments_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.backup.Comments_.UITextSizeConstraint \\ --
 UI["6d"] = Instance.new("UITextSizeConstraint", UI["6c"])
 UI["6d"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.Comments_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.Comments_ \\ --
 UI["6e"] = Instance.new("TextBox", UI["5e"])
 UI["6e"]["Interactable"] = false
 UI["6e"]["TextColor3"] = Color3.fromRGB(60, 201, 60)
@@ -1005,7 +1005,7 @@ UI["6e"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["6e"]["Text"] = [[]]
 UI["6e"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.Globals_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.Globals_ \\ --
 UI["6f"] = Instance.new("TextBox", UI["5e"])
 UI["6f"]["Interactable"] = false
 UI["6f"]["TextColor3"] = Color3.fromRGB(133, 215, 248)
@@ -1024,7 +1024,7 @@ UI["6f"]["Position"] = UDim2.new(0, 0, 0, 0)
 UI["6f"]["Text"] = [[]]
 UI["6f"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.Keywords_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.Keywords_ \\ --
 UI["70"] = Instance.new("TextBox", UI["5e"])
 UI["70"]["Interactable"] = false
 UI["70"]["TextColor3"] = Color3.fromRGB(249, 110, 125)
@@ -1043,7 +1043,7 @@ UI["70"]["Position"] = UDim2.new(0, 0, 0, 0)
 UI["70"]["Text"] = [[]]
 UI["70"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.Numbers_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.Numbers_ \\ --
 UI["71"] = Instance.new("TextBox", UI["5e"])
 UI["71"]["Interactable"] = false
 UI["71"]["TextColor3"] = Color3.fromRGB(255, 199, 0)
@@ -1062,7 +1062,7 @@ UI["71"]["Position"] = UDim2.new(0, 0, 0, 0)
 UI["71"]["Text"] = [[]]
 UI["71"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.RemoteHighlight_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.RemoteHighlight_ \\ --
 UI["72"] = Instance.new("TextBox", UI["5e"])
 UI["72"]["Interactable"] = false
 UI["72"]["TextColor3"] = Color3.fromRGB(0, 145, 255)
@@ -1081,7 +1081,7 @@ UI["72"]["Position"] = UDim2.new(0, 0, 0, 0)
 UI["72"]["Text"] = [[]]
 UI["72"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.Strings_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.Strings_ \\ --
 UI["73"] = Instance.new("TextBox", UI["5e"])
 UI["73"]["Interactable"] = false
 UI["73"]["TextColor3"] = Color3.fromRGB(174, 242, 150)
@@ -1100,7 +1100,7 @@ UI["73"]["Position"] = UDim2.new(0, 0, 0, 0)
 UI["73"]["Text"] = [[]]
 UI["73"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.Tokens_ \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Source.Tokens_ \\ --
 UI["74"] = Instance.new("TextBox", UI["5e"])
 UI["74"]["Interactable"] = false
 UI["74"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
@@ -1119,7 +1119,7 @@ UI["74"]["Position"] = UDim2.new(0, 0, 0, 0)
 UI["74"]["Text"] = [[]]
 UI["74"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.TextLabel \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.TextLabel \\ --
 UI["75"] = Instance.new("TextLabel", UI["4b"])
 UI["75"]["TextWrapped"] = true
 UI["75"]["BorderSizePixel"] = 0
@@ -1133,15 +1133,15 @@ UI["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["75"]["Text"] = [[1]]
 UI["75"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.TextLabel.UITextSizeConstraint \\ --
 UI["76"] = Instance.new("UITextSizeConstraint", UI["75"])
 UI["76"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.UICorner \\ --
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.UICorner \\ --
 UI["77"] = Instance.new("UICorner", UI["4b"])
 
 
--- // ServerStorage.Cubix.UI.ScriptHub \\ --
+-- // StarterGui.Cubix.UI.ScriptHub \\ --
 UI["78"] = Instance.new("Frame", UI["21"])
 UI["78"]["Visible"] = false
 UI["78"]["BorderSizePixel"] = 0
@@ -1152,7 +1152,7 @@ UI["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["78"]["Name"] = [[ScriptHub]]
 UI["78"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.ScriptHub.Executor \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.Executor \\ --
 UI["79"] = Instance.new("Frame", UI["78"])
 UI["79"]["BorderSizePixel"] = 0
 UI["79"]["BackgroundColor3"] = Color3.fromRGB(24, 19, 30)
@@ -1161,11 +1161,11 @@ UI["79"]["Position"] = UDim2.new(0.01713, 0, -0.00273, 0)
 UI["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["79"]["Name"] = [[Executor]]
 
--- // ServerStorage.Cubix.UI.ScriptHub.Executor.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.Executor.UICorner \\ --
 UI["7a"] = Instance.new("UICorner", UI["79"])
 UI["7a"]["CornerRadius"] = UDim.new(0.15, 0)
 
--- // ServerStorage.Cubix.UI.ScriptHub.Executor.TextLabel \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.Executor.TextLabel \\ --
 UI["7b"] = Instance.new("TextLabel", UI["79"])
 UI["7b"]["TextWrapped"] = true
 UI["7b"]["BorderSizePixel"] = 0
@@ -1180,11 +1180,11 @@ UI["7b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["7b"]["Text"] = [[Scripts Hub]]
 UI["7b"]["Position"] = UDim2.new(0.40158, 0, 0.14754, 0)
 
--- // ServerStorage.Cubix.UI.ScriptHub.Executor.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.Executor.TextLabel.UITextSizeConstraint \\ --
 UI["7c"] = Instance.new("UITextSizeConstraint", UI["7b"])
 UI["7c"]["MaxTextSize"] = 20
 
--- // ServerStorage.Cubix.UI.ScriptHub.Executor.Shadow \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.Executor.Shadow \\ --
 UI["7d"] = Instance.new("Frame", UI["79"])
 UI["7d"]["BorderSizePixel"] = 0
 UI["7d"]["BackgroundColor3"] = Color3.fromRGB(24, 19, 30)
@@ -1192,7 +1192,7 @@ UI["7d"]["Size"] = UDim2.new(1, 0, 0.09726, 0)
 UI["7d"]["Position"] = UDim2.new(-0, 0, 0.91803, 0)
 UI["7d"]["Name"] = [[Shadow]]
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage \\ --
 UI["7e"] = Instance.new("Frame", UI["78"])
 UI["7e"]["BorderSizePixel"] = 0
 UI["7e"]["BackgroundColor3"] = Color3.fromRGB(17, 11, 23)
@@ -1201,11 +1201,11 @@ UI["7e"]["Position"] = UDim2.new(0.01627, 0, 0.09348, 0)
 UI["7e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["7e"]["Name"] = [[ExecutorPage]]
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UICorner \\ --
 UI["7f"] = Instance.new("UICorner", UI["7e"])
 
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage \\ --
 UI["80"] = Instance.new("ScrollingFrame", UI["7e"])
 UI["80"]["Active"] = true
 UI["80"]["BorderSizePixel"] = 0
@@ -1217,7 +1217,7 @@ UI["80"]["Position"] = UDim2.new(0, 0, 0.00205, 0)
 UI["80"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["80"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN \\ --
 UI["81"] = Instance.new("Frame", UI["80"])
 UI["81"]["BorderSizePixel"] = 0
 UI["81"]["BackgroundColor3"] = Color3.fromRGB(16, 16, 17)
@@ -1227,11 +1227,11 @@ UI["81"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["81"]["Name"] = [[mAIN]]
 UI["81"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder \\ --
 UI["82"] = Instance.new("Folder", UI["81"])
 
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9 \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9 \\ --
 UI["83"] = Instance.new("Frame", UI["82"])
 UI["83"]["Visible"] = false
 UI["83"]["BorderSizePixel"] = 0
@@ -1240,11 +1240,11 @@ UI["83"]["Size"] = UDim2.new(0.29516, 0, 0.45614, 0)
 UI["83"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["83"]["Name"] = [[ui9]]
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.UICorner \\ --
 UI["84"] = Instance.new("UICorner", UI["83"])
 UI["84"]["CornerRadius"] = UDim.new(0, 6)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.ImageLabel \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.ImageLabel \\ --
 UI["85"] = Instance.new("ImageLabel", UI["83"])
 UI["85"]["BorderSizePixel"] = 0
 UI["85"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -1254,7 +1254,7 @@ UI["85"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["85"]["BackgroundTransparency"] = 1
 UI["85"]["Position"] = UDim2.new(-0, 0, -0, 0)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.scriptname \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.scriptname \\ --
 UI["86"] = Instance.new("TextLabel", UI["83"])
 UI["86"]["TextWrapped"] = true
 UI["86"]["BorderSizePixel"] = 0
@@ -1271,16 +1271,16 @@ UI["86"]["Text"] = [[Script.Lua]]
 UI["86"]["Name"] = [[scriptname]]
 UI["86"]["Position"] = UDim2.new(0.04101, 0, 0.8464, 0)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.scriptname.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.scriptname.UITextSizeConstraint \\ --
 UI["87"] = Instance.new("UITextSizeConstraint", UI["86"])
 UI["87"]["MaxTextSize"] = 25
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.UIStroke \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.UIStroke \\ --
 UI["88"] = Instance.new("UIStroke", UI["83"])
 UI["88"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["88"]["Color"] = Color3.fromRGB(119, 119, 119)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.Universal \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.Universal \\ --
 UI["89"] = Instance.new("TextLabel", UI["83"])
 UI["89"]["TextWrapped"] = true
 UI["89"]["BorderSizePixel"] = 0
@@ -1294,20 +1294,20 @@ UI["89"]["Text"] = [[Scripts]]
 UI["89"]["Name"] = [[Universal]]
 UI["89"]["Position"] = UDim2.new(0.69, 0, 0.055, 0)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.Universal.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.Universal.UICorner \\ --
 UI["8a"] = Instance.new("UICorner", UI["89"])
 UI["8a"]["CornerRadius"] = UDim.new(0, 5)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.Universal.UIStroke \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.Universal.UIStroke \\ --
 UI["8b"] = Instance.new("UIStroke", UI["89"])
 UI["8b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["8b"]["Color"] = Color3.fromRGB(73, 73, 73)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.Universal.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.Universal.UIAspectRatioConstraint \\ --
 UI["8c"] = Instance.new("UIAspectRatioConstraint", UI["89"])
 UI["8c"]["AspectRatio"] = 2.13333
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.load \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.load \\ --
 UI["8d"] = Instance.new("Frame", UI["83"])
 UI["8d"]["BorderSizePixel"] = 0
 UI["8d"]["BackgroundColor3"] = Color3.fromRGB(24, 14, 37)
@@ -1316,11 +1316,11 @@ UI["8d"]["Position"] = UDim2.new(0.82632, 0, 0.82294, 0)
 UI["8d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["8d"]["Name"] = [[load]]
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.load.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.load.UICorner \\ --
 UI["8e"] = Instance.new("UICorner", UI["8d"])
 UI["8e"]["CornerRadius"] = UDim.new(0.34, 0)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.load.ImageButton \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.Folder.ui9.load.ImageButton \\ --
 UI["8f"] = Instance.new("ImageButton", UI["8d"])
 UI["8f"]["BorderSizePixel"] = 0
 UI["8f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -1331,22 +1331,22 @@ UI["8f"]["BackgroundTransparency"] = 1
 UI["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["8f"]["Position"] = UDim2.new(-0.056, 0, -0.105, 0)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.UIAspectRatioConstraint \\ --
 UI["90"] = Instance.new("UIAspectRatioConstraint", UI["81"])
 UI["90"]["AspectRatio"] = 1.24162
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.UIGridLayout \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.mAIN.UIGridLayout \\ --
 UI["91"] = Instance.new("UIGridLayout", UI["81"])
 UI["91"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center
 UI["91"]["CellSize"] = UDim2.new(0.281, 0, 0.349, 0)
 UI["91"]["SortOrder"] = Enum.SortOrder.LayoutOrder
 UI["91"]["CellPadding"] = UDim2.new(0, 10, 0, 10)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.SearchPage.UIAspectRatioConstraint \\ --
 UI["92"] = Instance.new("UIAspectRatioConstraint", UI["80"])
 UI["92"]["AspectRatio"] = 2.02914
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP \\ --
 UI["93"] = Instance.new("Frame", UI["7e"])
 UI["93"]["BorderSizePixel"] = 0
 UI["93"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -1355,7 +1355,7 @@ UI["93"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["93"]["Name"] = [[UP]]
 UI["93"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP.nm \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP.nm \\ --
 UI["94"] = Instance.new("TextBox", UI["93"])
 UI["94"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["94"]["BorderSizePixel"] = 0
@@ -1371,20 +1371,20 @@ UI["94"]["Position"] = UDim2.new(0.01045, 0, 0.18367, 0)
 UI["94"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["94"]["Text"] = [[]]
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP.nm.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP.nm.UICorner \\ --
 UI["95"] = Instance.new("UICorner", UI["94"])
 UI["95"]["CornerRadius"] = UDim.new(0, 6)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP.nm.UIStroke \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP.nm.UIStroke \\ --
 UI["96"] = Instance.new("UIStroke", UI["94"])
 UI["96"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["96"]["Color"] = Color3.fromRGB(26, 16, 35)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP.nm.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP.nm.UITextSizeConstraint \\ --
 UI["97"] = Instance.new("UITextSizeConstraint", UI["94"])
 UI["97"]["MaxTextSize"] = 25
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP.Search \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP.Search \\ --
 UI["98"] = Instance.new("TextButton", UI["93"])
 UI["98"]["TextWrapped"] = true
 UI["98"]["BorderSizePixel"] = 0
@@ -1399,20 +1399,20 @@ UI["98"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["98"]["Text"] = [[Add]]
 UI["98"]["Position"] = UDim2.new(0.92991, 0, 0.18367, 0)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP.Search.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP.Search.UICorner \\ --
 UI["99"] = Instance.new("UICorner", UI["98"])
 UI["99"]["CornerRadius"] = UDim.new(0, 5)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP.Search.UIStroke \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP.Search.UIStroke \\ --
 UI["9a"] = Instance.new("UIStroke", UI["98"])
 UI["9a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["9a"]["Color"] = Color3.fromRGB(26, 16, 35)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP.Search.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP.Search.UITextSizeConstraint \\ --
 UI["9b"] = Instance.new("UITextSizeConstraint", UI["98"])
 UI["9b"]["MaxTextSize"] = 25
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP.dt \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP.dt \\ --
 UI["9c"] = Instance.new("TextBox", UI["93"])
 UI["9c"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["9c"]["BorderSizePixel"] = 0
@@ -1429,24 +1429,24 @@ UI["9c"]["Position"] = UDim2.new(0.2291, 0, 0.18367, 0)
 UI["9c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["9c"]["Text"] = [[]]
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP.dt.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP.dt.UICorner \\ --
 UI["9d"] = Instance.new("UICorner", UI["9c"])
 UI["9d"]["CornerRadius"] = UDim.new(0, 6)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP.dt.UIStroke \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP.dt.UIStroke \\ --
 UI["9e"] = Instance.new("UIStroke", UI["9c"])
 UI["9e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["9e"]["Color"] = Color3.fromRGB(26, 16, 35)
 
--- // ServerStorage.Cubix.UI.ScriptHub.ExecutorPage.UP.dt.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.ExecutorPage.UP.dt.UITextSizeConstraint \\ --
 UI["9f"] = Instance.new("UITextSizeConstraint", UI["9c"])
 UI["9f"]["MaxTextSize"] = 25
 
--- // ServerStorage.Cubix.UI.ScriptHub.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptHub.UIAspectRatioConstraint \\ --
 UI["a0"] = Instance.new("UIAspectRatioConstraint", UI["78"])
 UI["a0"]["AspectRatio"] = 1.45426
 
--- // ServerStorage.Cubix.UI.ScriptCloud \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud \\ --
 UI["a1"] = Instance.new("Frame", UI["21"])
 UI["a1"]["Visible"] = false
 UI["a1"]["BorderSizePixel"] = 0
@@ -1457,7 +1457,7 @@ UI["a1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["a1"]["Name"] = [[ScriptCloud]]
 UI["a1"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.ScriptCloud.Executor \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.Executor \\ --
 UI["a2"] = Instance.new("Frame", UI["a1"])
 UI["a2"]["BorderSizePixel"] = 0
 UI["a2"]["BackgroundColor3"] = Color3.fromRGB(24, 19, 30)
@@ -1466,11 +1466,11 @@ UI["a2"]["Position"] = UDim2.new(0.01713, 0, -0.00273, 0)
 UI["a2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["a2"]["Name"] = [[Executor]]
 
--- // ServerStorage.Cubix.UI.ScriptCloud.Executor.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.Executor.UICorner \\ --
 UI["a3"] = Instance.new("UICorner", UI["a2"])
 UI["a3"]["CornerRadius"] = UDim.new(0.15, 0)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.Executor.TextLabel \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.Executor.TextLabel \\ --
 UI["a4"] = Instance.new("TextLabel", UI["a2"])
 UI["a4"]["TextWrapped"] = true
 UI["a4"]["BorderSizePixel"] = 0
@@ -1485,11 +1485,11 @@ UI["a4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["a4"]["Text"] = [[Scripts Cloud]]
 UI["a4"]["Position"] = UDim2.new(0.40158, 0, 0.14754, 0)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.Executor.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.Executor.TextLabel.UITextSizeConstraint \\ --
 UI["a5"] = Instance.new("UITextSizeConstraint", UI["a4"])
 UI["a5"]["MaxTextSize"] = 20
 
--- // ServerStorage.Cubix.UI.ScriptCloud.Executor.Shadow \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.Executor.Shadow \\ --
 UI["a6"] = Instance.new("Frame", UI["a2"])
 UI["a6"]["BorderSizePixel"] = 0
 UI["a6"]["BackgroundColor3"] = Color3.fromRGB(24, 19, 30)
@@ -1497,7 +1497,7 @@ UI["a6"]["Size"] = UDim2.new(1, 0, 0.09726, 0)
 UI["a6"]["Position"] = UDim2.new(-0, 0, 0.91803, 0)
 UI["a6"]["Name"] = [[Shadow]]
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage \\ --
 UI["a7"] = Instance.new("Frame", UI["a1"])
 UI["a7"]["BorderSizePixel"] = 0
 UI["a7"]["BackgroundColor3"] = Color3.fromRGB(17, 11, 23)
@@ -1506,11 +1506,11 @@ UI["a7"]["Position"] = UDim2.new(0.01627, 0, 0.09348, 0)
 UI["a7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["a7"]["Name"] = [[ExecutorPage]]
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.UICorner \\ --
 UI["a8"] = Instance.new("UICorner", UI["a7"])
 
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage \\ --
 UI["a9"] = Instance.new("ScrollingFrame", UI["a7"])
 UI["a9"]["Active"] = true
 UI["a9"]["BorderSizePixel"] = 0
@@ -1522,7 +1522,7 @@ UI["a9"]["Position"] = UDim2.new(0, 0, 0.00205, 0)
 UI["a9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["a9"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN \\ --
 UI["aa"] = Instance.new("Frame", UI["a9"])
 UI["aa"]["BorderSizePixel"] = 0
 UI["aa"]["BackgroundColor3"] = Color3.fromRGB(16, 16, 17)
@@ -1532,11 +1532,11 @@ UI["aa"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["aa"]["Name"] = [[mAIN]]
 UI["aa"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder \\ --
 UI["ab"] = Instance.new("Folder", UI["aa"])
 
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui \\ --
 UI["ac"] = Instance.new("Frame", UI["ab"])
 UI["ac"]["Visible"] = false
 UI["ac"]["BorderSizePixel"] = 0
@@ -1545,11 +1545,11 @@ UI["ac"]["Size"] = UDim2.new(0.27121, 0, 0.28558, 0)
 UI["ac"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["ac"]["Name"] = [[ui]]
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.UICorner \\ --
 UI["ad"] = Instance.new("UICorner", UI["ac"])
 UI["ad"]["CornerRadius"] = UDim.new(0, 6)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.ImageLabel \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.ImageLabel \\ --
 UI["ae"] = Instance.new("ImageLabel", UI["ac"])
 UI["ae"]["BorderSizePixel"] = 0
 UI["ae"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -1558,11 +1558,11 @@ UI["ae"]["Size"] = UDim2.new(1, 0, 0.64231, 0)
 UI["ae"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["ae"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.ImageLabel.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.ImageLabel.UIAspectRatioConstraint \\ --
 UI["af"] = Instance.new("UIAspectRatioConstraint", UI["ae"])
 UI["af"]["AspectRatio"] = 1.49701
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel \\ --
 UI["b0"] = Instance.new("TextLabel", UI["ac"])
 UI["b0"]["TextWrapped"] = true
 UI["b0"]["BorderSizePixel"] = 0
@@ -1577,15 +1577,15 @@ UI["b0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["b0"]["Text"] = [[views: ???]]
 UI["b0"]["Position"] = UDim2.new(0.0518, 0, 0.86874, 0)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UITextSizeConstraint \\ --
 UI["b1"] = Instance.new("UITextSizeConstraint", UI["b0"])
 UI["b1"]["MaxTextSize"] = 25
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UIAspectRatioConstraint \\ --
 UI["b2"] = Instance.new("UIAspectRatioConstraint", UI["b0"])
 UI["b2"]["AspectRatio"] = 4
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel \\ --
 UI["b3"] = Instance.new("TextLabel", UI["ac"])
 UI["b3"]["TextWrapped"] = true
 UI["b3"]["BorderSizePixel"] = 0
@@ -1600,15 +1600,15 @@ UI["b3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["b3"]["Text"] = [[Created: ??/??/????]]
 UI["b3"]["Position"] = UDim2.new(0.0278, 0, 0.79182, 0)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UITextSizeConstraint \\ --
 UI["b4"] = Instance.new("UITextSizeConstraint", UI["b3"])
 UI["b4"]["MaxTextSize"] = 25
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UIAspectRatioConstraint \\ --
 UI["b5"] = Instance.new("UIAspectRatioConstraint", UI["b3"])
 UI["b5"]["AspectRatio"] = 6.6
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.scriptname \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.scriptname \\ --
 UI["b6"] = Instance.new("TextLabel", UI["ac"])
 UI["b6"]["TextWrapped"] = true
 UI["b6"]["BorderSizePixel"] = 0
@@ -1625,20 +1625,20 @@ UI["b6"]["Text"] = [[Anya BETTER]]
 UI["b6"]["Name"] = [[scriptname]]
 UI["b6"]["Position"] = UDim2.new(0.109, 0, 0.715, 0)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.scriptname.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.scriptname.UITextSizeConstraint \\ --
 UI["b7"] = Instance.new("UITextSizeConstraint", UI["b6"])
 UI["b7"]["MaxTextSize"] = 25
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.scriptname.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.scriptname.UIAspectRatioConstraint \\ --
 UI["b8"] = Instance.new("UIAspectRatioConstraint", UI["b6"])
 UI["b8"]["AspectRatio"] = 10.9
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.UIStroke \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.UIStroke \\ --
 UI["b9"] = Instance.new("UIStroke", UI["ac"])
 UI["b9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["b9"]["Color"] = Color3.fromRGB(119, 119, 119)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal \\ --
 UI["ba"] = Instance.new("TextLabel", UI["ac"])
 UI["ba"]["TextWrapped"] = true
 UI["ba"]["BorderSizePixel"] = 0
@@ -1653,28 +1653,28 @@ UI["ba"]["Text"] = [[Anya UI]]
 UI["ba"]["Name"] = [[Universal]]
 UI["ba"]["Position"] = UDim2.new(0.69, 0, 0.055, 0)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UICorner \\ --
 UI["bb"] = Instance.new("UICorner", UI["ba"])
 UI["bb"]["CornerRadius"] = UDim.new(0, 5)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UIStroke \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UIStroke \\ --
 UI["bc"] = Instance.new("UIStroke", UI["ba"])
 UI["bc"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["bc"]["Color"] = Color3.fromRGB(73, 73, 73)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UIAspectRatioConstraint \\ --
 UI["bd"] = Instance.new("UIAspectRatioConstraint", UI["ba"])
 UI["bd"]["AspectRatio"] = 2.13333
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UITextSizeConstraint \\ --
 UI["be"] = Instance.new("UITextSizeConstraint", UI["ba"])
 UI["be"]["MaxTextSize"] = 20
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.UIAspectRatioConstraint \\ --
 UI["bf"] = Instance.new("UIAspectRatioConstraint", UI["ac"])
 UI["bf"]["AspectRatio"] = 0.96154
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.load \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.load \\ --
 UI["c0"] = Instance.new("Frame", UI["ac"])
 UI["c0"]["BorderSizePixel"] = 0
 UI["c0"]["BackgroundColor3"] = Color3.fromRGB(24, 14, 37)
@@ -1683,11 +1683,11 @@ UI["c0"]["Position"] = UDim2.new(0.81432, 0, 0.83447, 0)
 UI["c0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["c0"]["Name"] = [[load]]
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.load.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.load.UICorner \\ --
 UI["c1"] = Instance.new("UICorner", UI["c0"])
 UI["c1"]["CornerRadius"] = UDim.new(0.34, 0)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.load.ImageButton \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.load.ImageButton \\ --
 UI["c2"] = Instance.new("ImageButton", UI["c0"])
 UI["c2"]["BorderSizePixel"] = 0
 UI["c2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -1698,14 +1698,14 @@ UI["c2"]["BackgroundTransparency"] = 1
 UI["c2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["c2"]["Position"] = UDim2.new(-0.056, 0, -0.105, 0)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.UIGridLayout \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.UIGridLayout \\ --
 UI["c3"] = Instance.new("UIGridLayout", UI["aa"])
 UI["c3"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center
 UI["c3"]["CellSize"] = UDim2.new(0.271, 0, 0.286, 0)
 UI["c3"]["SortOrder"] = Enum.SortOrder.LayoutOrder
 UI["c3"]["CellPadding"] = UDim2.new(0, 10, 0, 10)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.UP \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.UP \\ --
 UI["c4"] = Instance.new("Frame", UI["a7"])
 UI["c4"]["BorderSizePixel"] = 0
 UI["c4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -1714,7 +1714,7 @@ UI["c4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["c4"]["Name"] = [[UP]]
 UI["c4"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.UP.TextBox \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.UP.TextBox \\ --
 UI["c5"] = Instance.new("TextBox", UI["c4"])
 UI["c5"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["c5"]["BorderSizePixel"] = 0
@@ -1730,20 +1730,20 @@ UI["c5"]["Position"] = UDim2.new(0.01045, 0, 0.18367, 0)
 UI["c5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["c5"]["Text"] = [[]]
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.UP.TextBox.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.UP.TextBox.UICorner \\ --
 UI["c6"] = Instance.new("UICorner", UI["c5"])
 UI["c6"]["CornerRadius"] = UDim.new(0, 6)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.UP.TextBox.UIStroke \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.UP.TextBox.UIStroke \\ --
 UI["c7"] = Instance.new("UIStroke", UI["c5"])
 UI["c7"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["c7"]["Color"] = Color3.fromRGB(26, 16, 35)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.UP.TextBox.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.UP.TextBox.UITextSizeConstraint \\ --
 UI["c8"] = Instance.new("UITextSizeConstraint", UI["c5"])
 UI["c8"]["MaxTextSize"] = 25
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.UP.Search \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.UP.Search \\ --
 UI["c9"] = Instance.new("TextButton", UI["c4"])
 UI["c9"]["TextWrapped"] = true
 UI["c9"]["BorderSizePixel"] = 0
@@ -1758,28 +1758,28 @@ UI["c9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["c9"]["Text"] = [[Search]]
 UI["c9"]["Position"] = UDim2.new(0.92991, 0, 0.18367, 0)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.UP.Search.UICorner \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.UP.Search.UICorner \\ --
 UI["ca"] = Instance.new("UICorner", UI["c9"])
 UI["ca"]["CornerRadius"] = UDim.new(0, 5)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.UP.Search.UIStroke \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.UP.Search.UIStroke \\ --
 UI["cb"] = Instance.new("UIStroke", UI["c9"])
 UI["cb"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["cb"]["Color"] = Color3.fromRGB(26, 16, 35)
 
--- // ServerStorage.Cubix.UI.ScriptCloud.ExecutorPage.UP.Search.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.UP.Search.UITextSizeConstraint \\ --
 UI["cc"] = Instance.new("UITextSizeConstraint", UI["c9"])
 UI["cc"]["MaxTextSize"] = 25
 
--- // ServerStorage.Cubix.UI.ScriptCloud.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.UI.ScriptCloud.UIAspectRatioConstraint \\ --
 UI["cd"] = Instance.new("UIAspectRatioConstraint", UI["a1"])
 UI["cd"]["AspectRatio"] = 1.45426
 
--- // ServerStorage.Cubix.UI.LocalScript \\ --
+-- // StarterGui.Cubix.UI.LocalScript \\ --
 UI["ce"] = Instance.new("LocalScript", UI["21"])
 
 
--- // ServerStorage.Cubix.UI.Settings \\ --
+-- // StarterGui.Cubix.UI.Settings \\ --
 UI["cf"] = Instance.new("Frame", UI["21"])
 UI["cf"]["Visible"] = false
 UI["cf"]["BorderSizePixel"] = 0
@@ -1790,7 +1790,7 @@ UI["cf"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["cf"]["Name"] = [[Settings]]
 UI["cf"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.Settings.Executor \\ --
+-- // StarterGui.Cubix.UI.Settings.Executor \\ --
 UI["d0"] = Instance.new("Frame", UI["cf"])
 UI["d0"]["BorderSizePixel"] = 0
 UI["d0"]["BackgroundColor3"] = Color3.fromRGB(24, 19, 30)
@@ -1799,11 +1799,11 @@ UI["d0"]["Position"] = UDim2.new(0.27093, 0, 0.02881, 0)
 UI["d0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["d0"]["Name"] = [[Executor]]
 
--- // ServerStorage.Cubix.UI.Settings.Executor.UICorner \\ --
+-- // StarterGui.Cubix.UI.Settings.Executor.UICorner \\ --
 UI["d1"] = Instance.new("UICorner", UI["d0"])
 UI["d1"]["CornerRadius"] = UDim.new(0.15, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Executor.Shadow \\ --
+-- // StarterGui.Cubix.UI.Settings.Executor.Shadow \\ --
 UI["d2"] = Instance.new("Frame", UI["d0"])
 UI["d2"]["BorderSizePixel"] = 0
 UI["d2"]["BackgroundColor3"] = Color3.fromRGB(24, 19, 30)
@@ -1811,7 +1811,7 @@ UI["d2"]["Size"] = UDim2.new(1, 0, 0.09726, 0)
 UI["d2"]["Position"] = UDim2.new(-0, 0, 0.91803, 0)
 UI["d2"]["Name"] = [[Shadow]]
 
--- // ServerStorage.Cubix.UI.Settings.Executor.TextLabel \\ --
+-- // StarterGui.Cubix.UI.Settings.Executor.TextLabel \\ --
 UI["d3"] = Instance.new("TextLabel", UI["d0"])
 UI["d3"]["TextWrapped"] = true
 UI["d3"]["BorderSizePixel"] = 0
@@ -1826,11 +1826,11 @@ UI["d3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["d3"]["Text"] = [[Settings]]
 UI["d3"]["Position"] = UDim2.new(0.00108, 0, 0.14754, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Executor.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Settings.Executor.TextLabel.UITextSizeConstraint \\ --
 UI["d4"] = Instance.new("UITextSizeConstraint", UI["d3"])
 UI["d4"]["MaxTextSize"] = 20
 
--- // ServerStorage.Cubix.UI.Settings.Settings \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings \\ --
 UI["d5"] = Instance.new("Frame", UI["cf"])
 UI["d5"]["BorderSizePixel"] = 0
 UI["d5"]["BackgroundColor3"] = Color3.fromRGB(17, 11, 23)
@@ -1839,11 +1839,11 @@ UI["d5"]["Position"] = UDim2.new(0.27146, 0, 0.11714, 0)
 UI["d5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["d5"]["Name"] = [[Settings]]
 
--- // ServerStorage.Cubix.UI.Settings.Settings.UICorner \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.UICorner \\ --
 UI["d6"] = Instance.new("UICorner", UI["d5"])
 
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue \\ --
 UI["d7"] = Instance.new("Frame", UI["d5"])
 UI["d7"]["BorderSizePixel"] = 0
 UI["d7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -1853,7 +1853,7 @@ UI["d7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["d7"]["Name"] = [[fpsValue]]
 UI["d7"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.FPS \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.FPS \\ --
 UI["d8"] = Instance.new("Frame", UI["d7"])
 UI["d8"]["BorderSizePixel"] = 0
 UI["d8"]["BackgroundColor3"] = Color3.fromRGB(151, 134, 154)
@@ -1863,12 +1863,12 @@ UI["d8"]["Position"] = UDim2.new(0.50288, 0, 0.61667, 0)
 UI["d8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["d8"]["Name"] = [[FPS]]
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.FPS.corner \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.FPS.corner \\ --
 UI["d9"] = Instance.new("UICorner", UI["d8"])
 UI["d9"]["Name"] = [[corner]]
 UI["d9"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.FPS.indicator \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.FPS.indicator \\ --
 UI["da"] = Instance.new("Frame", UI["d8"])
 UI["da"]["BorderSizePixel"] = 0
 UI["da"]["BackgroundColor3"] = Color3.fromRGB(126, 38, 208)
@@ -1878,12 +1878,12 @@ UI["da"]["Position"] = UDim2.new(0, 0, 0.5, 0)
 UI["da"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["da"]["Name"] = [[indicator]]
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.FPS.indicator.corner \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.FPS.indicator.corner \\ --
 UI["db"] = Instance.new("UICorner", UI["da"])
 UI["db"]["Name"] = [[corner]]
 UI["db"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.FPS.indicator.dot \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.FPS.indicator.dot \\ --
 UI["dc"] = Instance.new("Frame", UI["da"])
 UI["dc"]["BorderSizePixel"] = 0
 UI["dc"]["BackgroundColor3"] = Color3.fromRGB(126, 38, 208)
@@ -1893,16 +1893,16 @@ UI["dc"]["Position"] = UDim2.new(1, 0, 0.5, 0)
 UI["dc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["dc"]["Name"] = [[dot]]
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.FPS.indicator.dot.corner \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.FPS.indicator.dot.corner \\ --
 UI["dd"] = Instance.new("UICorner", UI["dc"])
 UI["dd"]["Name"] = [[corner]]
 UI["dd"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.FPS.LocalScript \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.FPS.LocalScript \\ --
 UI["de"] = Instance.new("LocalScript", UI["d8"])
 
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.FPSValue \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.FPSValue \\ --
 UI["df"] = Instance.new("TextLabel", UI["d7"])
 UI["df"]["TextWrapped"] = true
 UI["df"]["BorderSizePixel"] = 0
@@ -1919,11 +1919,11 @@ UI["df"]["Text"] = [[0]]
 UI["df"]["Name"] = [[FPSValue]]
 UI["df"]["Position"] = UDim2.new(0.9128, 0, -0.01667, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.FPSValue.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.FPSValue.UITextSizeConstraint \\ --
 UI["e0"] = Instance.new("UITextSizeConstraint", UI["df"])
 UI["e0"]["MaxTextSize"] = 16
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.text \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.text \\ --
 UI["e1"] = Instance.new("TextLabel", UI["d7"])
 UI["e1"]["TextWrapped"] = true
 UI["e1"]["BorderSizePixel"] = 0
@@ -1940,11 +1940,11 @@ UI["e1"]["Text"] = [[Jump Power]]
 UI["e1"]["Name"] = [[text]]
 UI["e1"]["Position"] = UDim2.new(0.011, 0, 2.1, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.text.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.text.UITextSizeConstraint \\ --
 UI["e2"] = Instance.new("UITextSizeConstraint", UI["e1"])
 UI["e2"]["MaxTextSize"] = 16
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.Jump \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.Jump \\ --
 UI["e3"] = Instance.new("Frame", UI["d7"])
 UI["e3"]["BorderSizePixel"] = 0
 UI["e3"]["BackgroundColor3"] = Color3.fromRGB(151, 134, 154)
@@ -1954,12 +1954,12 @@ UI["e3"]["Position"] = UDim2.new(0.50838, 0, 2.85, 0)
 UI["e3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["e3"]["Name"] = [[Jump]]
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.Jump.corner \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.Jump.corner \\ --
 UI["e4"] = Instance.new("UICorner", UI["e3"])
 UI["e4"]["Name"] = [[corner]]
 UI["e4"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.Jump.indicator \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.Jump.indicator \\ --
 UI["e5"] = Instance.new("Frame", UI["e3"])
 UI["e5"]["BorderSizePixel"] = 0
 UI["e5"]["BackgroundColor3"] = Color3.fromRGB(126, 38, 208)
@@ -1969,12 +1969,12 @@ UI["e5"]["Position"] = UDim2.new(0, 0, 0.5, 0)
 UI["e5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["e5"]["Name"] = [[indicator]]
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.Jump.indicator.corner \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.Jump.indicator.corner \\ --
 UI["e6"] = Instance.new("UICorner", UI["e5"])
 UI["e6"]["Name"] = [[corner]]
 UI["e6"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.Jump.indicator.dot \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.Jump.indicator.dot \\ --
 UI["e7"] = Instance.new("Frame", UI["e5"])
 UI["e7"]["BorderSizePixel"] = 0
 UI["e7"]["BackgroundColor3"] = Color3.fromRGB(126, 38, 208)
@@ -1984,12 +1984,12 @@ UI["e7"]["Position"] = UDim2.new(1, 0, 0.5, 0)
 UI["e7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["e7"]["Name"] = [[dot]]
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.Jump.indicator.dot.corner \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.Jump.indicator.dot.corner \\ --
 UI["e8"] = Instance.new("UICorner", UI["e7"])
 UI["e8"]["Name"] = [[corner]]
 UI["e8"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.jumpvalue \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.jumpvalue \\ --
 UI["e9"] = Instance.new("TextLabel", UI["d7"])
 UI["e9"]["TextWrapped"] = true
 UI["e9"]["BorderSizePixel"] = 0
@@ -2006,11 +2006,11 @@ UI["e9"]["Text"] = [[100]]
 UI["e9"]["Name"] = [[jumpvalue]]
 UI["e9"]["Position"] = UDim2.new(0.9183, 0, 2.21667, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.jumpvalue.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.jumpvalue.UITextSizeConstraint \\ --
 UI["ea"] = Instance.new("UITextSizeConstraint", UI["e9"])
 UI["ea"]["MaxTextSize"] = 16
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.text \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.text \\ --
 UI["eb"] = Instance.new("TextLabel", UI["d7"])
 UI["eb"]["TextWrapped"] = true
 UI["eb"]["BorderSizePixel"] = 0
@@ -2027,11 +2027,11 @@ UI["eb"]["Text"] = [[SpeedHack]]
 UI["eb"]["Name"] = [[text]]
 UI["eb"]["Position"] = UDim2.new(0.011, 0, 3.41667, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.text.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.text.UITextSizeConstraint \\ --
 UI["ec"] = Instance.new("UITextSizeConstraint", UI["eb"])
 UI["ec"]["MaxTextSize"] = 16
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.Speed \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.Speed \\ --
 UI["ed"] = Instance.new("Frame", UI["d7"])
 UI["ed"]["BorderSizePixel"] = 0
 UI["ed"]["BackgroundColor3"] = Color3.fromRGB(151, 134, 154)
@@ -2041,12 +2041,12 @@ UI["ed"]["Position"] = UDim2.new(0.50838, 0, 4.16667, 0)
 UI["ed"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["ed"]["Name"] = [[Speed]]
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.Speed.corner \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.Speed.corner \\ --
 UI["ee"] = Instance.new("UICorner", UI["ed"])
 UI["ee"]["Name"] = [[corner]]
 UI["ee"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.Speed.indicator \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.Speed.indicator \\ --
 UI["ef"] = Instance.new("Frame", UI["ed"])
 UI["ef"]["BorderSizePixel"] = 0
 UI["ef"]["BackgroundColor3"] = Color3.fromRGB(126, 38, 208)
@@ -2056,12 +2056,12 @@ UI["ef"]["Position"] = UDim2.new(0, 0, 0.5, 0)
 UI["ef"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["ef"]["Name"] = [[indicator]]
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.Speed.indicator.corner \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.Speed.indicator.corner \\ --
 UI["f0"] = Instance.new("UICorner", UI["ef"])
 UI["f0"]["Name"] = [[corner]]
 UI["f0"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.Speed.indicator.dot \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.Speed.indicator.dot \\ --
 UI["f1"] = Instance.new("Frame", UI["ef"])
 UI["f1"]["BorderSizePixel"] = 0
 UI["f1"]["BackgroundColor3"] = Color3.fromRGB(126, 38, 208)
@@ -2071,12 +2071,12 @@ UI["f1"]["Position"] = UDim2.new(1, 0, 0.5, 0)
 UI["f1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["f1"]["Name"] = [[dot]]
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.Speed.indicator.dot.corner \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.Speed.indicator.dot.corner \\ --
 UI["f2"] = Instance.new("UICorner", UI["f1"])
 UI["f2"]["Name"] = [[corner]]
 UI["f2"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.speedvalue \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.speedvalue \\ --
 UI["f3"] = Instance.new("TextLabel", UI["d7"])
 UI["f3"]["TextWrapped"] = true
 UI["f3"]["BorderSizePixel"] = 0
@@ -2093,11 +2093,11 @@ UI["f3"]["Text"] = [[100]]
 UI["f3"]["Name"] = [[speedvalue]]
 UI["f3"]["Position"] = UDim2.new(0.9183, 0, 3.53333, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.speedvalue.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.speedvalue.UITextSizeConstraint \\ --
 UI["f4"] = Instance.new("UITextSizeConstraint", UI["f3"])
 UI["f4"]["MaxTextSize"] = 16
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.text \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.text \\ --
 UI["f5"] = Instance.new("TextLabel", UI["d7"])
 UI["f5"]["TextWrapped"] = true
 UI["f5"]["BorderSizePixel"] = 0
@@ -2114,11 +2114,11 @@ UI["f5"]["Text"] = [[FPS Value]]
 UI["f5"]["Name"] = [[text]]
 UI["f5"]["Position"] = UDim2.new(0.0055, 0, -0.13333, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.text.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.text.UITextSizeConstraint \\ --
 UI["f6"] = Instance.new("UITextSizeConstraint", UI["f5"])
 UI["f6"]["MaxTextSize"] = 16
 
--- // ServerStorage.Cubix.UI.Settings.Settings.hop server \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.hop server \\ --
 UI["f7"] = Instance.new("TextButton", UI["d5"])
 UI["f7"]["TextWrapped"] = true
 UI["f7"]["BorderSizePixel"] = 0
@@ -2133,24 +2133,24 @@ UI["f7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["f7"]["Text"] = [[hop server]]
 UI["f7"]["Position"] = UDim2.new(0.40535, 0, 0.87901, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.hop server.UICorner \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.hop server.UICorner \\ --
 UI["f8"] = Instance.new("UICorner", UI["f7"])
 UI["f8"]["CornerRadius"] = UDim.new(0, 5)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.hop server.UIStroke \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.hop server.UIStroke \\ --
 UI["f9"] = Instance.new("UIStroke", UI["f7"])
 UI["f9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["f9"]["Color"] = Color3.fromRGB(26, 16, 35)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.hop server.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.hop server.UITextSizeConstraint \\ --
 UI["fa"] = Instance.new("UITextSizeConstraint", UI["f7"])
 UI["fa"]["MaxTextSize"] = 25
 
--- // ServerStorage.Cubix.UI.Settings.Settings.hop server.LocalScript \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.hop server.LocalScript \\ --
 UI["fb"] = Instance.new("LocalScript", UI["f7"])
 
 
--- // ServerStorage.Cubix.UI.Settings.Settings.rj \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.rj \\ --
 UI["fc"] = Instance.new("TextButton", UI["d5"])
 UI["fc"]["TextWrapped"] = true
 UI["fc"]["BorderSizePixel"] = 0
@@ -2165,28 +2165,28 @@ UI["fc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["fc"]["Text"] = [[Rejoin]]
 UI["fc"]["Position"] = UDim2.new(0.40535, 0, 0.77688, 0)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.rj.UICorner \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.rj.UICorner \\ --
 UI["fd"] = Instance.new("UICorner", UI["fc"])
 UI["fd"]["CornerRadius"] = UDim.new(0, 5)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.rj.UIStroke \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.rj.UIStroke \\ --
 UI["fe"] = Instance.new("UIStroke", UI["fc"])
 UI["fe"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["fe"]["Color"] = Color3.fromRGB(26, 16, 35)
 
--- // ServerStorage.Cubix.UI.Settings.Settings.rj.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.rj.UITextSizeConstraint \\ --
 UI["ff"] = Instance.new("UITextSizeConstraint", UI["fc"])
 UI["ff"]["MaxTextSize"] = 25
 
--- // ServerStorage.Cubix.UI.Settings.Settings.rj.LocalScript \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.rj.LocalScript \\ --
 UI["100"] = Instance.new("LocalScript", UI["fc"])
 
 
--- // ServerStorage.Cubix.UI.Settings.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.UI.Settings.UIAspectRatioConstraint \\ --
 UI["101"] = Instance.new("UIAspectRatioConstraint", UI["cf"])
 UI["101"]["AspectRatio"] = 1.45426
 
--- // ServerStorage.Cubix.UI.console \\ --
+-- // StarterGui.Cubix.UI.console \\ --
 UI["102"] = Instance.new("Frame", UI["21"])
 UI["102"]["Visible"] = false
 UI["102"]["BorderSizePixel"] = 0
@@ -2197,11 +2197,11 @@ UI["102"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["102"]["Name"] = [[console]]
 UI["102"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.console.UICorner \\ --
+-- // StarterGui.Cubix.UI.console.UICorner \\ --
 UI["103"] = Instance.new("UICorner", UI["102"])
 
 
--- // ServerStorage.Cubix.UI.console.Console \\ --
+-- // StarterGui.Cubix.UI.console.Console \\ --
 UI["104"] = Instance.new("Frame", UI["102"])
 UI["104"]["BorderSizePixel"] = 0
 UI["104"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
@@ -2211,7 +2211,7 @@ UI["104"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["104"]["Name"] = [[Console]]
 UI["104"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.console.Console.Name \\ --
+-- // StarterGui.Cubix.UI.console.Console.Name \\ --
 UI["105"] = Instance.new("TextLabel", UI["104"])
 UI["105"]["TextWrapped"] = true
 UI["105"]["BorderSizePixel"] = 0
@@ -2227,11 +2227,11 @@ UI["105"]["Text"] = [[Console Logs]]
 UI["105"]["Name"] = [[Name]]
 UI["105"]["Position"] = UDim2.new(0, 0, 0, 0)
 
--- // ServerStorage.Cubix.UI.console.Console.Name.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.console.Console.Name.UITextSizeConstraint \\ --
 UI["106"] = Instance.new("UITextSizeConstraint", UI["105"])
 UI["106"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.console.Console.Scroller \\ --
+-- // StarterGui.Cubix.UI.console.Console.Scroller \\ --
 UI["107"] = Instance.new("ScrollingFrame", UI["104"])
 UI["107"]["Active"] = true
 UI["107"]["BorderSizePixel"] = 0
@@ -2246,11 +2246,11 @@ UI["107"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["107"]["ScrollBarThickness"] = 10
 UI["107"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.UI.console.Console.Scroller.UIListLayout \\ --
+-- // StarterGui.Cubix.UI.console.Console.Scroller.UIListLayout \\ --
 UI["108"] = Instance.new("UIListLayout", UI["107"])
 UI["108"]["SortOrder"] = Enum.SortOrder.LayoutOrder
 
--- // ServerStorage.Cubix.UI.console.Console.Scroller._Line_ \\ --
+-- // StarterGui.Cubix.UI.console.Console.Scroller._Line_ \\ --
 UI["109"] = Instance.new("TextLabel", UI["107"])
 UI["109"]["TextWrapped"] = true
 UI["109"]["BorderSizePixel"] = 0
@@ -2267,19 +2267,19 @@ UI["109"]["Text"] = [[-- All Consoles errors logs here]]
 UI["109"]["Name"] = [[_Line_]]
 UI["109"]["Position"] = UDim2.new(-0.02248, 0, -0.03023, 0)
 
--- // ServerStorage.Cubix.UI.console.Console.Scroller._Line_.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.console.Console.Scroller._Line_.UITextSizeConstraint \\ --
 UI["10a"] = Instance.new("UITextSizeConstraint", UI["109"])
 UI["10a"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons \\ --
 UI["10b"] = Instance.new("Folder", UI["104"])
 UI["10b"]["Name"] = [[Buttons]]
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.Modes \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes \\ --
 UI["10c"] = Instance.new("Folder", UI["10b"])
 UI["10c"]["Name"] = [[Modes]]
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.Modes.Warn \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Warn \\ --
 UI["10d"] = Instance.new("TextButton", UI["10c"])
 UI["10d"]["TextWrapped"] = true
 UI["10d"]["BorderSizePixel"] = 0
@@ -2294,11 +2294,11 @@ UI["10d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["10d"]["Text"] = [[warn: on]]
 UI["10d"]["Position"] = UDim2.new(0.98993, 0, 0.60231, 0)
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.Modes.Warn.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Warn.UITextSizeConstraint \\ --
 UI["10e"] = Instance.new("UITextSizeConstraint", UI["10d"])
 UI["10e"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.Modes.Print \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Print \\ --
 UI["10f"] = Instance.new("TextButton", UI["10c"])
 UI["10f"]["TextWrapped"] = true
 UI["10f"]["BorderSizePixel"] = 0
@@ -2313,11 +2313,11 @@ UI["10f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["10f"]["Text"] = [[print: on]]
 UI["10f"]["Position"] = UDim2.new(0.98993, 0, 0.49452, 0)
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.Modes.Print.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Print.UITextSizeConstraint \\ --
 UI["110"] = Instance.new("UITextSizeConstraint", UI["10f"])
 UI["110"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.Modes.Error \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Error \\ --
 UI["111"] = Instance.new("TextButton", UI["10c"])
 UI["111"]["TextWrapped"] = true
 UI["111"]["BorderSizePixel"] = 0
@@ -2332,11 +2332,11 @@ UI["111"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["111"]["Text"] = [[error: on]]
 UI["111"]["Position"] = UDim2.new(0.98993, 0, 0.7101, 0)
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.Modes.Error.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Error.UITextSizeConstraint \\ --
 UI["112"] = Instance.new("UITextSizeConstraint", UI["111"])
 UI["112"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.Modes.Info \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Info \\ --
 UI["113"] = Instance.new("TextButton", UI["10c"])
 UI["113"]["TextWrapped"] = true
 UI["113"]["BorderSizePixel"] = 0
@@ -2351,15 +2351,15 @@ UI["113"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["113"]["Text"] = [[info: on]]
 UI["113"]["Position"] = UDim2.new(0.98993, 0, 0.38674, 0)
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.Modes.Info.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Info.UITextSizeConstraint \\ --
 UI["114"] = Instance.new("UITextSizeConstraint", UI["113"])
 UI["114"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.BottomConsole \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole \\ --
 UI["115"] = Instance.new("Folder", UI["10b"])
 UI["115"]["Name"] = [[BottomConsole]]
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.BottomConsole.Clear \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Clear \\ --
 UI["116"] = Instance.new("TextButton", UI["115"])
 UI["116"]["TextWrapped"] = true
 UI["116"]["BorderSizePixel"] = 0
@@ -2374,11 +2374,11 @@ UI["116"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["116"]["Text"] = [[clear]]
 UI["116"]["Position"] = UDim2.new(0.81231, 0, 0.90314, 0)
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.BottomConsole.Clear.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Clear.UITextSizeConstraint \\ --
 UI["117"] = Instance.new("UITextSizeConstraint", UI["116"])
 UI["117"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.BottomConsole.Copy \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Copy \\ --
 UI["118"] = Instance.new("TextButton", UI["115"])
 UI["118"]["TextWrapped"] = true
 UI["118"]["BorderSizePixel"] = 0
@@ -2393,11 +2393,11 @@ UI["118"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["118"]["Text"] = [[copy]]
 UI["118"]["Position"] = UDim2.new(0.90277, 0, 0.90291, 0)
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.BottomConsole.Copy.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Copy.UITextSizeConstraint \\ --
 UI["119"] = Instance.new("UITextSizeConstraint", UI["118"])
 UI["119"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.BottomConsole.Save \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Save \\ --
 UI["11a"] = Instance.new("TextButton", UI["115"])
 UI["11a"]["TextWrapped"] = true
 UI["11a"]["BorderSizePixel"] = 0
@@ -2412,15 +2412,15 @@ UI["11a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["11a"]["Text"] = [[save]]
 UI["11a"]["Position"] = UDim2.new(0.98386, 0, 0.90314, 0)
 
--- // ServerStorage.Cubix.UI.console.Console.Buttons.BottomConsole.Save.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Save.UITextSizeConstraint \\ --
 UI["11b"] = Instance.new("UITextSizeConstraint", UI["11a"])
 UI["11b"]["MaxTextSize"] = 15
 
--- // ServerStorage.Cubix.UI.console.LocalScript \\ --
+-- // StarterGui.Cubix.UI.console.LocalScript \\ --
 UI["11c"] = Instance.new("LocalScript", UI["102"])
 
 
--- // ServerStorage.Cubix.ImageLabel \\ --
+-- // StarterGui.Cubix.ImageLabel \\ --
 UI["11d"] = Instance.new("ImageLabel", UI["1"])
 UI["11d"]["BorderSizePixel"] = 0
 UI["11d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -2430,14 +2430,14 @@ UI["11d"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["11d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["11d"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.Cubix.CubiXIntro \\ --
+-- // StarterGui.Cubix.CubiXIntro \\ --
 UI["11e"] = Instance.new("ScreenGui", UI["1"])
 UI["11e"]["IgnoreGuiInset"] = true
 UI["11e"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets
 UI["11e"]["Name"] = [[CubiXIntro]]
 UI["11e"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
 
--- // ServerStorage.Cubix.CubiXIntro.Frame \\ --
+-- // StarterGui.Cubix.CubiXIntro.Frame \\ --
 UI["11f"] = Instance.new("Frame", UI["11e"])
 UI["11f"]["BorderSizePixel"] = 0
 UI["11f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0)
@@ -2446,7 +2446,7 @@ UI["11f"]["Size"] = UDim2.new(2, 0, 2, 0)
 UI["11f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0)
 UI["11f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.Cubix.CubiXIntro.Frame.LogoImage \\ --
+-- // StarterGui.Cubix.CubiXIntro.Frame.LogoImage \\ --
 UI["120"] = Instance.new("ImageLabel", UI["11f"])
 UI["120"]["BorderSizePixel"] = 0
 UI["120"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -2458,11 +2458,11 @@ UI["120"]["Rotation"] = 360
 UI["120"]["Name"] = [[LogoImage]]
 UI["120"]["Position"] = UDim2.new(0.49996, 0, 0.49957, 0)
 
--- // ServerStorage.Cubix.CubiXIntro.Frame.LogoImage.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.CubiXIntro.Frame.LogoImage.UIAspectRatioConstraint \\ --
 UI["121"] = Instance.new("UIAspectRatioConstraint", UI["120"])
 
 
--- // ServerStorage.Cubix.CubiXIntro.Frame.ImageLabel \\ --
+-- // StarterGui.Cubix.CubiXIntro.Frame.ImageLabel \\ --
 UI["122"] = Instance.new("ImageLabel", UI["11f"])
 UI["122"]["BorderSizePixel"] = 0
 UI["122"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -2474,11 +2474,11 @@ UI["122"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["122"]["BackgroundTransparency"] = 1
 UI["122"]["Position"] = UDim2.new(0.45622, 0, 0.49957, 0)
 
--- // ServerStorage.Cubix.CubiXIntro.Frame.ImageLabel.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.CubiXIntro.Frame.ImageLabel.UIAspectRatioConstraint \\ --
 UI["123"] = Instance.new("UIAspectRatioConstraint", UI["122"])
 
 
--- // ServerStorage.Cubix.CubiXIntro.Frame.TextButton \\ --
+-- // StarterGui.Cubix.CubiXIntro.Frame.TextButton \\ --
 UI["124"] = Instance.new("TextLabel", UI["11f"])
 UI["124"]["TextWrapped"] = true
 UI["124"]["Active"] = true
@@ -2499,12 +2499,12 @@ UI["124"]["Selectable"] = true
 UI["124"]["Name"] = [[TextButton]]
 UI["124"]["Position"] = UDim2.new(0.54987, 0, 0.49957, 0)
 
--- // ServerStorage.Cubix.CubiXIntro.Frame.TextButton.UIGradient \\ --
+-- // StarterGui.Cubix.CubiXIntro.Frame.TextButton.UIGradient \\ --
 UI["125"] = Instance.new("UIGradient", UI["124"])
 UI["125"]["Rotation"] = 51
 UI["125"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(0.150, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(137, 137, 137))}
 
--- // ServerStorage.Cubix.CubiXIntro.Frame.LogoText \\ --
+-- // StarterGui.Cubix.CubiXIntro.Frame.LogoText \\ --
 UI["126"] = Instance.new("TextLabel", UI["11f"])
 UI["126"]["TextWrapped"] = true
 UI["126"]["Active"] = true
@@ -2525,16 +2525,66 @@ UI["126"]["Selectable"] = true
 UI["126"]["Name"] = [[LogoText]]
 UI["126"]["Position"] = UDim2.new(0.54708, 0, 0.49957, 0)
 
--- // ServerStorage.Cubix.CubiXIntro.Frame.LogoText.UIGradient \\ --
+-- // StarterGui.Cubix.CubiXIntro.Frame.LogoText.UIGradient \\ --
 UI["127"] = Instance.new("UIGradient", UI["126"])
 UI["127"]["Rotation"] = 51
 UI["127"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(0.150, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(137, 137, 137))}
 
--- // ServerStorage.Cubix.CubiXIntro.LocalScript \\ --
+-- // StarterGui.Cubix.CubiXIntro.LocalScript \\ --
 UI["128"] = Instance.new("LocalScript", UI["11e"])
 
 
--- // ServerStorage.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.LocalScript \\ --
+-- // StarterGui.Cubix.ModuleScript \\ --
+UI["129"] = Instance.new("ModuleScript", UI["1"])
+
+
+-- Require G2L wrapper
+local G2L_REQUIRE = require;
+local G2L_MODULES = {};
+local function require(Module:ModuleScript)
+	local ModuleState = G2L_MODULES[Module];
+	if ModuleState then
+		if not ModuleState.Required then
+			ModuleState.Required = true;
+			ModuleState.Value = ModuleState.Closure();
+		end
+		return ModuleState.Value;
+	end;
+	return G2L_REQUIRE(Module);
+end
+
+G2L_MODULES[UI["129"]] = {
+	Closure = function()
+		local script = UI["129"]
+		local module = {}
+
+		local function AddTab(imageId, scriptname, source)
+			local scriptFrame = script.Parent.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN
+			local newList99 = scriptFrame.Folder.ui
+			local newList = newList99
+			local execute = newList.exe
+			local scname = newList.scriptname
+			local img = newList.ImageLabel
+
+			newList.Name = scriptname
+			newList.Parent = scriptFrame
+			newList.Visible = true
+
+			img.Image = "rbxassetid://" .. imageId
+
+			scname.Text = scriptname
+
+			execute.MouseButton1Click:Connect(function()
+				loadstring(source)()
+			end)
+		end
+
+		module.AddTab = AddTab
+
+		return module
+	end
+}
+-- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.LocalScript \\ --
 local function SCRIPT_4d()
 	local script = UI["4d"]
 	local textLabel = script.Parent.lol
@@ -2544,7 +2594,7 @@ local function SCRIPT_4d()
 	end
 end
 task.spawn(SCRIPT_4d)
--- // ServerStorage.Cubix.UI.LocalScript \\ --
+-- // StarterGui.Cubix.UI.LocalScript \\ --
 local function SCRIPT_ce()
 	local script = UI["ce"]
 	--for i,v in pairs(script.Parent.Parent:GetDescendants()) do
@@ -3012,29 +3062,7 @@ local function SCRIPT_ce()
 	--search script
 	local btn = f3.ExecutorPage.UP.Search
 
-	local function AddTab(imageId, scriptname, source)
-		
-		local scriptFrame = f3.ExecutorPage.SearchPage.mAIN
-		local hub = scriptFrame.Folder.ui
-		local newList = hub:Clone()
-
-		local execute = newList.exe
-		local scname = newList.scriptname
-		local img = newList.ImageLabel
-
-		newList.Name = scriptname
-		newList.Parent = scriptFrame
-		newList.Visible = true
-
-		img.Image = "rbxassetid://" .. imageId
-
-		scname.Text = scriptname
-
-		execute.MouseButton1Click:Connect(function()
-			loadstring(source)()
-		end)
-	end
-
+	local uiui = require(script.Parent.Parent.ModuleScript)
 
 	btn.MouseButton1Click:Connect(function()
 		for _, child in ipairs(f3.ExecutorPage.SearchPage.mAIN:GetChildren()) do
@@ -3051,9 +3079,9 @@ local function SCRIPT_ce()
 		for _, scriptData in pairs(decoded.result.scripts) do
 			if scriptData.scriptType == "free" and not scriptData.isPatched then
 				if scriptData.isUniversal then
-					AddTab(17383983244, scriptData.title, scriptData.script)
+					uiui.AddTab(17383983244, scriptData.title, scriptData.script)
 				else
-					AddTab(scriptData.game.gameId, scriptData.title, scriptData.script)
+					uiui.AddTab(scriptData.game.gameId, scriptData.title, scriptData.script)
 				end
 			end
 		end
@@ -3101,7 +3129,7 @@ local function SCRIPT_ce()
 	end
 end
 task.spawn(SCRIPT_ce)
--- // ServerStorage.Cubix.UI.Settings.Settings.fpsValue.FPS.LocalScript \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.fpsValue.FPS.LocalScript \\ --
 local function SCRIPT_de()
 	local script = UI["de"]
 	local function makeCX(params)
@@ -3238,7 +3266,7 @@ local function SCRIPT_de()
 	})
 end
 task.spawn(SCRIPT_de)
--- // ServerStorage.Cubix.UI.Settings.Settings.hop server.LocalScript \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.hop server.LocalScript \\ --
 local function SCRIPT_fb()
 	local script = UI["fb"]
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3257,7 +3285,7 @@ local function SCRIPT_fb()
 
 end
 task.spawn(SCRIPT_fb)
--- // ServerStorage.Cubix.UI.Settings.Settings.rj.LocalScript \\ --
+-- // StarterGui.Cubix.UI.Settings.Settings.rj.LocalScript \\ --
 local function SCRIPT_100()
 	local script = UI["100"]
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3266,7 +3294,7 @@ local function SCRIPT_100()
 
 end
 task.spawn(SCRIPT_100)
--- // ServerStorage.Cubix.UI.console.LocalScript \\ --
+-- // StarterGui.Cubix.UI.console.LocalScript \\ --
 local function SCRIPT_11c()
 	local script = UI["11c"]
 	local function randomstr()
@@ -3422,7 +3450,7 @@ local function SCRIPT_11c()
 	end)
 end
 task.spawn(SCRIPT_11c)
--- // ServerStorage.Cubix.CubiXIntro.LocalScript \\ --
+-- // StarterGui.Cubix.CubiXIntro.LocalScript \\ --
 local function SCRIPT_128()
 	local script = UI["128"]
 	repeat until game.Loaded
