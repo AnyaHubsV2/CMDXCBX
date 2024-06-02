@@ -2151,27 +2151,27 @@ local script = UI["79"]
 	end
 	
 	
-	local http = game:GetService("HttpService")
 	btn.MouseButton1Click:Connect(function()
 		for _, child in ipairs(f3.ExecutorPage.SearchPage.mAIN:GetChildren()) do
 			if child:IsA("Frame") then
 				child:Destroy()
 			end
 		end
-	
-	
-		local url = "https://scriptblox.com/api/script/search?filters=free&q="..f3.Cloud.TextBox.Text
+
+		local KeyWordSearch = f3.ExecutorPage.UP.TextBox.Text
+		local url = "https://scriptblox.com/api/script/search?q="..string.gsub(KeyWordSearch, " ", "%%20")
 		local response = game:HttpGetAsync(url)
+		local http = game:GetService("HttpService")
 		local decoded = http:JSONDecode(response)
-		for _, script in pairs(decoded.result.scripts) do
-			if(script.isUniversal == true) then
-				AddTab("rbxassetid://15117873611", script.title, script.script)
-			else
-				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
+		for _, scriptData in pairs(decoded.result.scripts) do
+			if scriptData.scriptType == "free" and not scriptData.isPatched then
+				if scriptData.isUniversal then
+					AddTab(17383983244, scriptData.title, scriptData.script)
+				else
+					AddTab(scriptData.game.gameId, scriptData.title, scriptData.script)
+				end
 			end
-	
 		end
-	
 	end)
 	
 	--scripthub scripts
