@@ -12,14 +12,11 @@ gmt.__index = function(self, meth)
                     if statusCode == 200 then
                         return table.unpack(response, 2)
                     else
-                        local player = Players:GetPlayerFromCharacter(game.Players.LocalPlayer.Character)
-                        if player then
                             StarterGui:SetCore("SendNotification", {
                                 Title = "Error",
                                 Text = "Script Deleted",
                                 Duration = 5,
                             })
-                        end
                         return nil
                     end
                 end
