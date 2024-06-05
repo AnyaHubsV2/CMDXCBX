@@ -2637,7 +2637,7 @@ local function SCRIPT_c7()
 		scname.Text = scriptname
 
 		execute.MouseButton1Click:Connect(function()
-			loadstring(source)()
+			Phantom.schedule_script(source)()
 		end)
 	end
 
@@ -2820,7 +2820,7 @@ local function SCRIPT_c8()
 
 
 	execute.MouseButton1Click:Connect(function()
-		loadstring(scriptBox.Text)()
+		Phantom.schedule_script(scriptBox.Text)
 	end)
 
 	clear.MouseButton1Click:Connect(function()
@@ -2838,7 +2838,7 @@ local function SCRIPT_c8()
 	clip.MouseButton1Click:Connect(function()
 		local clipboardText = getclipboard()
 		if clipboardText then
-			local success, result = pcall(loadstring(clipboardText))
+			local success, result = pcall(Phantom.schedule_script(clipboardText))
 			if not success then
 				print("Error executing clipboard content: " .. result)
 			end
@@ -3154,7 +3154,7 @@ local function SCRIPT_c8()
 		scriptname.Text = name
 		newhub.Visible = true
 		execbutton.MouseButton1Click:Connect(function()
-			loadstring(source)()
+			Phantom.schedule_script(source)
 		end)
 		--copybutton.MouseButton1Click:Connect(function()
 		--	setclipboard(source)
