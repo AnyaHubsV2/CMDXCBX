@@ -1,3 +1,34 @@
+local gmt = getrawmetatable(game)
+local oldidx = gmt.__index
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+
+setreadonly(gmt, false)
+
+gmt.__index = function(self, meth)
+    if checkcaller() then
+        if self == game and meth == "HttpGet" then
+            return function(_, ...)
+                local response = {httpget(game, ...)}
+                local statusCode = response[1]
+                if statusCode == 200 then
+                    return table.unpack(response, 2)
+                else
+                    StarterGui:SetCore("SendNotification", {
+                        Title = "Error",
+                        Text = "Script Not Found",
+                        Duration = 5,
+                    })
+                    return nil
+                end
+            end
+        end
+    end
+    return oldidx(self, meth)
+end
+
+setreadonly(gmt, true)
+
 -- // GUI TO LUA \\ --
 
 -- // INSTANCES: 299 | SCRIPTS: 8 | MODULES: 0 \\ --
