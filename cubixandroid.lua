@@ -1,7 +1,5 @@
 print("ANYA TEST BRUHHHH")
 
-
-
 local gmt = getrawmetatable(game)
 setreadonly(gmt, false)
 
@@ -36,7 +34,7 @@ gmt.__namecall = function(self, ...)
 
     if self == game then -- self == game
         if method == "HttpGet" or method == "HttpGetAsync" then
-            local response = {game[method](game, args[2], unpack(args, 3))}
+            local response = {game.HttpGetAsync(game, args[2], unpack(args, 3))}
             return handleHttpGetResponse(response)
         end
     end
