@@ -1,3 +1,34 @@
+local oldidx = gmt.__index
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+
+gmt.__index = function(self, meth)
+    if checkcaller() then
+        if self == game then
+            if meth == "HttpGet" then
+                return function(_, ...)
+                    local response = {httpget(game, ...)}
+                    local statusCode = response[1]
+                    if statusCode == 200 then
+                        return table.unpack(response, 2)
+                    else
+                        local player = Players:GetPlayerFromCharacter(game.Players.LocalPlayer.Character)
+                        if player then
+                            StarterGui:SetCore("SendNotification", {
+                                Title = "Error",
+                                Text = "Script Deleted",
+                                Duration = 5,
+                            })
+                        end
+                        return nil
+                    end
+                end
+            end
+        end
+    end
+    return oldidx(self, meth)
+end
+
 -- // GUI TO LUA \\ --
 
 -- // INSTANCES: 299 | SCRIPTS: 8 | MODULES: 0 \\ --
