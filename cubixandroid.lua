@@ -1630,6 +1630,7 @@ UI["b4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["b4"]["Text"] = [[Anya UI]]
 UI["b4"]["Name"] = [[Universal]]
 UI["b4"]["Position"] = UDim2.new(0.69, 0, 0.055, 0)
+UI["b4"]["Visible"] = false
 
 -- // StarterGui.Cubix.UI.ScriptCloud.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UICorner \\ --
 UI["b5"] = Instance.new("UICorner", UI["b4"])
