@@ -7,7 +7,6 @@ local UI = {}
 -- // StarterGui.Cubix \\ --
 UI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"))
 UI["1"]["IgnoreGuiInset"] = true
-UI["1"]["Enabled"] = false
 UI["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets
 UI["1"]["Name"] = [[Cubix]]
 UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
@@ -2164,7 +2163,6 @@ UI["fa"] = Instance.new("LocalScript", UI["f6"])
 
 -- // StarterGui.Cubix.UI.console \\ --
 UI["fb"] = Instance.new("Frame", UI["1c"])
-UI["fb"]["Visible"] = false
 UI["fb"]["BorderSizePixel"] = 0
 UI["fb"]["BackgroundColor3"] = Color3.fromRGB(24, 19, 30)
 UI["fb"]["Size"] = UDim2.new(0.87247, 0, 0.87995, 0)
@@ -2276,7 +2274,7 @@ UI["108"] = Instance.new("TextButton", UI["107"])
 UI["108"]["TextWrapped"] = true
 UI["108"]["BorderSizePixel"] = 0
 UI["108"]["TextSize"] = 15
-UI["108"]["TextColor3"] = Color3.fromRGB(255, 255, 25)
+UI["108"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["108"]["TextScaled"] = true
 UI["108"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
 UI["108"]["Size"] = UDim2.new(0.08116, 0, 0.084, 0)
@@ -3194,8 +3192,8 @@ local function SCRIPT_d8()
 
 		-- Create an invisible hitbox around the dot
 		local hitbox = Instance.new("Frame")
-		hitbox.Size = UDim2.new(0, 20, 0, 20)  -- Adjust the size to make it easier to drag
-		hitbox.Position = UDim2.new(0.5, -10, 0.5, -10)  -- Center the hitbox on the dot
+		hitbox.Size = UDim2.new(0, 40, 0, 40)  -- Increase the size for easier dragging
+		hitbox.Position = UDim2.new(0.5, -20, 0.5, -20)  -- Center the hitbox on the dot
 		hitbox.BackgroundTransparency = 1  -- Make it invisible
 		hitbox.Parent = dot
 
@@ -3296,6 +3294,16 @@ local function SCRIPT_d8()
 	})
 
 	makeCX({
+		bar = script.Parent.Parent.FPS,
+		value = script.Parent.Parent.FPSValue,
+		limit = 999,
+		started = 60,
+		func = function(NewFps)
+			-- setfpscap(NewFps)
+		end
+	})
+
+	makeCX({
 		bar = script.Parent.Parent.Jump,
 		value = script.Parent.Parent.jumpvalue,
 		limit = 500,
@@ -3308,17 +3316,6 @@ local function SCRIPT_d8()
 			end
 		end
 	})
-
-	makeCX({
-		bar = script.Parent.Parent.FPS,
-		value = script.Parent.Parent.FPSValue,
-		limit = 999,
-		started = 60,
-		func = function(NewFps)
-			-- setfpscap(NewFps)
-		end
-	})
-
 end
 task.spawn(SCRIPT_d8)
 -- // StarterGui.Cubix.UI.Settings.Settings.hop server.LocalScript \\ --
