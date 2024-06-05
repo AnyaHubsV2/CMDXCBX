@@ -4,42 +4,40 @@ setreadonly(gmt, false)
 local oldidx = gmt.__index
 local oldnc = gmt.__namecall
 
+local function handleHttpGetResponse(response)
+    local statusCode = response[1]
+    if statusCode == 200 then
+        return table.concat(response, "", 2)
+    else
+        warn("Link deleted - Status Code:", statusCode)
+        return ""
+    end
+end
+
 gmt.__index = function(self, meth)
     if self == game then
         if meth == "HttpGet" or meth == "HttpGetAsync" then
             return function(_, url, ...)
                 local response = {game:HttpGetAsync(url, ...)}
-                local statusCode = response[1]
-                if statusCode == 200 then
-                    return table.concat(response, "", 2)
-                else
-                    warn("Link deleted - Status Code:", statusCode)
-                    return ""
-                end
+                return handleHttpGetResponse(response)
             end
         end
     end
     return oldidx(self, meth)
 end
 
-gmt.__namecall = function(...)
+gmt.__namecall = function(self, ...)
     local args = {...}
+    local method = getnamecallmethod()
 
-    if args[1] == game then -- self == game
-        local method = getnamecallmethod()
+    if self == game then -- self == game
         if method == "HttpGet" or method == "HttpGetAsync" then
-            local response = {game:HttpGetAsync(args[2])}
-            local statusCode = response[1]
-            if statusCode == 200 then
-                return table.concat(response, "", 2)
-            else
-                warn("Link deleted - Status Code:", statusCode)
-                return ""
-            end
+            local response = {game[method](game, args[2], unpack(args, 3))}
+            return handleHttpGetResponse(response)
         end
     end
 
-    return oldnc(...)
+    return oldnc(self, ...)
 end
 
 setreadonly(gmt, true)
