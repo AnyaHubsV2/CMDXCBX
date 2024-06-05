@@ -32,7 +32,7 @@ gmt.__namecall = function(...)
     local args = {...}
     local method = getnamecallmethod()
 
-    if args[1] == game and (method == "HttpGet" or method == "HttpGetAsync") then
+    if args[1] == game and (method == "HttpGet" then
         local response = {game[method](game, args[2], unpack(args, 3))}
         return handleHttpGetResponse(response)
     end
