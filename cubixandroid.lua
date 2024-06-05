@@ -1,6 +1,11 @@
+local gmt = getrawmetatable(game)
+
 local oldidx = gmt.__index
 local Players = game:GetService("Players")
 local StarterGui = game:GetService("StarterGui")
+
+
+setreadonly(gmt, false)
 
 gmt.__index = function(self, meth)
     if checkcaller() then
@@ -25,6 +30,9 @@ gmt.__index = function(self, meth)
     end
     return oldidx(self, meth)
 end
+
+setreadonly(gmt, true)
+
 
 -- // GUI TO LUA \\ --
 
