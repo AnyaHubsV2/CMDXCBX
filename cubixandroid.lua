@@ -11,6 +11,7 @@ gmt.__index = function(self, meth)
             return function(_, ...)
                 local response = {httpget(game, ...)}
                 local statusCode = response[1]
+                print("Status Code:", statusCode) -- Print the status code
                 if statusCode == 200 then
                     return table.unpack(response, 2)
                 else
