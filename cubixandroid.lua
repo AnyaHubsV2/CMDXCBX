@@ -3190,23 +3190,22 @@ local function SCRIPT_d8()
 		local dragging = false
 		local printCooldown = false
 
-		-- Create an invisible hitbox around the dot
 		local hitbox = Instance.new("Frame")
-		hitbox.Size = UDim2.new(0, 40, 0, 40)  -- Increase the size for easier dragging
-		hitbox.Position = UDim2.new(0.5, -20, 0.5, -20)  -- Center the hitbox on the dot
-		hitbox.BackgroundTransparency = 1  -- Make it invisible
+		hitbox.Size = UDim2.new(0, 60, 0, 60)  
+		hitbox.Position = UDim2.new(0.5, -30, 0.5, -30)  
+		hitbox.BackgroundTransparency = 1
 		hitbox.Parent = dot
 
-		local function updateDotPosition()
+		local function updateDotPosition(value)
 			local barWidth = bar.AbsoluteSize.X
 			if barWidth == 0 then
-				warn("Bar has zero width, check its size or layout.")
+				--warn("Bar has zero width, check its size or layout.")
 				return
 			end
 
-			local value = tonumber(valueTextLabel.Text)
+			value = value or tonumber(valueTextLabel.Text)
 			if value == nil then
-				warn("Failed to convert valueTextLabel to number.")
+				--warn("Failed to convert valueTextLabel to number.")
 				return
 			end
 
@@ -3255,8 +3254,8 @@ local function SCRIPT_d8()
 				if not printCooldown then
 					printCooldown = true
 					wait(1)  -- Wait for 1 second
-					local jumpValue = tonumber(valueTextLabel.Text)
-					valueToChange(jumpValue)
+					local newValue = tonumber(valueTextLabel.Text)
+					valueToChange(newValue)
 					printCooldown = false
 				end
 			end
@@ -3268,16 +3267,9 @@ local function SCRIPT_d8()
 		hitbox.InputBegan:Connect(onInputBegan)
 		hitbox.InputChanged:Connect(onInputChanged)
 
-		-- Add touch events
-		bar.TouchStarted:Connect(onInputBegan)
-		bar.TouchMoved:Connect(onInputChanged)
-		userInputService.TouchEnded:Connect(onInputEnded)
-		hitbox.TouchStarted:Connect(onInputBegan)
-		hitbox.TouchMoved:Connect(onInputChanged)
-
 		-- Set initial value
 		valueTextLabel.Text = tostring(starter)
-		updateDotPosition()
+		updateDotPosition(starter)
 	end
 
 	makeCX({
@@ -3294,6 +3286,20 @@ local function SCRIPT_d8()
 	})
 
 	makeCX({
+		bar = script.Parent.Parent.Jump,
+		value = script.Parent.Parent.jumpvalue,
+		limit = 500,
+		started = 50,
+		func = function(jumpVL)
+			local player = game.Players.LocalPlayer
+			if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
+				player.Character.Humanoid.JumpPower = jumpVL
+				player.Character.Humanoid.JumpHeight = jumpVL * 0.3  
+			end
+		end
+	})
+
+	makeCX({
 		bar = script.Parent.Parent.FPS,
 		value = script.Parent.Parent.FPSValue,
 		limit = 999,
@@ -3303,19 +3309,6 @@ local function SCRIPT_d8()
 		end
 	})
 
-	makeCX({
-		bar = script.Parent.Parent.Jump,
-		value = script.Parent.Parent.jumpvalue,
-		limit = 500,
-		started = 50,
-		func = function(jumpVL)
-			local player = game.Players.LocalPlayer
-			if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
-				player.Character.Humanoid.JumpPower = jumpVL
-				player.Character.Humanoid.JumpHeight = jumpVL * 0.3  -- Adjust the multiplier as needed
-			end
-		end
-	})
 end
 task.spawn(SCRIPT_d8)
 -- // StarterGui.Cubix.UI.Settings.Settings.hop server.LocalScript \\ --
