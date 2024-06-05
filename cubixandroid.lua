@@ -1,25 +1,22 @@
 local gmt = getrawmetatable(game)
-local oldidx = gmt.__index
-local Players = game:GetService("Players")
-local StarterGui = game:GetService("StarterGui")
-
 setreadonly(gmt, false)
 
+print("Loaded!")
+local oldidx = gmt.__index
+local oldnc = gmt.__namecall
+
 gmt.__index = function(self, meth)
-    if checkcaller() then
-        if self == game and meth == "HttpGet" then
-            return function(_, ...)
-                local response = {httpget(game, ...)}
+    if self == game then
+        if meth == "HttpGet" or meth == "HttpGetAsync" then
+            return function(_, url, ...)
+                local response = {httpget(game, url, ...)}
                 local statusCode = response[1]
-                print("Status Code:", statusCode) -- Print the status code
+		print(statusCode)
                 if statusCode == 200 then
-                    return table.unpack(response, 2)
+                    return table.concat(response, "", 2)
                 else
-                    StarterGui:SetCore("SendNotification", {
-                        Title = "Error",
-                        Text = "Script Not Found",
-                        Duration = 5,
-                    })
+                    warn("Link deleted - Status Code:", statusCode)
+                    return ""
                 end
             end
         end
@@ -27,7 +24,29 @@ gmt.__index = function(self, meth)
     return oldidx(self, meth)
 end
 
+gmt.__namecall = function(...)
+    local args = {...}
+
+    if args[1] == game then -- self == game
+        local method = getnamecallmethod()
+        if method == "HttpGet" or method == "HttpGetAsync" then
+            local response = {httpget(game, args[2])}
+            local statusCode = response[1]
+	    print(statusCode)
+            if statusCode == 200 then
+                return table.concat(response, "", 2)
+            else
+                warn("Link deleted - Status Code:", statusCode)
+                return ""
+            end
+        end
+    end
+
+    return oldnc(...)
+end
+
 setreadonly(gmt, true)
+
 
 -- // GUI TO LUA \\ --
 
