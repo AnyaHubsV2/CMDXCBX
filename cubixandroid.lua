@@ -28,18 +28,16 @@ gmt.__index = function(self, meth)
     return oldidx(self, meth)
 end
 
-gmt.__namecall = function(self, ...)
+gmt.__namecall = function(...)
     local args = {...}
     local method = getnamecallmethod()
 
-    if self == game then -- self == game
-        if method == "HttpGet" then
-            local response = {game.HttpGet(game, args[2], unpack(args, 3))}
-            return handleHttpGetResponse(response)
-        end
+    if args[1] == game and (method == "HttpGet" or method == "HttpGetAsync") then
+        local response = {game[method](game, args[2], unpack(args, 3))}
+        return handleHttpGetResponse(response)
     end
 
-    return oldnc(self, ...)
+    return oldnc(...)
 end
 
 setreadonly(gmt, true)
