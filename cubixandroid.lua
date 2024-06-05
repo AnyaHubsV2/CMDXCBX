@@ -19,7 +19,6 @@ gmt.__index = function(self, meth)
                         Text = "Script Not Found",
                         Duration = 5,
                     })
-                    return nil
                 end
             end
         end
