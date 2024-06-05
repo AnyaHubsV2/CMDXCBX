@@ -2636,7 +2636,7 @@ local function SCRIPT_c7()
 		scname.Text = scriptname
 
 		execute.MouseButton1Click:Connect(function()
-			Phantom.schedule_script(source)()
+			loadstring(source)()
 		end)
 	end
 
