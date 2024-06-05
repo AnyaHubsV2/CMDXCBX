@@ -1,7 +1,6 @@
 local gmt = getrawmetatable(game)
 setreadonly(gmt, false)
 
-print("Loaded!")
 local oldidx = gmt.__index
 local oldnc = gmt.__namecall
 
@@ -9,9 +8,8 @@ gmt.__index = function(self, meth)
     if self == game then
         if meth == "HttpGet" or meth == "HttpGetAsync" then
             return function(_, url, ...)
-                local response = {httpget(game, url, ...)}
+                local response = {game:HttpGetAsync(url, ...)}
                 local statusCode = response[1]
-		print(statusCode)
                 if statusCode == 200 then
                     return table.concat(response, "", 2)
                 else
@@ -30,9 +28,8 @@ gmt.__namecall = function(...)
     if args[1] == game then -- self == game
         local method = getnamecallmethod()
         if method == "HttpGet" or method == "HttpGetAsync" then
-            local response = {httpget(game, args[2])}
+            local response = {game:HttpGetAsync(args[2])}
             local statusCode = response[1]
-	    print(statusCode)
             if statusCode == 200 then
                 return table.concat(response, "", 2)
             else
@@ -47,6 +44,7 @@ end
 
 setreadonly(gmt, true)
 
+print("ANYA TEST BRUHHHH")
 
 -- // GUI TO LUA \\ --
 
