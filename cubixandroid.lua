@@ -1,4 +1,4 @@
-print("ANYA TEST BRUHHHH")
+print("ANYA TEST BRUHHHH                  يبلاتابلالبيبلاتالب")
 
 local gmt = getrawmetatable(game)
 setreadonly(gmt, false)
