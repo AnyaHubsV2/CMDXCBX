@@ -1,3 +1,7 @@
+print("ANYA TEST BRUHHHH")
+
+
+
 local gmt = getrawmetatable(game)
 setreadonly(gmt, false)
 
@@ -41,8 +45,6 @@ gmt.__namecall = function(self, ...)
 end
 
 setreadonly(gmt, true)
-
-print("ANYA TEST BRUHHHH")
 
 -- // GUI TO LUA \\ --
 
