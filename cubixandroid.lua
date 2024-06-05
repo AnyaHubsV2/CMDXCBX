@@ -18,9 +18,9 @@ end
 
 gmt.__index = function(self, meth)
     if self == game then
-        if meth == "HttpGet" or meth == "HttpGetAsync" then
+        if meth == "HttpGet" then
             return function(_, url, ...)
-                local response = {game:HttpGetAsync(url, ...)}
+                local response = {game:HttpGet(url, ...)}
                 return handleHttpGetResponse(response)
             end
         end
@@ -33,8 +33,8 @@ gmt.__namecall = function(self, ...)
     local method = getnamecallmethod()
 
     if self == game then -- self == game
-        if method == "HttpGet" or method == "HttpGetAsync" then
-            local response = {game.HttpGetAsync(game, args[2], unpack(args, 3))}
+        if method == "HttpGet" then
+            local response = {game.HttpGet(game, args[2], unpack(args, 3))}
             return handleHttpGetResponse(response)
         end
     end
