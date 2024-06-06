@@ -1,17 +1,17 @@
 -- // GUI TO LUA \\ --
 
--- // INSTANCES: 270 | SCRIPTS: 7 | MODULES: 0 \\ --
+-- // INSTANCES: 269 | SCRIPTS: 7 | MODULES: 0 \\ --
 
 local UI = {}
 
--- // ServerStorage.UIS.Mobile.CommanderX \\ --
+-- // StarterGui.CommanderX \\ --
 UI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"))
 UI["1"]["IgnoreGuiInset"] = true
-UI["1"]["ScreenInsets"] = Enum.ScreenInsets.None
+UI["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets
 UI["1"]["Name"] = [[CommanderX]]
 UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame \\ --
+-- // StarterGui.CommanderX.Frame \\ --
 UI["2"] = Instance.new("Frame", UI["1"])
 UI["2"]["ZIndex"] = 0
 UI["2"]["BorderSizePixel"] = 0
@@ -20,7 +20,7 @@ UI["2"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["2"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main \\ --
+-- // StarterGui.CommanderX.Frame.Main \\ --
 UI["3"] = Instance.new("Frame", UI["2"])
 UI["3"]["BorderSizePixel"] = 0
 UI["3"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32)
@@ -29,18 +29,18 @@ UI["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["3"]["Name"] = [[Main]]
 UI["3"]["BackgroundTransparency"] = 0.4
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1 \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1 \\ --
 UI["4"] = Instance.new("Frame", UI["3"])
 UI["4"]["Visible"] = false
 UI["4"]["BorderSizePixel"] = 0
 UI["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
 UI["4"]["Size"] = UDim2.new(1.198, 0, 0.719, 0)
-UI["4"]["Position"] = UDim2.new(0.01011, 0, 0.10788, 0)
+UI["4"]["Position"] = UDim2.new(-0.10022, 0, 0.10025, 0)
 UI["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["4"]["Name"] = [[Page1]]
 UI["4"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage \\ --
 UI["5"] = Instance.new("Frame", UI["4"])
 UI["5"]["BorderSizePixel"] = 0
 UI["5"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32)
@@ -49,7 +49,7 @@ UI["5"]["Position"] = UDim2.new(0.29121, 0, 0.03607, 0)
 UI["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["5"]["Name"] = [[ExecutorPage]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.nothing \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.nothing \\ --
 UI["6"] = Instance.new("Frame", UI["5"])
 UI["6"]["BorderSizePixel"] = 0
 UI["6"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -57,7 +57,7 @@ UI["6"]["Size"] = UDim2.new(1, 0, 0.09036, 0)
 UI["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["6"]["Name"] = [[nothing]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.nothing.nothing \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.nothing.nothing \\ --
 UI["7"] = Instance.new("Frame", UI["6"])
 UI["7"]["BorderSizePixel"] = 0
 UI["7"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28)
@@ -66,7 +66,7 @@ UI["7"]["Position"] = UDim2.new(0, 0, 0.97925, 0)
 UI["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["7"]["Name"] = [[nothing]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.nothing.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.nothing.TextLabel \\ --
 UI["8"] = Instance.new("TextLabel", UI["6"])
 UI["8"]["TextWrapped"] = true
 UI["8"]["BorderSizePixel"] = 0
@@ -81,15 +81,15 @@ UI["8"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["8"]["Text"] = [[Executor Page]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.nothing.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.nothing.TextLabel.UITextSizeConstraint \\ --
 UI["9"] = Instance.new("UITextSizeConstraint", UI["8"])
 UI["9"]["MaxTextSize"] = 40
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons \\ --
 UI["a"] = Instance.new("Folder", UI["5"])
 UI["a"]["Name"] = [[Buttons]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard \\ --
 UI["b"] = Instance.new("Frame", UI["a"])
 UI["b"]["BorderSizePixel"] = 0
 UI["b"]["BackgroundColor3"] = Color3.fromRGB(104, 77, 255)
@@ -98,11 +98,11 @@ UI["b"]["Position"] = UDim2.new(0.01003, 0, 0.87349, 0)
 UI["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["b"]["Name"] = [[Clipboard]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.UICorner \\ --
 UI["c"] = Instance.new("UICorner", UI["b"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.Buttons \\ --
 UI["d"] = Instance.new("Frame", UI["b"])
 UI["d"]["BorderSizePixel"] = 0
 UI["d"]["BackgroundColor3"] = Color3.fromRGB(11, 109, 201)
@@ -112,11 +112,11 @@ UI["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["d"]["Name"] = [[Buttons]]
 UI["d"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.Buttons.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.Buttons.UICorner \\ --
 UI["e"] = Instance.new("UICorner", UI["d"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.Buttons.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.Buttons.ImageButton \\ --
 UI["f"] = Instance.new("ImageButton", UI["d"])
 UI["f"]["BorderSizePixel"] = 0
 UI["f"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -126,16 +126,16 @@ UI["f"]["BackgroundTransparency"] = 1
 UI["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["f"]["Position"] = UDim2.new(0.125, 0, 0.06786, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.Buttons.ImageButton.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.Buttons.ImageButton.UICorner \\ --
 UI["10"] = Instance.new("UICorner", UI["f"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.UIGradient \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.UIGradient \\ --
 UI["11"] = Instance.new("UIGradient", UI["b"])
 UI["11"]["Rotation"] = 150
 UI["11"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 122, 169)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))}
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.TextLabel \\ --
 UI["12"] = Instance.new("TextLabel", UI["b"])
 UI["12"]["TextWrapped"] = true
 UI["12"]["BorderSizePixel"] = 0
@@ -151,11 +151,11 @@ UI["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["12"]["Text"] = [[Clipboard]]
 UI["12"]["Position"] = UDim2.new(0.23904, 0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.TextLabel.UITextSizeConstraint \\ --
 UI["13"] = Instance.new("UITextSizeConstraint", UI["12"])
 UI["13"]["MaxTextSize"] = 40
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clear \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clear \\ --
 UI["14"] = Instance.new("Frame", UI["a"])
 UI["14"]["BorderSizePixel"] = 0
 UI["14"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -164,7 +164,7 @@ UI["14"]["Position"] = UDim2.new(0.845, 0, 0.88153, 0)
 UI["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["14"]["Name"] = [[Clear]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clear.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clear.Buttons \\ --
 UI["15"] = Instance.new("Frame", UI["14"])
 UI["15"]["BorderSizePixel"] = 0
 UI["15"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -173,11 +173,11 @@ UI["15"]["Position"] = UDim2.new(0.15, 0, 0.15, 0)
 UI["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["15"]["Name"] = [[Buttons]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clear.Buttons.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clear.Buttons.UICorner \\ --
 UI["16"] = Instance.new("UICorner", UI["15"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clear.Buttons.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clear.Buttons.ImageButton \\ --
 UI["17"] = Instance.new("ImageButton", UI["15"])
 UI["17"]["BorderSizePixel"] = 0
 UI["17"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -187,15 +187,15 @@ UI["17"]["BackgroundTransparency"] = 1
 UI["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["17"]["Position"] = UDim2.new(0.06786, 0, 0.06786, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clear.Buttons.ImageButton.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clear.Buttons.ImageButton.UICorner \\ --
 UI["18"] = Instance.new("UICorner", UI["17"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clear.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clear.UICorner \\ --
 UI["19"] = Instance.new("UICorner", UI["14"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Copy \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Copy \\ --
 UI["1a"] = Instance.new("Frame", UI["a"])
 UI["1a"]["Visible"] = false
 UI["1a"]["BorderSizePixel"] = 0
@@ -205,7 +205,7 @@ UI["1a"]["Position"] = UDim2.new(0.76745, 0, 0.88153, 0)
 UI["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["1a"]["Name"] = [[Copy]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Copy.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Copy.Buttons \\ --
 UI["1b"] = Instance.new("Frame", UI["1a"])
 UI["1b"]["BorderSizePixel"] = 0
 UI["1b"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -214,11 +214,11 @@ UI["1b"]["Position"] = UDim2.new(0.15, 0, 0.15, 0)
 UI["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["1b"]["Name"] = [[Buttons]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Copy.Buttons.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Copy.Buttons.UICorner \\ --
 UI["1c"] = Instance.new("UICorner", UI["1b"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Copy.Buttons.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Copy.Buttons.ImageButton \\ --
 UI["1d"] = Instance.new("ImageButton", UI["1b"])
 UI["1d"]["BorderSizePixel"] = 0
 UI["1d"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -228,15 +228,15 @@ UI["1d"]["BackgroundTransparency"] = 1
 UI["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["1d"]["Position"] = UDim2.new(0.06786, 0, 0.06786, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Copy.Buttons.ImageButton.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Copy.Buttons.ImageButton.UICorner \\ --
 UI["1e"] = Instance.new("UICorner", UI["1d"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Copy.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Copy.UICorner \\ --
 UI["1f"] = Instance.new("UICorner", UI["1a"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Execute \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Execute \\ --
 UI["20"] = Instance.new("Frame", UI["a"])
 UI["20"]["BorderSizePixel"] = 0
 UI["20"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -245,7 +245,7 @@ UI["20"]["Position"] = UDim2.new(0.92259, 0, 0.88153, 0)
 UI["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["20"]["Name"] = [[Execute]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Execute.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Execute.Buttons \\ --
 UI["21"] = Instance.new("Frame", UI["20"])
 UI["21"]["BorderSizePixel"] = 0
 UI["21"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -254,11 +254,11 @@ UI["21"]["Position"] = UDim2.new(0.15, 0, 0.15, 0)
 UI["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["21"]["Name"] = [[Buttons]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Execute.Buttons.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Execute.Buttons.UICorner \\ --
 UI["22"] = Instance.new("UICorner", UI["21"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Execute.Buttons.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Execute.Buttons.ImageButton \\ --
 UI["23"] = Instance.new("ImageButton", UI["21"])
 UI["23"]["BorderSizePixel"] = 0
 UI["23"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -268,19 +268,19 @@ UI["23"]["BackgroundTransparency"] = 1
 UI["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["23"]["Position"] = UDim2.new(0.06786, 0, 0.06786, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Execute.Buttons.ImageButton.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Execute.Buttons.ImageButton.UICorner \\ --
 UI["24"] = Instance.new("UICorner", UI["23"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Execute.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Execute.UICorner \\ --
 UI["25"] = Instance.new("UICorner", UI["20"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder \\ --
 UI["26"] = Instance.new("Folder", UI["5"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox \\ --
 UI["27"] = Instance.new("Frame", UI["26"])
 UI["27"]["BorderSizePixel"] = 0
 UI["27"]["BackgroundColor3"] = Color3.fromRGB(18, 17, 18)
@@ -290,7 +290,7 @@ UI["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["27"]["Name"] = [[txtbox]]
 UI["27"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame \\ --
 UI["28"] = Instance.new("ScrollingFrame", UI["27"])
 UI["28"]["CanvasSize"] = UDim2.new(0, 0, 0, 15)
 UI["28"]["ElasticBehavior"] = Enum.ElasticBehavior.Always
@@ -308,8 +308,9 @@ UI["28"]["BorderColor3"] = Color3.fromRGB(63, 63, 63)
 UI["28"]["ScrollBarThickness"] = 15
 UI["28"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source \\ --
 UI["29"] = Instance.new("TextBox", UI["28"])
+UI["29"]["CursorPosition"] = -1
 UI["29"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["29"]["PlaceholderColor3"] = Color3.fromRGB(206, 206, 206)
 UI["29"]["ZIndex"] = 3
@@ -330,7 +331,7 @@ UI["29"]["Position"] = UDim2.new(0.10945, 0, 0, 0)
 UI["29"]["Text"] = [[]]
 UI["29"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.Comments_ \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.Comments_ \\ --
 UI["2a"] = Instance.new("TextLabel", UI["29"])
 UI["2a"]["ZIndex"] = 5
 UI["2a"]["TextXAlignment"] = Enum.TextXAlignment.Left
@@ -344,7 +345,7 @@ UI["2a"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["2a"]["Text"] = [[]]
 UI["2a"]["Name"] = [[Comments_]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.Globals_ \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.Globals_ \\ --
 UI["2b"] = Instance.new("TextLabel", UI["29"])
 UI["2b"]["ZIndex"] = 5
 UI["2b"]["TextXAlignment"] = Enum.TextXAlignment.Left
@@ -358,7 +359,7 @@ UI["2b"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["2b"]["Text"] = [[]]
 UI["2b"]["Name"] = [[Globals_]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.Keywords_ \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.Keywords_ \\ --
 UI["2c"] = Instance.new("TextLabel", UI["29"])
 UI["2c"]["ZIndex"] = 5
 UI["2c"]["TextXAlignment"] = Enum.TextXAlignment.Left
@@ -372,7 +373,7 @@ UI["2c"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["2c"]["Text"] = [[]]
 UI["2c"]["Name"] = [[Keywords_]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.RemoteHighlight_ \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.RemoteHighlight_ \\ --
 UI["2d"] = Instance.new("TextLabel", UI["29"])
 UI["2d"]["ZIndex"] = 5
 UI["2d"]["TextXAlignment"] = Enum.TextXAlignment.Left
@@ -386,7 +387,7 @@ UI["2d"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["2d"]["Text"] = [[]]
 UI["2d"]["Name"] = [[RemoteHighlight_]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.Strings_ \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.Strings_ \\ --
 UI["2e"] = Instance.new("TextLabel", UI["29"])
 UI["2e"]["ZIndex"] = 5
 UI["2e"]["TextXAlignment"] = Enum.TextXAlignment.Left
@@ -400,7 +401,7 @@ UI["2e"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["2e"]["Text"] = [[]]
 UI["2e"]["Name"] = [[Strings_]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.Tokens_ \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.Tokens_ \\ --
 UI["2f"] = Instance.new("TextLabel", UI["29"])
 UI["2f"]["ZIndex"] = 5
 UI["2f"]["TextXAlignment"] = Enum.TextXAlignment.Left
@@ -414,7 +415,7 @@ UI["2f"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["2f"]["Text"] = [[]]
 UI["2f"]["Name"] = [[Tokens_]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.Numbers_ \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.Numbers_ \\ --
 UI["30"] = Instance.new("TextLabel", UI["29"])
 UI["30"]["ZIndex"] = 4
 UI["30"]["TextXAlignment"] = Enum.TextXAlignment.Left
@@ -428,11 +429,11 @@ UI["30"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["30"]["Text"] = [[]]
 UI["30"]["Name"] = [[Numbers_]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.Source.UITextSizeConstraint \\ --
 UI["31"] = Instance.new("UITextSizeConstraint", UI["29"])
 UI["31"]["MaxTextSize"] = 15
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.TextLabel \\ --
 UI["32"] = Instance.new("TextLabel", UI["28"])
 UI["32"]["TextWrapped"] = true
 UI["32"]["BorderSizePixel"] = 0
@@ -448,15 +449,15 @@ UI["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["32"]["Text"] = [[1]]
 UI["32"]["Position"] = UDim2.new(0.00065, 0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.TextLabel.UITextSizeConstraint \\ --
 UI["33"] = Instance.new("UITextSizeConstraint", UI["32"])
 UI["33"]["MaxTextSize"] = 15
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ExecutorPage.Folder.txtbox.EditorFrame.UICorner \\ --
 UI["34"] = Instance.new("UICorner", UI["28"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub \\ --
 UI["35"] = Instance.new("Frame", UI["4"])
 UI["35"]["BorderSizePixel"] = 0
 UI["35"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32)
@@ -465,7 +466,7 @@ UI["35"]["Position"] = UDim2.new(0.10343, 0, 0.03607, 0)
 UI["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["35"]["Name"] = [[ScriptHub]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.nothing \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.nothing \\ --
 UI["36"] = Instance.new("Frame", UI["35"])
 UI["36"]["BorderSizePixel"] = 0
 UI["36"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -473,7 +474,7 @@ UI["36"]["Size"] = UDim2.new(1, 0, 0.09036, 0)
 UI["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["36"]["Name"] = [[nothing]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.nothing.Frame \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.nothing.Frame \\ --
 UI["37"] = Instance.new("Frame", UI["36"])
 UI["37"]["BorderSizePixel"] = 0
 UI["37"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28)
@@ -481,7 +482,7 @@ UI["37"]["Size"] = UDim2.new(1, 0, 0.11111, 0)
 UI["37"]["Position"] = UDim2.new(0, 0, 0.97925, 0)
 UI["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.nothing.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.nothing.TextLabel \\ --
 UI["38"] = Instance.new("TextLabel", UI["36"])
 UI["38"]["TextWrapped"] = true
 UI["38"]["BorderSizePixel"] = 0
@@ -496,11 +497,11 @@ UI["38"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["38"]["Text"] = [[Scripts Page]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.nothing.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.nothing.TextLabel.UITextSizeConstraint \\ --
 UI["39"] = Instance.new("UITextSizeConstraint", UI["38"])
 UI["39"]["MaxTextSize"] = 40
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame \\ --
 UI["3a"] = Instance.new("ScrollingFrame", UI["35"])
 UI["3a"]["Active"] = true
 UI["3a"]["BorderSizePixel"] = 0
@@ -512,17 +513,17 @@ UI["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["3a"]["ScrollBarThickness"] = 2
 UI["3a"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.UIListLayout \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.UIListLayout \\ --
 UI["3b"] = Instance.new("UIListLayout", UI["3a"])
 UI["3b"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center
 UI["3b"]["Padding"] = UDim.new(0, 5)
 UI["3b"]["SortOrder"] = Enum.SortOrder.LayoutOrder
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder \\ --
 UI["3c"] = Instance.new("Folder", UI["3a"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder.nothing \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder.nothing \\ --
 UI["3d"] = Instance.new("Frame", UI["3c"])
 UI["3d"]["Visible"] = false
 UI["3d"]["BorderSizePixel"] = 0
@@ -532,7 +533,7 @@ UI["3d"]["Position"] = UDim2.new(0, 0, 0.0274, 0)
 UI["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["3d"]["Name"] = [[nothing]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder.nothing.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder.nothing.TextLabel \\ --
 UI["3e"] = Instance.new("TextLabel", UI["3d"])
 UI["3e"]["BorderSizePixel"] = 0
 UI["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -546,7 +547,7 @@ UI["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["3e"]["Text"] = [[fly.lua]]
 UI["3e"]["Position"] = UDim2.new(0.04592, 0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder.nothing.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder.nothing.Buttons \\ --
 UI["3f"] = Instance.new("Frame", UI["3d"])
 UI["3f"]["BorderSizePixel"] = 0
 UI["3f"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -555,11 +556,11 @@ UI["3f"]["Position"] = UDim2.new(0.76563, 0, 0.10556, 0)
 UI["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["3f"]["Name"] = [[Buttons]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder.nothing.Buttons.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder.nothing.Buttons.UICorner \\ --
 UI["40"] = Instance.new("UICorner", UI["3f"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder.nothing.Buttons.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder.nothing.Buttons.ImageButton \\ --
 UI["41"] = Instance.new("ImageButton", UI["3f"])
 UI["41"]["BorderSizePixel"] = 0
 UI["41"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -569,11 +570,11 @@ UI["41"]["BackgroundTransparency"] = 1
 UI["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["41"]["Position"] = UDim2.new(0.06786, 0, 0.06786, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder.nothing.Buttons.ImageButton.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.ScrollingFrame.Folder.nothing.Buttons.ImageButton.UICorner \\ --
 UI["42"] = Instance.new("UICorner", UI["41"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.Execute \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.Execute \\ --
 UI["43"] = Instance.new("Frame", UI["35"])
 UI["43"]["BorderSizePixel"] = 0
 UI["43"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -582,11 +583,11 @@ UI["43"]["Position"] = UDim2.new(0.36537, 0, 0.8575, 0)
 UI["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["43"]["Name"] = [[Execute]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.Execute.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.Execute.UICorner \\ --
 UI["44"] = Instance.new("UICorner", UI["43"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.Execute.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.Execute.Buttons \\ --
 UI["45"] = Instance.new("Frame", UI["43"])
 UI["45"]["BorderSizePixel"] = 0
 UI["45"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -595,11 +596,11 @@ UI["45"]["Position"] = UDim2.new(0.13636, 0, 0.13636, 0)
 UI["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["45"]["Name"] = [[Buttons]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.Execute.Buttons.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.Execute.Buttons.UICorner \\ --
 UI["46"] = Instance.new("UICorner", UI["45"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.Execute.Buttons.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.Execute.Buttons.ImageButton \\ --
 UI["47"] = Instance.new("ImageButton", UI["45"])
 UI["47"]["BorderSizePixel"] = 0
 UI["47"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -609,12 +610,13 @@ UI["47"]["BackgroundTransparency"] = 1
 UI["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["47"]["Position"] = UDim2.new(0.125, 0, 0.125, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.Execute.Buttons.ImageButton.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.Execute.Buttons.ImageButton.UICorner \\ --
 UI["48"] = Instance.new("UICorner", UI["47"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.NM \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.NM \\ --
 UI["49"] = Instance.new("TextBox", UI["35"])
+UI["49"]["CursorPosition"] = -1
 UI["49"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["49"]["BorderSizePixel"] = 0
 UI["49"]["TextWrapped"] = true
@@ -629,12 +631,13 @@ UI["49"]["Position"] = UDim2.new(0.1736, 0, 0.70216, 0)
 UI["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["49"]["Text"] = [[]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.NM.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.NM.UITextSizeConstraint \\ --
 UI["4a"] = Instance.new("UITextSizeConstraint", UI["49"])
 UI["4a"]["MaxTextSize"] = 14
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.SC \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.SC \\ --
 UI["4b"] = Instance.new("TextBox", UI["35"])
+UI["4b"]["CursorPosition"] = -1
 UI["4b"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["4b"]["BorderSizePixel"] = 0
 UI["4b"]["TextWrapped"] = true
@@ -649,15 +652,15 @@ UI["4b"]["Position"] = UDim2.new(0.1736, 0, 0.7763, 0)
 UI["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["4b"]["Text"] = [[]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.ScriptHub.SC.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.ScriptHub.SC.UITextSizeConstraint \\ --
 UI["4c"] = Instance.new("UITextSizeConstraint", UI["4b"])
 UI["4c"]["MaxTextSize"] = 14
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page1.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page1.UIAspectRatioConstraint \\ --
 UI["4d"] = Instance.new("UIAspectRatioConstraint", UI["4"])
 UI["4d"]["AspectRatio"] = 2.94404
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.icon \\ --
+-- // StarterGui.CommanderX.Frame.Main.icon \\ --
 UI["4e"] = Instance.new("Frame", UI["3"])
 UI["4e"]["BorderSizePixel"] = 0
 UI["4e"]["BackgroundColor3"] = Color3.fromRGB(23, 23, 23)
@@ -667,7 +670,7 @@ UI["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["4e"]["Name"] = [[icon]]
 UI["4e"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.icon.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.icon.TextLabel \\ --
 UI["4f"] = Instance.new("TextLabel", UI["4e"])
 UI["4f"]["TextWrapped"] = true
 UI["4f"]["BorderSizePixel"] = 0
@@ -681,27 +684,27 @@ UI["4f"]["RichText"] = true
 UI["4f"]["Size"] = UDim2.new(21.5378, 0, 1.33006, 0)
 UI["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["4f"]["Text"] = [[Commander X Punk Team]]
-UI["4f"]["Position"] = UDim2.new(-8.30328, 0, -0.25997, 0)
+UI["4f"]["Position"] = UDim2.new(-10.27505, 0, -0.25997, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.icon.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.icon.TextLabel.UITextSizeConstraint \\ --
 UI["50"] = Instance.new("UITextSizeConstraint", UI["4f"])
 UI["50"]["MaxTextSize"] = 40
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.icon.TextLabel.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.icon.TextLabel.UIAspectRatioConstraint \\ --
 UI["51"] = Instance.new("UIAspectRatioConstraint", UI["4f"])
 UI["51"]["AspectRatio"] = 21.20093
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0 \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0 \\ --
 UI["52"] = Instance.new("Frame", UI["3"])
 UI["52"]["BorderSizePixel"] = 0
 UI["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["52"]["Size"] = UDim2.new(0.80946, 0, 0.61932, 0)
-UI["52"]["Position"] = UDim2.new(0.09414, 0, 0.18831, 0)
+UI["52"]["Size"] = UDim2.new(1.00279, 0, 0.62531, 0)
+UI["52"]["Position"] = UDim2.new(-0.00093, 0, 0.16541, 0)
 UI["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["52"]["Name"] = [[Page0]]
 UI["52"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage \\ --
 UI["53"] = Instance.new("Frame", UI["52"])
 UI["53"]["BorderSizePixel"] = 0
 UI["53"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32)
@@ -710,7 +713,7 @@ UI["53"]["Position"] = UDim2.new(0.32167, 0, 0.02619, 0)
 UI["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["53"]["Name"] = [[ExecutorPage]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing \\ --
 UI["54"] = Instance.new("Frame", UI["53"])
 UI["54"]["BorderSizePixel"] = 0
 UI["54"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -719,7 +722,7 @@ UI["54"]["Position"] = UDim2.new(0.07795, 0, 0.74117, 0)
 UI["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["54"]["Name"] = [[nothing]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.Frame \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.Frame \\ --
 UI["55"] = Instance.new("Frame", UI["54"])
 UI["55"]["BorderSizePixel"] = 0
 UI["55"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28)
@@ -727,7 +730,7 @@ UI["55"]["Size"] = UDim2.new(1, 0, 0.06024, 0)
 UI["55"]["Position"] = UDim2.new(0, 0, 0.97925, 0)
 UI["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel \\ --
 UI["56"] = Instance.new("TextLabel", UI["54"])
 UI["56"]["TextWrapped"] = true
 UI["56"]["BorderSizePixel"] = 0
@@ -745,11 +748,11 @@ UI["56"]["Text"] = [[TMR Mida
 Role: Cubix Owner + partner]]
 UI["56"]["Position"] = UDim2.new(0.26016, 0, 0.0755, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel.UITextSizeConstraint \\ --
 UI["57"] = Instance.new("UITextSizeConstraint", UI["56"])
 UI["57"]["MaxTextSize"] = 35
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel \\ --
 UI["58"] = Instance.new("ImageLabel", UI["54"])
 UI["58"]["BorderSizePixel"] = 0
 UI["58"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -759,17 +762,17 @@ UI["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["58"]["BackgroundTransparency"] = 1
 UI["58"]["Position"] = UDim2.new(0.01355, 0, 0.12048, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UICorner \\ --
 UI["59"] = Instance.new("UICorner", UI["58"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UIStroke \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UIStroke \\ --
 UI["5a"] = Instance.new("UIStroke", UI["58"])
 UI["5a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["5a"]["Thickness"] = 5
 UI["5a"]["Color"] = Color3.fromRGB(24, 24, 24)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing \\ --
 UI["5b"] = Instance.new("Frame", UI["53"])
 UI["5b"]["BorderSizePixel"] = 0
 UI["5b"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -778,7 +781,7 @@ UI["5b"]["Position"] = UDim2.new(0.07795, 0, 0.50385, 0)
 UI["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["5b"]["Name"] = [[nothing]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.Frame \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.Frame \\ --
 UI["5c"] = Instance.new("Frame", UI["5b"])
 UI["5c"]["BorderSizePixel"] = 0
 UI["5c"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28)
@@ -786,7 +789,7 @@ UI["5c"]["Size"] = UDim2.new(1, 0, 0.06024, 0)
 UI["5c"]["Position"] = UDim2.new(0, 0, 0.97925, 0)
 UI["5c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel \\ --
 UI["5d"] = Instance.new("TextLabel", UI["5b"])
 UI["5d"]["TextWrapped"] = true
 UI["5d"]["BorderSizePixel"] = 0
@@ -798,17 +801,17 @@ UI["5d"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bo
 UI["5d"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["5d"]["BackgroundTransparency"] = 1
 UI["5d"]["RichText"] = true
-UI["5d"]["Size"] = UDim2.new(0.71797, 0, 0.80368, 0)
+UI["5d"]["Size"] = UDim2.new(0.72305, 0, 0.80161, 0)
 UI["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["5d"]["Text"] = [[Silent Caliber
 Role: Punk TEAM Owner]]
-UI["5d"]["Position"] = UDim2.new(0.25055, 0, 0.08222, 0)
+UI["5d"]["Position"] = UDim2.new(0.26016, 0, 0.0755, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel.UITextSizeConstraint \\ --
 UI["5e"] = Instance.new("UITextSizeConstraint", UI["5d"])
 UI["5e"]["MaxTextSize"] = 35
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel \\ --
 UI["5f"] = Instance.new("ImageLabel", UI["5b"])
 UI["5f"]["BorderSizePixel"] = 0
 UI["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -818,17 +821,17 @@ UI["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["5f"]["BackgroundTransparency"] = 1
 UI["5f"]["Position"] = UDim2.new(0.01355, 0, 0.12048, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UICorner \\ --
 UI["60"] = Instance.new("UICorner", UI["5f"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UIStroke \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UIStroke \\ --
 UI["61"] = Instance.new("UIStroke", UI["5f"])
 UI["61"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["61"]["Thickness"] = 5
 UI["61"]["Color"] = Color3.fromRGB(24, 24, 24)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing \\ --
 UI["62"] = Instance.new("Frame", UI["53"])
 UI["62"]["BorderSizePixel"] = 0
 UI["62"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -837,7 +840,7 @@ UI["62"]["Position"] = UDim2.new(0.07795, 0, 0.26149, 0)
 UI["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["62"]["Name"] = [[nothing]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.Frame \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.Frame \\ --
 UI["63"] = Instance.new("Frame", UI["62"])
 UI["63"]["BorderSizePixel"] = 0
 UI["63"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28)
@@ -845,7 +848,7 @@ UI["63"]["Size"] = UDim2.new(1, 0, 0.06024, 0)
 UI["63"]["Position"] = UDim2.new(0, 0, 0.97925, 0)
 UI["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel \\ --
 UI["64"] = Instance.new("TextLabel", UI["62"])
 UI["64"]["TextWrapped"] = true
 UI["64"]["BorderSizePixel"] = 0
@@ -863,11 +866,11 @@ UI["64"]["Text"] = [[nop
 Role: Powered by Nop]]
 UI["64"]["Position"] = UDim2.new(0.26016, 0, 0.0755, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel.UITextSizeConstraint \\ --
 UI["65"] = Instance.new("UITextSizeConstraint", UI["64"])
 UI["65"]["MaxTextSize"] = 35
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel \\ --
 UI["66"] = Instance.new("ImageLabel", UI["62"])
 UI["66"]["BorderSizePixel"] = 0
 UI["66"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -877,17 +880,17 @@ UI["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["66"]["BackgroundTransparency"] = 1
 UI["66"]["Position"] = UDim2.new(0.01355, 0, 0.12048, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UICorner \\ --
 UI["67"] = Instance.new("UICorner", UI["66"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UIStroke \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UIStroke \\ --
 UI["68"] = Instance.new("UIStroke", UI["66"])
 UI["68"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["68"]["Thickness"] = 5
 UI["68"]["Color"] = Color3.fromRGB(24, 24, 24)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing \\ --
 UI["69"] = Instance.new("Frame", UI["53"])
 UI["69"]["BorderSizePixel"] = 0
 UI["69"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -896,7 +899,7 @@ UI["69"]["Position"] = UDim2.new(0.07795, 0, 0.02669, 0)
 UI["69"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["69"]["Name"] = [[nothing]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.Frame \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.Frame \\ --
 UI["6a"] = Instance.new("Frame", UI["69"])
 UI["6a"]["BorderSizePixel"] = 0
 UI["6a"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28)
@@ -904,7 +907,7 @@ UI["6a"]["Size"] = UDim2.new(1, 0, 0.06024, 0)
 UI["6a"]["Position"] = UDim2.new(0, 0, 0.97925, 0)
 UI["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel \\ --
 UI["6b"] = Instance.new("TextLabel", UI["69"])
 UI["6b"]["TextWrapped"] = true
 UI["6b"]["BorderSizePixel"] = 0
@@ -922,11 +925,11 @@ UI["6b"]["Text"] = [[AnyaDEV
 Role: Commander X Owner + UI Desinger]]
 UI["6b"]["Position"] = UDim2.new(0.26016, 0, 0.0755, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.TextLabel.UITextSizeConstraint \\ --
 UI["6c"] = Instance.new("UITextSizeConstraint", UI["6b"])
 UI["6c"]["MaxTextSize"] = 35
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel \\ --
 UI["6d"] = Instance.new("ImageLabel", UI["69"])
 UI["6d"]["BorderSizePixel"] = 0
 UI["6d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -936,17 +939,17 @@ UI["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["6d"]["BackgroundTransparency"] = 1
 UI["6d"]["Position"] = UDim2.new(0.01355, 0, 0.12048, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UICorner \\ --
 UI["6e"] = Instance.new("UICorner", UI["6d"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UIStroke \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.ExecutorPage.nothing.ImageLabel.UIStroke \\ --
 UI["6f"] = Instance.new("UIStroke", UI["6d"])
 UI["6f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["6f"]["Thickness"] = 5
 UI["6f"]["Color"] = Color3.fromRGB(24, 24, 24)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.Cloud \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.Cloud \\ --
 UI["70"] = Instance.new("Frame", UI["52"])
 UI["70"]["BorderSizePixel"] = 0
 UI["70"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32)
@@ -955,7 +958,7 @@ UI["70"]["Position"] = UDim2.new(0.32167, 0, -0.07014, 0)
 UI["70"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["70"]["Name"] = [[Cloud]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.Cloud.nothing \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.Cloud.nothing \\ --
 UI["71"] = Instance.new("Frame", UI["70"])
 UI["71"]["BorderSizePixel"] = 0
 UI["71"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -963,7 +966,7 @@ UI["71"]["Size"] = UDim2.new(1, 0, 1.07143, 0)
 UI["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["71"]["Name"] = [[nothing]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.Cloud.nothing.Frame \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.Cloud.nothing.Frame \\ --
 UI["72"] = Instance.new("Frame", UI["71"])
 UI["72"]["BorderSizePixel"] = 0
 UI["72"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28)
@@ -971,7 +974,7 @@ UI["72"]["Size"] = UDim2.new(1, 0, 0.11111, 0)
 UI["72"]["Position"] = UDim2.new(0, 0, 0.97925, 0)
 UI["72"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.Cloud.nothing.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.Cloud.nothing.TextLabel \\ --
 UI["73"] = Instance.new("TextLabel", UI["71"])
 UI["73"]["TextWrapped"] = true
 UI["73"]["BorderSizePixel"] = 0
@@ -986,30 +989,30 @@ UI["73"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["73"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["73"]["Text"] = [[Home Page]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.Cloud.nothing.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.Cloud.nothing.TextLabel.UITextSizeConstraint \\ --
 UI["74"] = Instance.new("UITextSizeConstraint", UI["73"])
 UI["74"]["MaxTextSize"] = 40
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page0.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page0.UIAspectRatioConstraint \\ --
 UI["75"] = Instance.new("UIAspectRatioConstraint", UI["52"])
 UI["75"]["AspectRatio"] = 2.83355
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.LocalScript \\ --
 UI["76"] = Instance.new("LocalScript", UI["3"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page3 \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page3 \\ --
 UI["77"] = Instance.new("Frame", UI["3"])
 UI["77"]["Visible"] = false
 UI["77"]["BorderSizePixel"] = 0
 UI["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
 UI["77"]["Size"] = UDim2.new(1.198, 0, 0.719, 0)
-UI["77"]["Position"] = UDim2.new(0.0115, 0, 0.13972, 0)
+UI["77"]["Position"] = UDim2.new(-0.1, 0, 0.127, 0)
 UI["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["77"]["Name"] = [[Page3]]
 UI["77"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page3.ExecutorPage \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page3.ExecutorPage \\ --
 UI["78"] = Instance.new("Frame", UI["77"])
 UI["78"]["BorderSizePixel"] = 0
 UI["78"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32)
@@ -1018,7 +1021,7 @@ UI["78"]["Position"] = UDim2.new(0.19825, 0, 0.10634, 0)
 UI["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["78"]["Name"] = [[ExecutorPage]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page3.Cloud \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page3.Cloud \\ --
 UI["79"] = Instance.new("Frame", UI["77"])
 UI["79"]["BorderSizePixel"] = 0
 UI["79"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32)
@@ -1027,7 +1030,7 @@ UI["79"]["Position"] = UDim2.new(0.19825, 0, 0.00801, 0)
 UI["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["79"]["Name"] = [[Cloud]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page3.Cloud.nothing \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page3.Cloud.nothing \\ --
 UI["7a"] = Instance.new("Frame", UI["79"])
 UI["7a"]["BorderSizePixel"] = 0
 UI["7a"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -1035,7 +1038,7 @@ UI["7a"]["Size"] = UDim2.new(1, 0, 1.07143, 0)
 UI["7a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["7a"]["Name"] = [[nothing]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page3.Cloud.nothing.Frame \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page3.Cloud.nothing.Frame \\ --
 UI["7b"] = Instance.new("Frame", UI["7a"])
 UI["7b"]["BorderSizePixel"] = 0
 UI["7b"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28)
@@ -1043,7 +1046,7 @@ UI["7b"]["Size"] = UDim2.new(1, 0, 0.11111, 0)
 UI["7b"]["Position"] = UDim2.new(0, 0, 0.97925, 0)
 UI["7b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page3.Cloud.nothing.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page3.Cloud.nothing.TextLabel \\ --
 UI["7c"] = Instance.new("TextLabel", UI["7a"])
 UI["7c"]["TextWrapped"] = true
 UI["7c"]["BorderSizePixel"] = 0
@@ -1058,35 +1061,35 @@ UI["7c"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["7c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["7c"]["Text"] = [[Console soon]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page3.Cloud.nothing.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page3.Cloud.nothing.TextLabel.UITextSizeConstraint \\ --
 UI["7d"] = Instance.new("UITextSizeConstraint", UI["7c"])
 UI["7d"]["MaxTextSize"] = 40
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page3.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page3.UIAspectRatioConstraint \\ --
 UI["7e"] = Instance.new("UIAspectRatioConstraint", UI["77"])
 UI["7e"]["AspectRatio"] = 2.94404
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4 \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4 \\ --
 UI["7f"] = Instance.new("Frame", UI["3"])
 UI["7f"]["Visible"] = false
 UI["7f"]["BorderSizePixel"] = 0
 UI["7f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
 UI["7f"]["Size"] = UDim2.new(1.19793, 0, 0.7188, 0)
-UI["7f"]["Position"] = UDim2.new(-0.015, 0, 0.13738, 0)
+UI["7f"]["Position"] = UDim2.new(-0.09951, 0, 0.1272, 0)
 UI["7f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["7f"]["Name"] = [[Page4]]
 UI["7f"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage \\ --
 UI["80"] = Instance.new("Frame", UI["7f"])
 UI["80"]["BorderSizePixel"] = 0
 UI["80"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32)
 UI["80"]["Size"] = UDim2.new(0.60239, 0, 0.89792, 0)
-UI["80"]["Position"] = UDim2.new(0.22589, 0, 0.10174, 0)
+UI["80"]["Position"] = UDim2.new(0.19825, 0, 0.0982, 0)
 UI["80"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["80"]["Name"] = [[ExecutorPage]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue \\ --
 UI["81"] = Instance.new("Frame", UI["80"])
 UI["81"]["BorderSizePixel"] = 0
 UI["81"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -1096,7 +1099,7 @@ UI["81"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["81"]["Name"] = [[fpsValue]]
 UI["81"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS \\ --
 UI["82"] = Instance.new("Frame", UI["81"])
 UI["82"]["BorderSizePixel"] = 0
 UI["82"]["BackgroundColor3"] = Color3.fromRGB(151, 134, 154)
@@ -1106,12 +1109,12 @@ UI["82"]["Position"] = UDim2.new(0.50288, 0, 0.61667, 0)
 UI["82"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["82"]["Name"] = [[FPS]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.corner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.corner \\ --
 UI["83"] = Instance.new("UICorner", UI["82"])
 UI["83"]["Name"] = [[corner]]
 UI["83"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.indicator \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.indicator \\ --
 UI["84"] = Instance.new("Frame", UI["82"])
 UI["84"]["BorderSizePixel"] = 0
 UI["84"]["BackgroundColor3"] = Color3.fromRGB(126, 38, 208)
@@ -1121,12 +1124,12 @@ UI["84"]["Position"] = UDim2.new(0, 0, 0.5, 0)
 UI["84"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["84"]["Name"] = [[indicator]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.indicator.corner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.indicator.corner \\ --
 UI["85"] = Instance.new("UICorner", UI["84"])
 UI["85"]["Name"] = [[corner]]
 UI["85"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.indicator.dot \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.indicator.dot \\ --
 UI["86"] = Instance.new("Frame", UI["84"])
 UI["86"]["BorderSizePixel"] = 0
 UI["86"]["BackgroundColor3"] = Color3.fromRGB(43, 43, 43)
@@ -1136,16 +1139,16 @@ UI["86"]["Position"] = UDim2.new(1, 0, 0.5, 0)
 UI["86"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["86"]["Name"] = [[dot]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.indicator.dot.corner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.indicator.dot.corner \\ --
 UI["87"] = Instance.new("UICorner", UI["86"])
 UI["87"]["Name"] = [[corner]]
 UI["87"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.LocalScript \\ --
 UI["88"] = Instance.new("LocalScript", UI["82"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPSValue \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPSValue \\ --
 UI["89"] = Instance.new("TextLabel", UI["81"])
 UI["89"]["TextWrapped"] = true
 UI["89"]["BorderSizePixel"] = 0
@@ -1162,11 +1165,11 @@ UI["89"]["Text"] = [[0]]
 UI["89"]["Name"] = [[FPSValue]]
 UI["89"]["Position"] = UDim2.new(0.9128, 0, -0.01667, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPSValue.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPSValue.UITextSizeConstraint \\ --
 UI["8a"] = Instance.new("UITextSizeConstraint", UI["89"])
 UI["8a"]["MaxTextSize"] = 16
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text \\ --
 UI["8b"] = Instance.new("TextLabel", UI["81"])
 UI["8b"]["TextWrapped"] = true
 UI["8b"]["BorderSizePixel"] = 0
@@ -1183,11 +1186,11 @@ UI["8b"]["Text"] = [[Jump Power]]
 UI["8b"]["Name"] = [[text]]
 UI["8b"]["Position"] = UDim2.new(0.011, 0, 2.1, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text.UITextSizeConstraint \\ --
 UI["8c"] = Instance.new("UITextSizeConstraint", UI["8b"])
 UI["8c"]["MaxTextSize"] = 16
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Jump \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Jump \\ --
 UI["8d"] = Instance.new("Frame", UI["81"])
 UI["8d"]["BorderSizePixel"] = 0
 UI["8d"]["BackgroundColor3"] = Color3.fromRGB(151, 134, 154)
@@ -1197,12 +1200,12 @@ UI["8d"]["Position"] = UDim2.new(0.50838, 0, 2.85, 0)
 UI["8d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["8d"]["Name"] = [[Jump]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Jump.corner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Jump.corner \\ --
 UI["8e"] = Instance.new("UICorner", UI["8d"])
 UI["8e"]["Name"] = [[corner]]
 UI["8e"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Jump.indicator \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Jump.indicator \\ --
 UI["8f"] = Instance.new("Frame", UI["8d"])
 UI["8f"]["BorderSizePixel"] = 0
 UI["8f"]["BackgroundColor3"] = Color3.fromRGB(126, 38, 208)
@@ -1212,12 +1215,12 @@ UI["8f"]["Position"] = UDim2.new(0, 0, 0.5, 0)
 UI["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["8f"]["Name"] = [[indicator]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Jump.indicator.corner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Jump.indicator.corner \\ --
 UI["90"] = Instance.new("UICorner", UI["8f"])
 UI["90"]["Name"] = [[corner]]
 UI["90"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Jump.indicator.dot \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Jump.indicator.dot \\ --
 UI["91"] = Instance.new("Frame", UI["8f"])
 UI["91"]["BorderSizePixel"] = 0
 UI["91"]["BackgroundColor3"] = Color3.fromRGB(43, 43, 43)
@@ -1227,12 +1230,12 @@ UI["91"]["Position"] = UDim2.new(1, 0, 0.5, 0)
 UI["91"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["91"]["Name"] = [[dot]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Jump.indicator.dot.corner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Jump.indicator.dot.corner \\ --
 UI["92"] = Instance.new("UICorner", UI["91"])
 UI["92"]["Name"] = [[corner]]
 UI["92"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.jumpvalue \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.jumpvalue \\ --
 UI["93"] = Instance.new("TextLabel", UI["81"])
 UI["93"]["TextWrapped"] = true
 UI["93"]["BorderSizePixel"] = 0
@@ -1249,11 +1252,11 @@ UI["93"]["Text"] = [[100]]
 UI["93"]["Name"] = [[jumpvalue]]
 UI["93"]["Position"] = UDim2.new(0.9183, 0, 2.21667, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.jumpvalue.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.jumpvalue.UITextSizeConstraint \\ --
 UI["94"] = Instance.new("UITextSizeConstraint", UI["93"])
 UI["94"]["MaxTextSize"] = 16
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text \\ --
 UI["95"] = Instance.new("TextLabel", UI["81"])
 UI["95"]["TextWrapped"] = true
 UI["95"]["BorderSizePixel"] = 0
@@ -1270,11 +1273,11 @@ UI["95"]["Text"] = [[SpeedHack]]
 UI["95"]["Name"] = [[text]]
 UI["95"]["Position"] = UDim2.new(0.011, 0, 3.41667, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text.UITextSizeConstraint \\ --
 UI["96"] = Instance.new("UITextSizeConstraint", UI["95"])
 UI["96"]["MaxTextSize"] = 16
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Speed \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Speed \\ --
 UI["97"] = Instance.new("Frame", UI["81"])
 UI["97"]["BorderSizePixel"] = 0
 UI["97"]["BackgroundColor3"] = Color3.fromRGB(151, 134, 154)
@@ -1284,12 +1287,12 @@ UI["97"]["Position"] = UDim2.new(0.50838, 0, 4.16667, 0)
 UI["97"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["97"]["Name"] = [[Speed]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Speed.corner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Speed.corner \\ --
 UI["98"] = Instance.new("UICorner", UI["97"])
 UI["98"]["Name"] = [[corner]]
 UI["98"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Speed.indicator \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Speed.indicator \\ --
 UI["99"] = Instance.new("Frame", UI["97"])
 UI["99"]["BorderSizePixel"] = 0
 UI["99"]["BackgroundColor3"] = Color3.fromRGB(126, 38, 208)
@@ -1299,12 +1302,12 @@ UI["99"]["Position"] = UDim2.new(0, 0, 0.5, 0)
 UI["99"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["99"]["Name"] = [[indicator]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Speed.indicator.corner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Speed.indicator.corner \\ --
 UI["9a"] = Instance.new("UICorner", UI["99"])
 UI["9a"]["Name"] = [[corner]]
 UI["9a"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Speed.indicator.dot \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Speed.indicator.dot \\ --
 UI["9b"] = Instance.new("Frame", UI["99"])
 UI["9b"]["BorderSizePixel"] = 0
 UI["9b"]["BackgroundColor3"] = Color3.fromRGB(43, 43, 43)
@@ -1314,12 +1317,12 @@ UI["9b"]["Position"] = UDim2.new(1, 0, 0.5, 0)
 UI["9b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["9b"]["Name"] = [[dot]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Speed.indicator.dot.corner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.Speed.indicator.dot.corner \\ --
 UI["9c"] = Instance.new("UICorner", UI["9b"])
 UI["9c"]["Name"] = [[corner]]
 UI["9c"]["CornerRadius"] = UDim.new(1, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.speedvalue \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.speedvalue \\ --
 UI["9d"] = Instance.new("TextLabel", UI["81"])
 UI["9d"]["TextWrapped"] = true
 UI["9d"]["BorderSizePixel"] = 0
@@ -1336,11 +1339,11 @@ UI["9d"]["Text"] = [[100]]
 UI["9d"]["Name"] = [[speedvalue]]
 UI["9d"]["Position"] = UDim2.new(0.9183, 0, 3.53333, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.speedvalue.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.speedvalue.UITextSizeConstraint \\ --
 UI["9e"] = Instance.new("UITextSizeConstraint", UI["9d"])
 UI["9e"]["MaxTextSize"] = 16
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text \\ --
 UI["9f"] = Instance.new("TextLabel", UI["81"])
 UI["9f"]["TextWrapped"] = true
 UI["9f"]["BorderSizePixel"] = 0
@@ -1357,11 +1360,11 @@ UI["9f"]["Text"] = [[FPS Value]]
 UI["9f"]["Name"] = [[text]]
 UI["9f"]["Position"] = UDim2.new(0.0055, 0, -0.13333, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text.UITextSizeConstraint \\ --
 UI["a0"] = Instance.new("UITextSizeConstraint", UI["9f"])
 UI["a0"]["MaxTextSize"] = 16
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.hop server \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.hop server \\ --
 UI["a1"] = Instance.new("TextButton", UI["80"])
 UI["a1"]["TextWrapped"] = true
 UI["a1"]["BorderSizePixel"] = 0
@@ -1376,24 +1379,24 @@ UI["a1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["a1"]["Text"] = [[hop server]]
 UI["a1"]["Position"] = UDim2.new(0.19506, 0, 0.87084, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.hop server.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.hop server.UICorner \\ --
 UI["a2"] = Instance.new("UICorner", UI["a1"])
 UI["a2"]["CornerRadius"] = UDim.new(0, 5)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.hop server.UIStroke \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.hop server.UIStroke \\ --
 UI["a3"] = Instance.new("UIStroke", UI["a1"])
 UI["a3"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["a3"]["Color"] = Color3.fromRGB(26, 16, 35)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.hop server.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.hop server.UITextSizeConstraint \\ --
 UI["a4"] = Instance.new("UITextSizeConstraint", UI["a1"])
 UI["a4"]["MaxTextSize"] = 25
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.hop server.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.hop server.LocalScript \\ --
 UI["a5"] = Instance.new("LocalScript", UI["a1"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.rj \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.rj \\ --
 UI["a6"] = Instance.new("TextButton", UI["80"])
 UI["a6"]["TextWrapped"] = true
 UI["a6"]["BorderSizePixel"] = 0
@@ -1408,24 +1411,24 @@ UI["a6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["a6"]["Text"] = [[Rejoin]]
 UI["a6"]["Position"] = UDim2.new(0.19506, 0, 0.75881, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.rj.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.rj.UICorner \\ --
 UI["a7"] = Instance.new("UICorner", UI["a6"])
 UI["a7"]["CornerRadius"] = UDim.new(0, 5)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.rj.UIStroke \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.rj.UIStroke \\ --
 UI["a8"] = Instance.new("UIStroke", UI["a6"])
 UI["a8"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["a8"]["Color"] = Color3.fromRGB(26, 16, 35)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.rj.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.rj.UITextSizeConstraint \\ --
 UI["a9"] = Instance.new("UITextSizeConstraint", UI["a6"])
 UI["a9"]["MaxTextSize"] = 25
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.rj.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.rj.LocalScript \\ --
 UI["aa"] = Instance.new("LocalScript", UI["a6"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.Languages \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.Languages \\ --
 UI["ab"] = Instance.new("ScrollingFrame", UI["80"])
 UI["ab"]["Active"] = true
 UI["ab"]["BorderSizePixel"] = 0
@@ -1438,15 +1441,15 @@ UI["ab"]["Position"] = UDim2.new(0.397, 0, 0.035, 0)
 UI["ab"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["ab"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.LocalScript \\ --
 UI["ac"] = Instance.new("LocalScript", UI["ab"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone \\ --
 UI["ad"] = Instance.new("Folder", UI["ab"])
 UI["ad"]["Name"] = [[ButtonClone]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone.Language \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone.Language \\ --
 UI["ae"] = Instance.new("TextButton", UI["ad"])
 UI["ae"]["TextWrapped"] = true
 UI["ae"]["BorderSizePixel"] = 0
@@ -1462,40 +1465,40 @@ UI["ae"]["Text"] = [[Language]]
 UI["ae"]["Visible"] = false
 UI["ae"]["Position"] = UDim2.new(0.19506, 0, 0.75881, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone.Language.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone.Language.UICorner \\ --
 UI["af"] = Instance.new("UICorner", UI["ae"])
 UI["af"]["CornerRadius"] = UDim.new(0, 3)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone.Language.UIStroke \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone.Language.UIStroke \\ --
 UI["b0"] = Instance.new("UIStroke", UI["ae"])
 UI["b0"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["b0"]["Color"] = Color3.fromRGB(26, 16, 35)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone.Language.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone.Language.UITextSizeConstraint \\ --
 UI["b1"] = Instance.new("UITextSizeConstraint", UI["ae"])
 UI["b1"]["MaxTextSize"] = 25
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone.Language.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone.Language.LocalScript \\ --
 UI["b2"] = Instance.new("LocalScript", UI["ae"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.UIGridLayout \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.UIGridLayout \\ --
 UI["b3"] = Instance.new("UIGridLayout", UI["ab"])
 UI["b3"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center
 UI["b3"]["CellSize"] = UDim2.new(0.9, 0, 0.03, 0)
 UI["b3"]["FillDirectionMaxCells"] = 5
 UI["b3"]["SortOrder"] = Enum.SortOrder.LayoutOrder
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.Cloud \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.Cloud \\ --
 UI["b4"] = Instance.new("Frame", UI["7f"])
 UI["b4"]["BorderSizePixel"] = 0
 UI["b4"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32)
 UI["b4"]["Size"] = UDim2.new(0.60239, 0, 0.08417, 0)
-UI["b4"]["Position"] = UDim2.new(0.22589, 0, 0.01756, 0)
+UI["b4"]["Position"] = UDim2.new(0.19825, 0, 0.01402, 0)
 UI["b4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["b4"]["Name"] = [[Cloud]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.Cloud.nothing \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.Cloud.nothing \\ --
 UI["b5"] = Instance.new("Frame", UI["b4"])
 UI["b5"]["BorderSizePixel"] = 0
 UI["b5"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -1504,7 +1507,7 @@ UI["b5"]["Position"] = UDim2.new(-0, 0, 0, 0)
 UI["b5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["b5"]["Name"] = [[nothing]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.Cloud.nothing.Frame \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.Cloud.nothing.Frame \\ --
 UI["b6"] = Instance.new("Frame", UI["b5"])
 UI["b6"]["BorderSizePixel"] = 0
 UI["b6"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28)
@@ -1512,7 +1515,7 @@ UI["b6"]["Size"] = UDim2.new(1, 0, 0.1111, 0)
 UI["b6"]["Position"] = UDim2.new(0, 0, 0.97925, 0)
 UI["b6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.Cloud.nothing.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.Cloud.nothing.TextLabel \\ --
 UI["b7"] = Instance.new("TextLabel", UI["b5"])
 UI["b7"]["TextWrapped"] = true
 UI["b7"]["BorderSizePixel"] = 0
@@ -1528,26 +1531,26 @@ UI["b7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["b7"]["Text"] = [[Settings]]
 UI["b7"]["Position"] = UDim2.new(0.00777, 0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.Cloud.nothing.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.Cloud.nothing.TextLabel.UITextSizeConstraint \\ --
 UI["b8"] = Instance.new("UITextSizeConstraint", UI["b7"])
 UI["b8"]["MaxTextSize"] = 40
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.UIAspectRatioConstraint \\ --
 UI["b9"] = Instance.new("UIAspectRatioConstraint", UI["7f"])
 UI["b9"]["AspectRatio"] = 2.94471
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2 \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2 \\ --
 UI["ba"] = Instance.new("Frame", UI["3"])
 UI["ba"]["Visible"] = false
 UI["ba"]["BorderSizePixel"] = 0
 UI["ba"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
 UI["ba"]["Size"] = UDim2.new(1.198, 0, 0.719, 0)
-UI["ba"]["Position"] = UDim2.new(0.01033, 0, 0.13972, 0)
+UI["ba"]["Position"] = UDim2.new(-0.1, 0, 0.127, 0)
 UI["ba"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["ba"]["Name"] = [[Page2]]
 UI["ba"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage \\ --
 UI["bb"] = Instance.new("Frame", UI["ba"])
 UI["bb"]["BorderSizePixel"] = 0
 UI["bb"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32)
@@ -1556,7 +1559,7 @@ UI["bb"]["Position"] = UDim2.new(0.19825, 0, 0.10634, 0)
 UI["bb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["bb"]["Name"] = [[ExecutorPage]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage \\ --
 UI["bc"] = Instance.new("ScrollingFrame", UI["bb"])
 UI["bc"]["Active"] = true
 UI["bc"]["BorderSizePixel"] = 0
@@ -1568,7 +1571,7 @@ UI["bc"]["Position"] = UDim2.new(0.01441, 0, 0.01976, 0)
 UI["bc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["bc"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN \\ --
 UI["bd"] = Instance.new("Frame", UI["bc"])
 UI["bd"]["BorderSizePixel"] = 0
 UI["bd"]["BackgroundColor3"] = Color3.fromRGB(17, 17, 18)
@@ -1578,17 +1581,17 @@ UI["bd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["bd"]["Name"] = [[mAIN]]
 UI["bd"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.UIGridLayout \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.UIGridLayout \\ --
 UI["be"] = Instance.new("UIGridLayout", UI["bd"])
 UI["be"]["CellSize"] = UDim2.new(0.271, 0, 0.286, 0)
 UI["be"]["SortOrder"] = Enum.SortOrder.LayoutOrder
 UI["be"]["CellPadding"] = UDim2.new(0, 18, 0, 10)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder \\ --
 UI["bf"] = Instance.new("Folder", UI["bd"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui \\ --
 UI["c0"] = Instance.new("Frame", UI["bf"])
 UI["c0"]["Visible"] = false
 UI["c0"]["BorderSizePixel"] = 0
@@ -1597,11 +1600,11 @@ UI["c0"]["Size"] = UDim2.new(0.27121, 0, 0.28558, 0)
 UI["c0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["c0"]["Name"] = [[ui]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.UICorner \\ --
 UI["c1"] = Instance.new("UICorner", UI["c0"])
 UI["c1"]["CornerRadius"] = UDim.new(0, 6)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.ImageLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.ImageLabel \\ --
 UI["c2"] = Instance.new("ImageLabel", UI["c0"])
 UI["c2"]["BorderSizePixel"] = 0
 UI["c2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -1611,11 +1614,11 @@ UI["c2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["c2"]["BackgroundTransparency"] = 1
 UI["c2"]["Position"] = UDim2.new(0, 0, -0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.ImageLabel.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.ImageLabel.UIAspectRatioConstraint \\ --
 UI["c3"] = Instance.new("UIAspectRatioConstraint", UI["c2"])
 UI["c3"]["AspectRatio"] = 1.44478
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel \\ --
 UI["c4"] = Instance.new("TextLabel", UI["c0"])
 UI["c4"]["TextWrapped"] = true
 UI["c4"]["BorderSizePixel"] = 0
@@ -1630,15 +1633,15 @@ UI["c4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["c4"]["Text"] = [[views: ???]]
 UI["c4"]["Position"] = UDim2.new(0.0518, 0, 0.86874, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UITextSizeConstraint \\ --
 UI["c5"] = Instance.new("UITextSizeConstraint", UI["c4"])
 UI["c5"]["MaxTextSize"] = 25
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UIAspectRatioConstraint \\ --
 UI["c6"] = Instance.new("UIAspectRatioConstraint", UI["c4"])
 UI["c6"]["AspectRatio"] = 4
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel \\ --
 UI["c7"] = Instance.new("TextLabel", UI["c0"])
 UI["c7"]["TextWrapped"] = true
 UI["c7"]["BorderSizePixel"] = 0
@@ -1653,15 +1656,15 @@ UI["c7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["c7"]["Text"] = [[Created: ??/??/????]]
 UI["c7"]["Position"] = UDim2.new(0.0278, 0, 0.79182, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UITextSizeConstraint \\ --
 UI["c8"] = Instance.new("UITextSizeConstraint", UI["c7"])
 UI["c8"]["MaxTextSize"] = 25
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel.UIAspectRatioConstraint \\ --
 UI["c9"] = Instance.new("UIAspectRatioConstraint", UI["c7"])
 UI["c9"]["AspectRatio"] = 6.6
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.scriptname \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.scriptname \\ --
 UI["ca"] = Instance.new("TextLabel", UI["c0"])
 UI["ca"]["TextWrapped"] = true
 UI["ca"]["BorderSizePixel"] = 0
@@ -1678,20 +1681,20 @@ UI["ca"]["Text"] = [[Anya BETTER]]
 UI["ca"]["Name"] = [[scriptname]]
 UI["ca"]["Position"] = UDim2.new(0.109, 0, 0.715, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.scriptname.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.scriptname.UITextSizeConstraint \\ --
 UI["cb"] = Instance.new("UITextSizeConstraint", UI["ca"])
 UI["cb"]["MaxTextSize"] = 25
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.scriptname.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.scriptname.UIAspectRatioConstraint \\ --
 UI["cc"] = Instance.new("UIAspectRatioConstraint", UI["ca"])
 UI["cc"]["AspectRatio"] = 10.9
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.UIStroke \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.UIStroke \\ --
 UI["cd"] = Instance.new("UIStroke", UI["c0"])
 UI["cd"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["cd"]["Color"] = Color3.fromRGB(119, 119, 119)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal \\ --
 UI["ce"] = Instance.new("TextLabel", UI["c0"])
 UI["ce"]["TextWrapped"] = true
 UI["ce"]["BorderSizePixel"] = 0
@@ -1707,24 +1710,24 @@ UI["ce"]["Text"] = [[Anya UI]]
 UI["ce"]["Name"] = [[Universal]]
 UI["ce"]["Position"] = UDim2.new(0.69, 0, 0.055, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UICorner \\ --
 UI["cf"] = Instance.new("UICorner", UI["ce"])
 UI["cf"]["CornerRadius"] = UDim.new(0, 5)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UIStroke \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UIStroke \\ --
 UI["d0"] = Instance.new("UIStroke", UI["ce"])
 UI["d0"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
 UI["d0"]["Color"] = Color3.fromRGB(73, 73, 73)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UIAspectRatioConstraint \\ --
 UI["d1"] = Instance.new("UIAspectRatioConstraint", UI["ce"])
 UI["d1"]["AspectRatio"] = 2.13333
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.Universal.UITextSizeConstraint \\ --
 UI["d2"] = Instance.new("UITextSizeConstraint", UI["ce"])
 UI["d2"]["MaxTextSize"] = 20
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.load \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.load \\ --
 UI["d3"] = Instance.new("Frame", UI["c0"])
 UI["d3"]["BorderSizePixel"] = 0
 UI["d3"]["BackgroundColor3"] = Color3.fromRGB(22, 22, 22)
@@ -1733,11 +1736,11 @@ UI["d3"]["Position"] = UDim2.new(0.81432, 0, 0.83447, 0)
 UI["d3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["d3"]["Name"] = [[load]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.load.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.load.UICorner \\ --
 UI["d4"] = Instance.new("UICorner", UI["d3"])
 UI["d4"]["CornerRadius"] = UDim.new(0.34, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.load.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.load.ImageButton \\ --
 UI["d5"] = Instance.new("ImageButton", UI["d3"])
 UI["d5"]["BorderSizePixel"] = 0
 UI["d5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
@@ -1748,7 +1751,7 @@ UI["d5"]["BackgroundTransparency"] = 1
 UI["d5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["d5"]["Position"] = UDim2.new(-0.056, 0, -0.105, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud \\ --
 UI["d6"] = Instance.new("Frame", UI["ba"])
 UI["d6"]["BorderSizePixel"] = 0
 UI["d6"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32)
@@ -1757,7 +1760,7 @@ UI["d6"]["Position"] = UDim2.new(0.19825, 0, 0.02196, 0)
 UI["d6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["d6"]["Name"] = [[Cloud]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.nothing \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.nothing \\ --
 UI["d7"] = Instance.new("Frame", UI["d6"])
 UI["d7"]["BorderSizePixel"] = 0
 UI["d7"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -1766,7 +1769,7 @@ UI["d7"]["Position"] = UDim2.new(-0.00117, 0, -0.02381, 0)
 UI["d7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["d7"]["Name"] = [[nothing]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.nothing.Frame \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.nothing.Frame \\ --
 UI["d8"] = Instance.new("Frame", UI["d7"])
 UI["d8"]["BorderSizePixel"] = 0
 UI["d8"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28)
@@ -1774,7 +1777,7 @@ UI["d8"]["Size"] = UDim2.new(1, 0, 0.11111, 0)
 UI["d8"]["Position"] = UDim2.new(0, 0, 0.97925, 0)
 UI["d8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.nothing.TextLabel \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.nothing.TextLabel \\ --
 UI["d9"] = Instance.new("TextLabel", UI["d7"])
 UI["d9"]["TextWrapped"] = true
 UI["d9"]["BorderSizePixel"] = 0
@@ -1790,11 +1793,11 @@ UI["d9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["d9"]["Text"] = [[Scripts Page]]
 UI["d9"]["Position"] = UDim2.new(0.18704, 0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.nothing.TextLabel.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.nothing.TextLabel.UITextSizeConstraint \\ --
 UI["da"] = Instance.new("UITextSizeConstraint", UI["d9"])
 UI["da"]["MaxTextSize"] = 40
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.Execute \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.Execute \\ --
 UI["db"] = Instance.new("Frame", UI["d6"])
 UI["db"]["BorderSizePixel"] = 0
 UI["db"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -1804,11 +1807,11 @@ UI["db"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["db"]["Name"] = [[Execute]]
 UI["db"]["BackgroundTransparency"] = 1
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.Execute.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.Execute.UICorner \\ --
 UI["dc"] = Instance.new("UICorner", UI["db"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons \\ --
 UI["dd"] = Instance.new("Frame", UI["db"])
 UI["dd"]["BorderSizePixel"] = 0
 UI["dd"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -1817,11 +1820,11 @@ UI["dd"]["Position"] = UDim2.new(17.66113, 0, 0.11296, 0)
 UI["dd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["dd"]["Name"] = [[Buttons]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons.UICorner \\ --
 UI["de"] = Instance.new("UICorner", UI["dd"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons.ImageButton \\ --
 UI["df"] = Instance.new("ImageButton", UI["dd"])
 UI["df"]["BorderSizePixel"] = 0
 UI["df"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -1831,15 +1834,15 @@ UI["df"]["BackgroundTransparency"] = 1
 UI["df"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["df"]["Position"] = UDim2.new(0.18382, 0, 0.18561, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons.ImageButton.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons.ImageButton.UICorner \\ --
 UI["e0"] = Instance.new("UICorner", UI["df"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons.ImageButton.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons.ImageButton.LocalScript \\ --
 UI["e1"] = Instance.new("LocalScript", UI["df"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.TextBox \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.TextBox \\ --
 UI["e2"] = Instance.new("TextBox", UI["d6"])
 UI["e2"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["e2"]["BorderSizePixel"] = 0
@@ -1854,15 +1857,15 @@ UI["e2"]["Position"] = UDim2.new(0.80987, 0, 0.11296, 0)
 UI["e2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["e2"]["Text"] = [[]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.TextBox.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.TextBox.UITextSizeConstraint \\ --
 UI["e3"] = Instance.new("UITextSizeConstraint", UI["e2"])
 UI["e3"]["MaxTextSize"] = 14
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.UIAspectRatioConstraint \\ --
 UI["e4"] = Instance.new("UIAspectRatioConstraint", UI["ba"])
 UI["e4"]["AspectRatio"] = 2.94404
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Frame \\ --
+-- // StarterGui.CommanderX.Frame.Frame \\ --
 UI["e5"] = Instance.new("Frame", UI["2"])
 UI["e5"]["BorderSizePixel"] = 0
 UI["e5"]["BackgroundColor3"] = Color3.fromRGB(23, 19, 29)
@@ -1870,11 +1873,11 @@ UI["e5"]["Size"] = UDim2.new(0.0384, 0, 0.0533, 0)
 UI["e5"]["Position"] = UDim2.new(0.948, 0, 0.157, 0)
 UI["e5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Frame.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Frame.UICorner \\ --
 UI["e6"] = Instance.new("UICorner", UI["e5"])
 UI["e6"]["CornerRadius"] = UDim.new(0.3, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Frame.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Frame.ImageButton \\ --
 UI["e7"] = Instance.new("ImageButton", UI["e5"])
 UI["e7"]["BorderSizePixel"] = 0
 UI["e7"]["BackgroundColor3"] = Color3.fromRGB(23, 19, 29)
@@ -1884,25 +1887,25 @@ UI["e7"]["BackgroundTransparency"] = 1
 UI["e7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["e7"]["Position"] = UDim2.new(-0.04946, 0, -0.089, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Frame.ImageButton.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Frame.ImageButton.UIAspectRatioConstraint \\ --
 UI["e8"] = Instance.new("UIAspectRatioConstraint", UI["e7"])
 UI["e8"]["AspectRatio"] = 0.86806
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Frame.UIAspectRatioConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Frame.UIAspectRatioConstraint \\ --
 UI["e9"] = Instance.new("UIAspectRatioConstraint", UI["e5"])
 UI["e9"]["AspectRatio"] = 0.97242
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down \\ --
+-- // StarterGui.CommanderX.Frame.Down \\ --
 UI["ea"] = Instance.new("Frame", UI["2"])
 UI["ea"]["ZIndex"] = 9
 UI["ea"]["BorderSizePixel"] = 0
 UI["ea"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32)
-UI["ea"]["Size"] = UDim2.new(0.93075, 0, 0.11156, 0)
-UI["ea"]["Position"] = UDim2.new(0.09155, 0, 0.88731, 0)
+UI["ea"]["Size"] = UDim2.new(1, 0, 0.11156, 0)
+UI["ea"]["Position"] = UDim2.new(0, 0, 0.88731, 0)
 UI["ea"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["ea"]["Name"] = [[Down]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Frame \\ --
+-- // StarterGui.CommanderX.Frame.Down.Frame \\ --
 UI["eb"] = Instance.new("Frame", UI["ea"])
 UI["eb"]["BorderSizePixel"] = 0
 UI["eb"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28)
@@ -1910,7 +1913,7 @@ UI["eb"]["Size"] = UDim2.new(1, 0, 0.07042, 0)
 UI["eb"]["Position"] = UDim2.new(-0.00093, 0, -0.00666, 0)
 UI["eb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Settings \\ --
+-- // StarterGui.CommanderX.Frame.Down.Settings \\ --
 UI["ec"] = Instance.new("Frame", UI["ea"])
 UI["ec"]["BorderSizePixel"] = 0
 UI["ec"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -1919,11 +1922,11 @@ UI["ec"]["Position"] = UDim2.new(0.94111, 0, 0.10601, 0)
 UI["ec"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["ec"]["Name"] = [[Settings]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Settings.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Settings.UICorner \\ --
 UI["ed"] = Instance.new("UICorner", UI["ec"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Settings.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Down.Settings.Buttons \\ --
 UI["ee"] = Instance.new("Frame", UI["ec"])
 UI["ee"]["BorderSizePixel"] = 0
 UI["ee"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -1932,11 +1935,11 @@ UI["ee"]["Position"] = UDim2.new(0.13636, 0, 0.13636, 0)
 UI["ee"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["ee"]["Name"] = [[Buttons]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Settings.Buttons.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Settings.Buttons.UICorner \\ --
 UI["ef"] = Instance.new("UICorner", UI["ee"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Settings.Buttons.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Down.Settings.Buttons.ImageButton \\ --
 UI["f0"] = Instance.new("ImageButton", UI["ee"])
 UI["f0"]["BorderSizePixel"] = 0
 UI["f0"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -1946,11 +1949,11 @@ UI["f0"]["BackgroundTransparency"] = 1
 UI["f0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["f0"]["Position"] = UDim2.new(0.05, 0, 0.05, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Settings.Buttons.ImageButton.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Settings.Buttons.ImageButton.UICorner \\ --
 UI["f1"] = Instance.new("UICorner", UI["f0"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Home \\ --
+-- // StarterGui.CommanderX.Frame.Down.Home \\ --
 UI["f2"] = Instance.new("Frame", UI["ea"])
 UI["f2"]["BorderSizePixel"] = 0
 UI["f2"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -1959,11 +1962,11 @@ UI["f2"]["Position"] = UDim2.new(0.00963, 0, 0.10601, 0)
 UI["f2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["f2"]["Name"] = [[Home]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Home.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Home.UICorner \\ --
 UI["f3"] = Instance.new("UICorner", UI["f2"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Home.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Down.Home.Buttons \\ --
 UI["f4"] = Instance.new("Frame", UI["f2"])
 UI["f4"]["BorderSizePixel"] = 0
 UI["f4"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -1972,11 +1975,11 @@ UI["f4"]["Position"] = UDim2.new(0.13636, 0, 0.13636, 0)
 UI["f4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["f4"]["Name"] = [[Buttons]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Home.Buttons.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Home.Buttons.UICorner \\ --
 UI["f5"] = Instance.new("UICorner", UI["f4"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Home.Buttons.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Down.Home.Buttons.ImageButton \\ --
 UI["f6"] = Instance.new("ImageButton", UI["f4"])
 UI["f6"]["BorderSizePixel"] = 0
 UI["f6"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -1986,15 +1989,15 @@ UI["f6"]["BackgroundTransparency"] = 1
 UI["f6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["f6"]["Position"] = UDim2.new(0.05, 0, 0.05, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Home.Buttons.ImageButton.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Home.Buttons.ImageButton.UICorner \\ --
 UI["f7"] = Instance.new("UICorner", UI["f6"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder \\ --
 UI["f8"] = Instance.new("Folder", UI["ea"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Executor \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Executor \\ --
 UI["f9"] = Instance.new("Frame", UI["f8"])
 UI["f9"]["BorderSizePixel"] = 0
 UI["f9"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -2003,11 +2006,11 @@ UI["f9"]["Position"] = UDim2.new(0.39398, 0, 0.11268, 0)
 UI["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["f9"]["Name"] = [[Executor]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Executor.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Executor.UICorner \\ --
 UI["fa"] = Instance.new("UICorner", UI["f9"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Executor.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Executor.Buttons \\ --
 UI["fb"] = Instance.new("Frame", UI["f9"])
 UI["fb"]["BorderSizePixel"] = 0
 UI["fb"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -2016,11 +2019,11 @@ UI["fb"]["Position"] = UDim2.new(0.13636, 0, 0.13636, 0)
 UI["fb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["fb"]["Name"] = [[Buttons]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Executor.Buttons.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Executor.Buttons.UICorner \\ --
 UI["fc"] = Instance.new("UICorner", UI["fb"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Executor.Buttons.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Executor.Buttons.ImageButton \\ --
 UI["fd"] = Instance.new("ImageButton", UI["fb"])
 UI["fd"]["BorderSizePixel"] = 0
 UI["fd"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -2028,11 +2031,11 @@ UI["fd"]["Image"] = [[rbxassetid://13587561191]]
 UI["fd"]["Size"] = UDim2.new(1, 0, 1, 0)
 UI["fd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Executor.Buttons.ImageButton.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Executor.Buttons.ImageButton.UICorner \\ --
 UI["fe"] = Instance.new("UICorner", UI["fd"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.UIListLayout \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.UIListLayout \\ --
 UI["ff"] = Instance.new("UIListLayout", UI["f8"])
 UI["ff"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center
 UI["ff"]["Padding"] = UDim.new(0, 20)
@@ -2040,7 +2043,7 @@ UI["ff"]["VerticalAlignment"] = Enum.VerticalAlignment.Center
 UI["ff"]["SortOrder"] = Enum.SortOrder.LayoutOrder
 UI["ff"]["FillDirection"] = Enum.FillDirection.Horizontal
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Cloud \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Cloud \\ --
 UI["100"] = Instance.new("Frame", UI["f8"])
 UI["100"]["BorderSizePixel"] = 0
 UI["100"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -2049,11 +2052,11 @@ UI["100"]["Position"] = UDim2.new(0.46343, 0, 0.11268, 0)
 UI["100"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["100"]["Name"] = [[Cloud]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Cloud.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Cloud.UICorner \\ --
 UI["101"] = Instance.new("UICorner", UI["100"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Cloud.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Cloud.Buttons \\ --
 UI["102"] = Instance.new("Frame", UI["100"])
 UI["102"]["BorderSizePixel"] = 0
 UI["102"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -2062,11 +2065,11 @@ UI["102"]["Position"] = UDim2.new(0.13636, 0, 0.13636, 0)
 UI["102"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["102"]["Name"] = [[Buttons]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Cloud.Buttons.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Cloud.Buttons.UICorner \\ --
 UI["103"] = Instance.new("UICorner", UI["102"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Cloud.Buttons.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Cloud.Buttons.ImageButton \\ --
 UI["104"] = Instance.new("ImageButton", UI["102"])
 UI["104"]["BorderSizePixel"] = 0
 UI["104"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -2076,11 +2079,11 @@ UI["104"]["BackgroundTransparency"] = 1
 UI["104"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["104"]["Position"] = UDim2.new(0.05, 0, 0.05, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Cloud.Buttons.ImageButton.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Cloud.Buttons.ImageButton.UICorner \\ --
 UI["105"] = Instance.new("UICorner", UI["104"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Console \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Console \\ --
 UI["106"] = Instance.new("Frame", UI["f8"])
 UI["106"]["BorderSizePixel"] = 0
 UI["106"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37)
@@ -2089,11 +2092,11 @@ UI["106"]["Position"] = UDim2.new(0.53287, 0, 0.11268, 0)
 UI["106"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["106"]["Name"] = [[Console]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Console.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Console.UICorner \\ --
 UI["107"] = Instance.new("UICorner", UI["106"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Console.Buttons \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Console.Buttons \\ --
 UI["108"] = Instance.new("Frame", UI["106"])
 UI["108"]["BorderSizePixel"] = 0
 UI["108"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -2102,11 +2105,11 @@ UI["108"]["Position"] = UDim2.new(0.13636, 0, 0.13636, 0)
 UI["108"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["108"]["Name"] = [[Buttons]]
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Console.Buttons.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Console.Buttons.UICorner \\ --
 UI["109"] = Instance.new("UICorner", UI["108"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Console.Buttons.ImageButton \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Console.Buttons.ImageButton \\ --
 UI["10a"] = Instance.new("ImageButton", UI["108"])
 UI["10a"]["BorderSizePixel"] = 0
 UI["10a"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
@@ -2115,11 +2118,11 @@ UI["10a"]["Size"] = UDim2.new(0.75, 0, 0.75, 0)
 UI["10a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["10a"]["Position"] = UDim2.new(0.125, 0, 0.125, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.Folder.Console.Buttons.ImageButton.UICorner \\ --
+-- // StarterGui.CommanderX.Frame.Down.Folder.Console.Buttons.ImageButton.UICorner \\ --
 UI["10b"] = Instance.new("UICorner", UI["10a"])
 
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.TextButton \\ --
+-- // StarterGui.CommanderX.Frame.Down.TextButton \\ --
 UI["10c"] = Instance.new("TextButton", UI["ea"])
 UI["10c"]["TextWrapped"] = true
 UI["10c"]["BorderSizePixel"] = 0
@@ -2134,11 +2137,11 @@ UI["10c"]["Text"] = [[Hide]]
 UI["10c"]["Visible"] = false
 UI["10c"]["Position"] = UDim2.new(0.93463, 0, -0.38028, 0)
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.TextButton.UITextSizeConstraint \\ --
+-- // StarterGui.CommanderX.Frame.Down.TextButton.UITextSizeConstraint \\ --
 UI["10d"] = Instance.new("UITextSizeConstraint", UI["10c"])
 UI["10d"]["MaxTextSize"] = 14
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.LocalScript \\ --
 local function SCRIPT_76()
 local script = UI["76"]
 	--for i,v in pairs(script.Parent.Parent:GetDescendants()) do
@@ -2154,7 +2157,7 @@ local script = UI["76"]
 	local down = script.Parent.Parent.Down
 	--ui settings 
 	frames.Position = UDim2.new(0, 0,-1, 0)
-	down.Position = UDim2.new(0.033, 0,-1, 0)
+	down.Position = UDim2.new(0, 0,-1, 0)
 	show.Parent.Position = UDim2.new(0.948, 0,0.157, 0)
 	--script.Parent.Parent.Enabled = true
 	
@@ -2184,79 +2187,79 @@ local script = UI["76"]
 	local function createTween(element, transparency)
 		return TweenService:Create(element, tweenInfo, {BackgroundTransparency = transparency})
 	end
-
+	
 	b0.MouseButton1Click:Connect(function()
 		createTween(b0.Parent, 0):Play()
 		createTween(b1.Parent, 1):Play()
 		createTween(b1.Parent, 1):Play()
 		createTween(b3.Parent, 1):Play()
 		createTween(b4.Parent, 1):Play()
-
+	
 		f0.Visible = true
 		f1.Visible = false
 		f3.Visible = false
 		f4.Visible = false
 		f5.Visible = false
 	end)
-
+	
 	b1.MouseButton1Click:Connect(function()
 		createTween(b0.Parent, 1):Play()
 		createTween(b1.Parent, 0):Play()
 		createTween(b1.Parent, 1):Play()
 		createTween(b3.Parent, 1):Play()
 		createTween(b4.Parent, 1):Play()
-
+	
 		f0.Visible = false
 		f1.Visible = true
 		f3.Visible = false
 		f4.Visible = false
 		f5.Visible = false
-
+	
 	end)
-
+	
 	b2.MouseButton1Click:Connect(function()
 		createTween(b0.Parent, 1):Play()
 		createTween(b1.Parent, 1):Play()
 		createTween(b2.Parent, 0):Play()
 		createTween(b3.Parent, 1):Play()
 		createTween(b4.Parent, 1):Play()
-
+	
 		f0.Visible = false
 		f1.Visible = false
 		f3.Visible = true
 		f4.Visible = false
 		f5.Visible = false
-
+	
 	end)
-
+	
 	b3.MouseButton1Click:Connect(function()
 		createTween(b0.Parent, 1):Play()
 		createTween(b1.Parent, 1):Play()
 		createTween(b2.Parent, 1):Play()
 		createTween(b3.Parent, 0):Play()
 		createTween(b4.Parent, 1):Play()
-
+	
 		f0.Visible = false
 		f1.Visible = false
 		f3.Visible = false
 		f4.Visible = true
 		f5.Visible = false
 	end)
-
+	
 	b4.MouseButton1Click:Connect(function()
 		createTween(b0.Parent, 1):Play()
 		createTween(b1.Parent, 1):Play()
 		createTween(b2.Parent, 1):Play()
 		createTween(b3.Parent, 1):Play()
 		createTween(b4.Parent, 0):Play()
-
+	
 		f0.Visible = false
 		f1.Visible = false
 		f3.Visible = false
 		f4.Visible = false
 		f5.Visible = true
 	end)
-
+	
 	b5.MouseButton1Click:Connect(function()
 		-- hide frames  = 0.226, 0,2, 0
 		-- hide down  = 0.999, 0,-0.076, 0
@@ -2271,36 +2274,36 @@ local script = UI["76"]
 		-- show down  = 0.911, 0,-0.076, 0
 		-- hide show  = 0.433, 0,-2, 0
 		b5.Visible = true
-		game.TweenService:Create(down, TweenInfo.new(1), {Position = UDim2.new(0.033, 0,0.887, 0)}):Play()
+		game.TweenService:Create(down, TweenInfo.new(1), {Position = UDim2.new(0, 0, 0.887, 0)}):Play()
 		game.TweenService:Create(frames, TweenInfo.new(1), {Position = UDim2.new(0, 0,0, 0)}):Play()
 		game.TweenService:Create(show.Parent, TweenInfo.new(1), {Position = UDim2.new(2, 0,0.157, 0)}):Play()
 	end)
 	--end
 	--buttons + frames done
-
+	
 	--f1 scripts
-
+	
 	--home scripts done
-
+	
 	--executor scripts
 	local scriptBox = f1.ExecutorPage.Folder.txtbox.EditorFrame.Source
 	local execute = f1.ExecutorPage.Buttons.Execute.Buttons.ImageButton
 	local clear = f1.ExecutorPage.Buttons.Clear.Buttons.ImageButton
 	local copy = f1.ExecutorPage.Buttons.Copy.Buttons.ImageButton
 	local clip = f1.ExecutorPage.Buttons.Clipboard.Buttons.ImageButton
-
+	
 	execute.MouseButton1Click:Connect(function()
 		loadstring(scriptBox.Text)()
 	end)
-
+	
 	clear.MouseButton1Click:Connect(function()
 		scriptBox.Text = ""
 	end)
-
+	
 	copy.MouseButton1Click:Connect(function(plr)
 		setclipboard(scriptBox.Text)
 	end)
-
+	
 	clip.MouseButton1Click:Connect(function()
 		local clipboardText = getclipboard()
 		if clipboardText then
@@ -2311,7 +2314,7 @@ local script = UI["76"]
 		end
 	end)
 	--executor DONE
-
+	
 	local lua_keywords = {
 		"and", "break", "do", "else", "elseif", "end", "false", "for",
 		"function", "goto", "if", "in", "local", "nil", "not", "or",
@@ -2587,7 +2590,7 @@ local script = UI["76"]
 	end
 end
 task.spawn(SCRIPT_76)
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.FPS.LocalScript \\ --
 local function SCRIPT_88()
 	local script = UI["88"]
 	local function makeCX(params)
@@ -2724,7 +2727,7 @@ local function SCRIPT_88()
 
 end
 task.spawn(SCRIPT_88)
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.hop server.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.hop server.LocalScript \\ --
 local function SCRIPT_a5()
 	local script = UI["a5"]
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2743,7 +2746,7 @@ local function SCRIPT_a5()
 
 end
 task.spawn(SCRIPT_a5)
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.rj.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.rj.LocalScript \\ --
 local function SCRIPT_aa()
 	local script = UI["aa"]
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2752,7 +2755,7 @@ local function SCRIPT_aa()
 
 end
 task.spawn(SCRIPT_aa)
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.LocalScript \\ --
 local function SCRIPT_ac()
 	local script = UI["ac"]
 	local translations = {
@@ -3127,7 +3130,7 @@ local function SCRIPT_ac()
 
 end
 task.spawn(SCRIPT_ac)
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone.Language.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.Languages.ButtonClone.Language.LocalScript \\ --
 local function SCRIPT_b2()
 	local script = UI["b2"]
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3136,7 +3139,7 @@ local function SCRIPT_b2()
 
 end
 task.spawn(SCRIPT_b2)
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons.ImageButton.LocalScript \\ --
+-- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons.ImageButton.LocalScript \\ --
 local function SCRIPT_e1()
 	local script = UI["e1"]
 	local btn = script.Parent
