@@ -2138,10 +2138,6 @@ UI["10c"]["Position"] = UDim2.new(0.93463, 0, -0.38028, 0)
 UI["10d"] = Instance.new("UITextSizeConstraint", UI["10c"])
 UI["10d"]["MaxTextSize"] = 14
 
--- // ServerStorage.UIS.Mobile.CommanderX.Frame.Down.UIAspectRatioConstraint \\ --
-UI["10e"] = Instance.new("UIAspectRatioConstraint", UI["ea"])
-UI["10e"]["AspectRatio"] = 15.83878
-
 -- // ServerStorage.UIS.Mobile.CommanderX.Frame.Main.LocalScript \\ --
 local function SCRIPT_76()
 local script = UI["76"]
