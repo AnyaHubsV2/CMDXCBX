@@ -1,5 +1,5 @@
 -- // GUI TO LUA \\ --
-
+print("anti LGBTQ")
 -- // INSTANCES: 265 | SCRIPTS: 7 | MODULES: 0 \\ --
 
 local UI = {}
@@ -2142,7 +2142,7 @@ local function SCRIPT_75()
 	local down = script.Parent.Parent.Down
 	--ui settings 
 	frames.Position = UDim2.new(0, 0,-1, 0)
-	down.Position = UDim2.new(0, 0,-1, 0)
+	down.Position = UDim2.new(0, 0,-2, 0)
 	show.Parent.Position = UDim2.new(0.948, 0,0.157, 0)
 	--script.Parent.Parent.Enabled = true
 
@@ -2250,7 +2250,7 @@ local function SCRIPT_75()
 		-- hide down  = 0.999, 0,-0.076, 0
 		-- show button  = 0.433, 0,0.069, 0
 		game.TweenService:Create(down, TweenInfo.new(1), {Position = UDim2.new(0, 0,1, 0)}):Play()
-		game.TweenService:Create(frames, TweenInfo.new(1), {Position = UDim2.new(0, 0,-1, 0)}):Play()
+		game.TweenService:Create(frames, TweenInfo.new(1), {Position = UDim2.new(0, 0,-2, 0)}):Play()
 		game.TweenService:Create(show.Parent, TweenInfo.new(1), {Position = UDim2.new(0.948, 0,0.157, 0)}):Play()
 		b5.Visible = false
 	end)
@@ -3065,7 +3065,7 @@ local function SCRIPT_aa()
 	local paths = {
 		["Executor Page"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page1.ExecutorPage.nothing.TextLabel,
 		["Clipboard"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.TextLabel,
-		["Scripts Page"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page1.ScriptHub.nothing.TextLabel and game:GetService("CoreGui").CommanderX.Frame.Main.Cloud.nothing.TextLabel,
+		["Scripts Page"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page1.ScriptHub.nothing.TextLabel and game:GetService("CoreGui").CommanderX.Frame.Main.Page2.Cloud.nothing.TextLabel,
 		["Home Page"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page0.Cloud.nothing.TextLabel,
 		["Console soon"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page3.Cloud.nothing.TextLabel,
 		["Jump Power"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.jp,
@@ -3121,7 +3121,6 @@ local function SCRIPT_b0()
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 	end)
-
 end
 task.spawn(SCRIPT_b0)
 -- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons.ImageButton.LocalScript \\ --
