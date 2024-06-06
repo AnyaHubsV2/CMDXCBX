@@ -2158,7 +2158,7 @@ local script = UI["76"]
 	local down = script.Parent.Parent.Down
 	--ui settings 
 	frames.Position = UDim2.new(0, 0,-1, 0)
-	down.Position = UDim2.new(0, 0,-1, 0)
+	down.Position = UDim2.new(0.033, 0,-1, 0)
 	show.Parent.Position = UDim2.new(0.948, 0,0.157, 0)
 	--script.Parent.Parent.Enabled = true
 	
@@ -2275,7 +2275,7 @@ local script = UI["76"]
 		-- show down  = 0.911, 0,-0.076, 0
 		-- hide show  = 0.433, 0,-2, 0
 		b5.Visible = true
-		game.TweenService:Create(down, TweenInfo.new(1), {Position = UDim2.new(0, 0, 0.887, 0)}):Play()
+		game.TweenService:Create(down, TweenInfo.new(1), {Position = UDim2.new(0.033, 0,0.887, 0)}):Play()
 		game.TweenService:Create(frames, TweenInfo.new(1), {Position = UDim2.new(0, 0,0, 0)}):Play()
 		game.TweenService:Create(show.Parent, TweenInfo.new(1), {Position = UDim2.new(2, 0,0.157, 0)}):Play()
 	end)
