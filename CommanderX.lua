@@ -1,6 +1,8 @@
 -- // GUI TO LUA \\ --
-print("anti LGBTQ")
+
 -- // INSTANCES: 265 | SCRIPTS: 7 | MODULES: 0 \\ --
+
+
 
 local UI = {}
 
@@ -2538,7 +2540,7 @@ local function SCRIPT_75()
 	local btn = f2.Execute.Buttons.ImageButton
 
 	local function AddScript(name, source)
-		writefile("CommanderX/" .. name, source)
+		writefile("/CommanderX/" .. name, source)
 
 		local parent = f2.ScrollingFrame.Folder
 		local hub = parent.nothing
@@ -2570,7 +2572,7 @@ local function SCRIPT_75()
 		f2.NM.Text = ""
 	end)
 
-	for _, file in ipairs(listfiles("CommanderX")) do
+	for _, file in ipairs(listfiles("/CommanderX")) do
 		AddScript(file:sub(22, #file), readfile(file), true)
 	end
 end
@@ -3066,7 +3068,6 @@ local function SCRIPT_aa()
 		["Executor Page"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page1.ExecutorPage.nothing.TextLabel,
 		["Clipboard"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.TextLabel,
 		["Scripts Page"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page1.ScriptHub.nothing.TextLabel,
-                --["Scripts Page."] = game:GetService("CoreGui").CommanderX.Frame.Main.Page2.Cloud.nothing.TextLabel,
 		["Home Page"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page0.Cloud.nothing.TextLabel,
 		["Console soon"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page3.Cloud.nothing.TextLabel,
 		["Jump Power"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.jp,
@@ -3122,6 +3123,7 @@ local function SCRIPT_b0()
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 	end)
+
 end
 task.spawn(SCRIPT_b0)
 -- // StarterGui.CommanderX.Frame.Main.Page2.Cloud.Execute.Buttons.ImageButton.LocalScript \\ --
