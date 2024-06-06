@@ -3065,7 +3065,8 @@ local function SCRIPT_aa()
 	local paths = {
 		["Executor Page"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page1.ExecutorPage.nothing.TextLabel,
 		["Clipboard"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page1.ExecutorPage.Buttons.Clipboard.TextLabel,
-		["Scripts Page"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page1.ScriptHub.nothing.TextLabel and game:GetService("CoreGui").CommanderX.Frame.Main.Page2.Cloud.nothing.TextLabel,
+		["Scripts Page"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page1.ScriptHub.nothing.TextLabel,
+                --["Scripts Page."] = game:GetService("CoreGui").CommanderX.Frame.Main.Page2.Cloud.nothing.TextLabel,
 		["Home Page"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page0.Cloud.nothing.TextLabel,
 		["Console soon"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page3.Cloud.nothing.TextLabel,
 		["Jump Power"] = game:GetService("CoreGui").CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.jp,
