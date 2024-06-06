@@ -1178,7 +1178,7 @@ UI["89"]["BackgroundTransparency"] = 1
 UI["89"]["Size"] = UDim2.new(0.38468, 0, 0.6, 0)
 UI["89"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["89"]["Text"] = [[Jump Power]]
-UI["89"]["Name"] = [[text]]
+UI["89"]["Name"] = [[jp]]
 UI["89"]["Position"] = UDim2.new(0.011, 0, 2.1, 0)
 
 -- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text.UITextSizeConstraint \\ --
@@ -1265,7 +1265,7 @@ UI["93"]["BackgroundTransparency"] = 1
 UI["93"]["Size"] = UDim2.new(0.31925, 0, 0.6, 0)
 UI["93"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["93"]["Text"] = [[SpeedHack]]
-UI["93"]["Name"] = [[text]]
+UI["93"]["Name"] = [[sh]]
 UI["93"]["Position"] = UDim2.new(0.011, 0, 3.41667, 0)
 
 -- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text.UITextSizeConstraint \\ --
@@ -1352,7 +1352,7 @@ UI["9d"]["BackgroundTransparency"] = 1
 UI["9d"]["Size"] = UDim2.new(0.25216, 0, 0.6, 0)
 UI["9d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["9d"]["Text"] = [[FPS Value]]
-UI["9d"]["Name"] = [[text]]
+UI["9d"]["Name"] = [[fps]]
 UI["9d"]["Position"] = UDim2.new(0.0055, 0, -0.13333, 0)
 
 -- // StarterGui.CommanderX.Frame.Main.Page4.ExecutorPage.fpsValue.text.UITextSizeConstraint \\ --
