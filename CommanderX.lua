@@ -1605,10 +1605,6 @@ UI["bf"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["bf"]["BackgroundTransparency"] = 1
 UI["bf"]["Position"] = UDim2.new(0, 0, -0, 0)
 
--- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.ImageLabel.UIAspectRatioConstraint \\ --
-UI["c0"] = Instance.new("UIAspectRatioConstraint", UI["bf"])
-UI["c0"]["AspectRatio"] = 1.44478
-
 -- // StarterGui.CommanderX.Frame.Main.Page2.ExecutorPage.SearchPage.mAIN.Folder.ui.TextLabel \\ --
 UI["c1"] = Instance.new("TextLabel", UI["bd"])
 UI["c1"]["TextWrapped"] = true
@@ -3169,10 +3165,10 @@ local function SCRIPT_de()
 			if scriptData.scriptType == "free" and not scriptData.isPatched then
 				if scriptData.isUniversal then
 					wait(0.3)
-					AddTab(17383983244, scriptData.title, scriptData.script)
+					AddTab(17565907013, scriptData.title, scriptData.script)
 				else
 					wait(0.3)
-					AddTab(scriptData.game.gameId, scriptData.title, scriptData.script)
+					AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", scriptData.title, scriptData.script)
 				end
 			end
 		end
