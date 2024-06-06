@@ -8,6 +8,8 @@ local UI = {}
 UI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"))
 UI["1"]["Name"] = [[CommanderX]]
 UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+UI["1"]["SafeAreaCompatibility"] = Enum.SafeAreaCompatibility.FullscreenExtension
+UI["1"]["ScreenInsets"] = Enum.ScreenInsets.None
 
 -- // StarterGui.CommanderX.Frame \\ --
 UI["2"] = Instance.new("Frame", UI["1"])
@@ -2126,15 +2128,15 @@ UI["109"]["MaxTextSize"] = 14
 
 -- // StarterGui.CommanderX.Frame.Main.LocalScript \\ --
 local function SCRIPT_75()
-local script = UI["75"]
+	local script = UI["75"]
 	--for i,v in pairs(script.Parent.Parent:GetDescendants()) do
 	--	if v:IsA("TextButton") or v:IsA("TextLabel") then 
 	--	v.FontFace = Font.fromId(12187377099)
 	--end
 	--end
-	
+
 	--makefolder("CommanderX")
-	
+
 	local show = script.Parent.Parent.Frame.ImageButton
 	local frames = script.Parent
 	local down = script.Parent.Parent.Down
@@ -2143,9 +2145,9 @@ local script = UI["75"]
 	down.Position = UDim2.new(0, 0,-1, 0)
 	show.Parent.Position = UDim2.new(0.948, 0,0.157, 0)
 	--script.Parent.Parent.Enabled = true
-	
+
 	wait(3)
-	
+
 	--fix ui config do not deleted
 	local b0 = down.Home.Buttons.ImageButton
 	local b1 = down.Folder.Executor.Buttons.ImageButton
@@ -2153,96 +2155,96 @@ local script = UI["75"]
 	local b3 = down.Folder.Console.Buttons.ImageButton
 	local b4 = down.Settings.Buttons.ImageButton
 	local b5 = down.TextButton
-	
+
 	local f0 = frames.Page0
 	local f1 = frames.Page1
 	local f2= frames.Page1.ScriptHub
 	local f3 = frames.Page2
 	local f4 = frames.Page3
 	local f5 = frames.Page4
-	
+
 	local TweenService = game:GetService("TweenService")
-	
+
 	-- Tween info: Duration of 0.5 seconds with 'Quad' easing style
 	local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-	
+
 	-- Helper function to create tweens for background transparency
 	local function createTween(element, transparency)
 		return TweenService:Create(element, tweenInfo, {BackgroundTransparency = transparency})
 	end
-	
+
 	b0.MouseButton1Click:Connect(function()
 		createTween(b0.Parent, 0):Play()
 		createTween(b1.Parent, 1):Play()
 		createTween(b1.Parent, 1):Play()
 		createTween(b3.Parent, 1):Play()
 		createTween(b4.Parent, 1):Play()
-	
+
 		f0.Visible = true
 		f1.Visible = false
 		f3.Visible = false
 		f4.Visible = false
 		f5.Visible = false
 	end)
-	
+
 	b1.MouseButton1Click:Connect(function()
 		createTween(b0.Parent, 1):Play()
 		createTween(b1.Parent, 0):Play()
 		createTween(b1.Parent, 1):Play()
 		createTween(b3.Parent, 1):Play()
 		createTween(b4.Parent, 1):Play()
-	
+
 		f0.Visible = false
 		f1.Visible = true
 		f3.Visible = false
 		f4.Visible = false
 		f5.Visible = false
-	
+
 	end)
-	
+
 	b2.MouseButton1Click:Connect(function()
 		createTween(b0.Parent, 1):Play()
 		createTween(b1.Parent, 1):Play()
 		createTween(b2.Parent, 0):Play()
 		createTween(b3.Parent, 1):Play()
 		createTween(b4.Parent, 1):Play()
-	
+
 		f0.Visible = false
 		f1.Visible = false
 		f3.Visible = true
 		f4.Visible = false
 		f5.Visible = false
-	
+
 	end)
-	
+
 	b3.MouseButton1Click:Connect(function()
 		createTween(b0.Parent, 1):Play()
 		createTween(b1.Parent, 1):Play()
 		createTween(b2.Parent, 1):Play()
 		createTween(b3.Parent, 0):Play()
 		createTween(b4.Parent, 1):Play()
-	
+
 		f0.Visible = false
 		f1.Visible = false
 		f3.Visible = false
 		f4.Visible = true
 		f5.Visible = false
 	end)
-	
+
 	b4.MouseButton1Click:Connect(function()
 		createTween(b0.Parent, 1):Play()
 		createTween(b1.Parent, 1):Play()
 		createTween(b2.Parent, 1):Play()
 		createTween(b3.Parent, 1):Play()
 		createTween(b4.Parent, 0):Play()
-	
+
 		f0.Visible = false
 		f1.Visible = false
 		f3.Visible = false
 		f4.Visible = false
 		f5.Visible = true
 	end)
-	
+
 	b5.MouseButton1Click:Connect(function()
 		-- hide frames  = 0.226, 0,2, 0
 		-- hide down  = 0.999, 0,-0.076, 0
@@ -2263,30 +2265,30 @@ local script = UI["75"]
 	end)
 	--end
 	--buttons + frames done
-	
+
 	--f1 scripts
-	
+
 	--home scripts done
-	
+
 	--executor scripts
 	local scriptBox = f1.ExecutorPage.Folder.txtbox.EditorFrame.Source
 	local execute = f1.ExecutorPage.Buttons.Execute.Buttons.ImageButton
 	local clear = f1.ExecutorPage.Buttons.Clear.Buttons.ImageButton
 	local copy = f1.ExecutorPage.Buttons.Copy.Buttons.ImageButton
 	local clip = f1.ExecutorPage.Buttons.Clipboard.Buttons.ImageButton
-	
+
 	execute.MouseButton1Click:Connect(function()
 		loadstring(scriptBox.Text)()
 	end)
-	
+
 	clear.MouseButton1Click:Connect(function()
 		scriptBox.Text = ""
 	end)
-	
+
 	copy.MouseButton1Click:Connect(function(plr)
 		setclipboard(scriptBox.Text)
 	end)
-	
+
 	clip.MouseButton1Click:Connect(function()
 		local clipboardText = getclipboard()
 		if clipboardText then
@@ -2297,7 +2299,7 @@ local script = UI["75"]
 		end
 	end)
 	--executor DONE
-	
+
 	local lua_keywords = {
 		"and", "break", "do", "else", "elseif", "end", "false", "for",
 		"function", "goto", "if", "in", "local", "nil", "not", "or",
@@ -2309,8 +2311,8 @@ local script = UI["75"]
 		"setfenv", "setmetatable", "tonumber", "tostring",
 		"type", "xpcall"
 	}
-	
-	
+
+
 	local global_env = {
 		-- Roblox Services
 		"game", "workspace", "Players", "StarterGui", "ReplicatedStorage", 
