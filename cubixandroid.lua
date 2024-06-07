@@ -3692,3 +3692,19 @@ getgenv().CustomMSG = function(MSG, CopyMessage, timer)
 	task.wait(2)
 	main:Destroy()
 end
+
+getgenv().getsenv = newcclosure(function(instance) 
+	for _, v in next, getreg() do
+		if type(v) == "function" then
+			if getfenv(v).script == instance then
+				return getfenv(v)
+			end
+		end
+	end
+
+	-- unc
+	local dummy = {}
+	dummy.script = instance
+	return dummy 
+end)
+getgenv().getmenv = getsenv
