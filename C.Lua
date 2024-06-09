@@ -1,4 +1,6 @@
 local function loadUI()
+
+
 local UI = {}
 
 -- // StarterGui.Cubix \\ --
@@ -3801,8 +3803,8 @@ local function SCRIPT_107()
 	local script = UI["107"]
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.down.Visible = false
-		script.Parent.Parent.left.Visible = true
+		script.Parent.Parent.Parent.Parent.Parent.down.Visible = false
+		script.Parent.Parent.Parent.Parent.Parent.left.Visible = true
 	end)
 end
 task.spawn(SCRIPT_107)
@@ -3811,8 +3813,8 @@ local function SCRIPT_10c()
 	local script = UI["10c"]
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.down.Visible = true
-		script.Parent.Parent.left.Visible = false
+		script.Parent.Parent.Parent.Parent.Parent.down.Visible = true
+		script.Parent.Parent.Parent.Parent.Parent.left.Visible = false
 	end)
 end
 task.spawn(SCRIPT_10c)
@@ -3951,28 +3953,22 @@ local function SCRIPT_118()
 
 	local function got(Url, Method, Body)
 		Method = Method or "GET"
-		local res
-		if Method == "POST" then
-			res = request({
-				["Url"] = Url,
-				["Method"] = Method,
-				["Headers"] = {
-					["cookie"] = "CONSENT=YES+"
-				},
-				["Body"] = Body
-			})
-		else
-			res = request({
-				["Url"] = Url,
-				["Method"] = Method,
-				["Headers"] = {
-					["cookie"] = "CONSENT=YES+"
-				}
-			})
+		local requestParams = {
+			["Url"] = Url,
+			["Method"] = Method,
+			["Headers"] = {
+				["cookie"] = "CONSENT=YES+"
+			}
+		}
+
+		if Method == "POST" and Body then
+			requestParams["Body"] = Body
 		end
 
+		local res = request(requestParams)
+
 		if res.Body:match("https://consent.google.com/s") then
-			res = syn.request({
+			res = request({
 				["Url"] = Url,
 				["Method"] = "GET",
 				["Headers"] = {
@@ -4024,8 +4020,8 @@ local function SCRIPT_118()
 		local body = stringifyQuery{["f.req"] = Encode(freq)}
 		local req = got(url, "POST", body)
 
-		local body = Decode(req.Body:match("%[.-%]\n"))
-		local translationData = Decode(body[1][3])
+		local bodyDecoded = Decode(req.Body:match("%[.-%]\n"))
+		local translationData = Decode(bodyDecoded[1][3])
 		local result = {
 			text = "",
 			from = {
