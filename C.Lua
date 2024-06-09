@@ -1794,6 +1794,7 @@ UI["d0"] = Instance.new("LocalScript", UI["22"])
 
 -- // StarterGui.Cubix.UI.Settings \\ --
 UI["d1"] = Instance.new("Frame", UI["22"])
+UI["d1"]["Visible"] = false
 UI["d1"]["BorderSizePixel"] = 0
 UI["d1"]["BackgroundColor3"] = Color3.fromRGB(24, 19, 30)
 UI["d1"]["Size"] = UDim2.new(0.68044, 0, 0.79449, 0)
@@ -2263,6 +2264,7 @@ UI["10c"] = Instance.new("LocalScript", UI["108"])
 UI["10d"] = Instance.new("Frame", UI["d1"])
 UI["10d"]["BorderSizePixel"] = 0
 UI["10d"]["BackgroundColor3"] = Color3.fromRGB(17, 11, 23)
+UI["10d"]["ClipsDescendants"] = true
 UI["10d"]["Size"] = UDim2.new(0.10465, 0, 0.71434, 0)
 UI["10d"]["Position"] = UDim2.new(0.77555, 0, 0.12868, 0)
 UI["10d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
@@ -3169,20 +3171,18 @@ local function SCRIPT_d0()
 	wait(3)
 
 	--fix ui config do not deleted
-	local b1 = down.Executor.ImageButton and left.Executor.ImageButton
-	local b2 = down.ScriptHub.ImageButton and left.ScriptHub.ImageButton
-	local b3 = down.ScriptCloud.ImageButton and left.ScriptCloud.ImageButton
-	local b4 = down.Settings.ImageButton and left.ScriptCloud.ImageButton
-	local close = down.Folder.Frame.ImageButton and left.ScriptCloud.ImageButton
-	local b5 = down.Console.ImageButton and left.ScriptCloud.ImageButton
+	local b1 = down.Executor.ImageButton or left.Executor.ImageButton
+	local b2 = down.ScriptHub.ImageButton or left.ScriptHub.ImageButton
+	local b3 = down.ScriptCloud.ImageButton or left.ScriptCloud.ImageButton
+	local b4 = down.Settings.ImageButton or left.ScriptCloud.ImageButton
+	local close = down.Folder.Frame.ImageButton or left.ScriptCloud.ImageButton
+	local b5 = down.Console.ImageButton or left.ScriptCloud.ImageButton
 
 	local f1 = frames.Executor
 	local f2= frames.ScriptHub
 	local f3 = frames.ScriptCloud
 	local f4 = frames.Settings
 	local f5 = frames.console
-	local downbutton = f4.Settings.down
-	local leftbutton = f4.Settings.left
 
 
 
@@ -3217,8 +3217,8 @@ local function SCRIPT_d0()
 		[f5] = 1
 	}
 
-	local buttons = {b1, b2, b3, b4, b5, downbutton, leftbutton} 
-	local frames = {f1, f2, f3, f4, f5, down, left} 
+	local buttons = {b1, b2, b3, b4, b5} 
+	local frames = {f1, f2, f3, f4, f5} 
 
 	local function createTween(element, transparency, tweenInfo)
 		return TweenService:Create(element, tweenInfo, {BackgroundTransparency = transparency})
