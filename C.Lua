@@ -2258,7 +2258,7 @@ UI["10b"] = Instance.new("Frame", UI["d1"])
 UI["10b"]["BorderSizePixel"] = 0
 UI["10b"]["BackgroundColor3"] = Color3.fromRGB(17, 11, 23)
 UI["10b"]["Size"] = UDim2.new(0.10465, 0, 0.71434, 0)
-UI["10b"]["Position"] = UDim2.new(0.77451, 0, 0.12868, 0)
+UI["10b"]["Position"] = UDim2.new(0.77555, 0, 0.12868, 0)
 UI["10b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["10b"]["Name"] = [[language]]
 
@@ -2273,6 +2273,7 @@ UI["10d"]["BorderSizePixel"] = 0
 UI["10d"]["CanvasSize"] = UDim2.new(0, 0, 17, 0)
 UI["10d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
 UI["10d"]["Name"] = [[Languages]]
+UI["10d"]["ClipsDescendants"] = false
 UI["10d"]["Size"] = UDim2.new(0.988, 0, 1, 0)
 UI["10d"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0)
 UI["10d"]["Position"] = UDim2.new(0, 0, -0, 0)
@@ -2294,6 +2295,7 @@ UI["10f"]["BackgroundColor3"] = Color3.fromRGB(9, 6, 12)
 UI["10f"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 UI["10f"]["Size"] = UDim2.new(0.19299, 0, 0.08423, 0)
 UI["10f"]["Name"] = [[languagebutton]]
+UI["10f"]["ClipsDescendants"] = true
 UI["10f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["10f"]["Text"] = [[language]]
 UI["10f"]["Visible"] = false
@@ -2332,276 +2334,264 @@ UI["114"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["114"]["Text"] = [[]]
 UI["114"]["Name"] = [[GameTexts]]
 
--- // StarterGui.Cubix.UI.Settings.language.LocalScript \\ --
-UI["115"] = Instance.new("LocalScript", UI["10b"])
+-- // StarterGui.Cubix.UI.Settings.language.Languages.UIAspectRatioConstraint \\ --
+UI["115"] = Instance.new("UIAspectRatioConstraint", UI["10d"])
+UI["115"]["AspectRatio"] = 0.2192
 
+-- // StarterGui.Cubix.UI.Settings.language.LocalScript \\ --
+UI["116"] = Instance.new("LocalScript", UI["10b"])
+
+
+-- // StarterGui.Cubix.UI.Settings.language.UIAspectRatioConstraint \\ --
+UI["117"] = Instance.new("UIAspectRatioConstraint", UI["10b"])
+UI["117"]["AspectRatio"] = 0.22187
 
 -- // StarterGui.Cubix.UI.console \\ --
-UI["116"] = Instance.new("Frame", UI["22"])
-UI["116"]["Visible"] = false
-UI["116"]["BorderSizePixel"] = 0
-UI["116"]["BackgroundColor3"] = Color3.fromRGB(24, 19, 30)
-UI["116"]["Size"] = UDim2.new(0.87247, 0, 0.87995, 0)
-UI["116"]["Position"] = UDim2.new(0.05322, 0, 0.01754, 0)
-UI["116"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["116"]["Name"] = [[console]]
-UI["116"]["BackgroundTransparency"] = 1
+UI["118"] = Instance.new("Frame", UI["22"])
+UI["118"]["Visible"] = false
+UI["118"]["BorderSizePixel"] = 0
+UI["118"]["BackgroundColor3"] = Color3.fromRGB(24, 19, 30)
+UI["118"]["Size"] = UDim2.new(0.87247, 0, 0.87995, 0)
+UI["118"]["Position"] = UDim2.new(0.05322, 0, 0.01754, 0)
+UI["118"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["118"]["Name"] = [[console]]
+UI["118"]["BackgroundTransparency"] = 1
 
 -- // StarterGui.Cubix.UI.console.UICorner \\ --
-UI["117"] = Instance.new("UICorner", UI["116"])
+UI["119"] = Instance.new("UICorner", UI["118"])
 
 
 -- // StarterGui.Cubix.UI.console.Console \\ --
-UI["118"] = Instance.new("Frame", UI["116"])
-UI["118"]["BorderSizePixel"] = 0
-UI["118"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
-UI["118"]["Size"] = UDim2.new(0.99992, 0, 0.99688, 0)
-UI["118"]["Position"] = UDim2.new(0, 0, 0, 0)
-UI["118"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["118"]["Name"] = [[Console]]
-UI["118"]["BackgroundTransparency"] = 1
+UI["11a"] = Instance.new("Frame", UI["118"])
+UI["11a"]["BorderSizePixel"] = 0
+UI["11a"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
+UI["11a"]["Size"] = UDim2.new(0.99992, 0, 0.99688, 0)
+UI["11a"]["Position"] = UDim2.new(0, 0, 0, 0)
+UI["11a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["11a"]["Name"] = [[Console]]
+UI["11a"]["BackgroundTransparency"] = 1
 
 -- // StarterGui.Cubix.UI.console.Console.Name \\ --
-UI["119"] = Instance.new("TextLabel", UI["118"])
-UI["119"]["TextWrapped"] = true
-UI["119"]["BorderSizePixel"] = 0
-UI["119"]["TextScaled"] = true
-UI["119"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51)
-UI["119"]["TextSize"] = 15
-UI["119"]["FontFace"] = Font.new([[rbxasset://fonts/families/JosefinSans.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["119"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["119"]["BackgroundTransparency"] = 1
-UI["119"]["Size"] = UDim2.new(1, 0, 0.07101, 0)
-UI["119"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["119"]["Text"] = [[Console Logs]]
-UI["119"]["Name"] = [[Name]]
-UI["119"]["Position"] = UDim2.new(0, 0, 0, 0)
+UI["11b"] = Instance.new("TextLabel", UI["11a"])
+UI["11b"]["TextWrapped"] = true
+UI["11b"]["BorderSizePixel"] = 0
+UI["11b"]["TextScaled"] = true
+UI["11b"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51)
+UI["11b"]["TextSize"] = 15
+UI["11b"]["FontFace"] = Font.new([[rbxasset://fonts/families/JosefinSans.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["11b"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["11b"]["BackgroundTransparency"] = 1
+UI["11b"]["Size"] = UDim2.new(1, 0, 0.07101, 0)
+UI["11b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["11b"]["Text"] = [[Console Logs]]
+UI["11b"]["Name"] = [[Name]]
+UI["11b"]["Position"] = UDim2.new(0, 0, 0, 0)
 
 -- // StarterGui.Cubix.UI.console.Console.Name.UITextSizeConstraint \\ --
-UI["11a"] = Instance.new("UITextSizeConstraint", UI["119"])
-UI["11a"]["MaxTextSize"] = 15
+UI["11c"] = Instance.new("UITextSizeConstraint", UI["11b"])
+UI["11c"]["MaxTextSize"] = 15
 
 -- // StarterGui.Cubix.UI.console.Console.Scroller \\ --
-UI["11b"] = Instance.new("ScrollingFrame", UI["118"])
-UI["11b"]["Active"] = true
-UI["11b"]["BorderSizePixel"] = 0
-UI["11b"]["CanvasSize"] = UDim2.new(0, 0, 0, 0)
-UI["11b"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57)
-UI["11b"]["Name"] = [[Scroller]]
-UI["11b"]["ScrollBarImageTransparency"] = 1
-UI["11b"]["AutomaticCanvasSize"] = Enum.AutomaticSize.XY
-UI["11b"]["Size"] = UDim2.new(0.91254, 0, 0.85356, 0)
-UI["11b"]["Position"] = UDim2.new(0.02087, 0, 0.04958, 0)
-UI["11b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["11b"]["ScrollBarThickness"] = 10
-UI["11b"]["BackgroundTransparency"] = 1
+UI["11d"] = Instance.new("ScrollingFrame", UI["11a"])
+UI["11d"]["Active"] = true
+UI["11d"]["BorderSizePixel"] = 0
+UI["11d"]["CanvasSize"] = UDim2.new(0, 0, 0, 0)
+UI["11d"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57)
+UI["11d"]["Name"] = [[Scroller]]
+UI["11d"]["ScrollBarImageTransparency"] = 1
+UI["11d"]["AutomaticCanvasSize"] = Enum.AutomaticSize.XY
+UI["11d"]["Size"] = UDim2.new(0.91254, 0, 0.85356, 0)
+UI["11d"]["Position"] = UDim2.new(0.02087, 0, 0.04958, 0)
+UI["11d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["11d"]["ScrollBarThickness"] = 10
+UI["11d"]["BackgroundTransparency"] = 1
 
 -- // StarterGui.Cubix.UI.console.Console.Scroller.UIListLayout \\ --
-UI["11c"] = Instance.new("UIListLayout", UI["11b"])
-UI["11c"]["SortOrder"] = Enum.SortOrder.LayoutOrder
+UI["11e"] = Instance.new("UIListLayout", UI["11d"])
+UI["11e"]["SortOrder"] = Enum.SortOrder.LayoutOrder
 
 -- // StarterGui.Cubix.UI.console.Console.Scroller._Line_ \\ --
-UI["11d"] = Instance.new("TextLabel", UI["11b"])
-UI["11d"]["TextWrapped"] = true
-UI["11d"]["BorderSizePixel"] = 0
-UI["11d"]["TextXAlignment"] = Enum.TextXAlignment.Left
-UI["11d"]["TextScaled"] = true
-UI["11d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["11d"]["TextSize"] = 15
-UI["11d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["11d"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["11d"]["BackgroundTransparency"] = 1
-UI["11d"]["Size"] = UDim2.new(1, 0, 0.125, 0)
-UI["11d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["11d"]["Text"] = [[-- All Consoles errors logs here]]
-UI["11d"]["Name"] = [[_Line_]]
-UI["11d"]["Position"] = UDim2.new(-0.02248, 0, -0.03023, 0)
+UI["11f"] = Instance.new("TextLabel", UI["11d"])
+UI["11f"]["TextWrapped"] = true
+UI["11f"]["BorderSizePixel"] = 0
+UI["11f"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["11f"]["TextScaled"] = true
+UI["11f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["11f"]["TextSize"] = 15
+UI["11f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["11f"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["11f"]["BackgroundTransparency"] = 1
+UI["11f"]["Size"] = UDim2.new(1, 0, 0.125, 0)
+UI["11f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["11f"]["Text"] = [[-- All Consoles errors logs here]]
+UI["11f"]["Name"] = [[_Line_]]
+UI["11f"]["Position"] = UDim2.new(-0.02248, 0, -0.03023, 0)
 
 -- // StarterGui.Cubix.UI.console.Console.Scroller._Line_.UITextSizeConstraint \\ --
-UI["11e"] = Instance.new("UITextSizeConstraint", UI["11d"])
-UI["11e"]["MaxTextSize"] = 15
+UI["120"] = Instance.new("UITextSizeConstraint", UI["11f"])
+UI["120"]["MaxTextSize"] = 15
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons \\ --
-UI["11f"] = Instance.new("Frame", UI["118"])
-UI["11f"]["ZIndex"] = 9
-UI["11f"]["BorderSizePixel"] = 0
-UI["11f"]["BackgroundColor3"] = Color3.fromRGB(17, 11, 23)
-UI["11f"]["Size"] = UDim2.new(0.12907, 0, 0.17868, 0)
-UI["11f"]["Position"] = UDim2.new(0.94718, 0, 0.82999, 0)
-UI["11f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["11f"]["Name"] = [[Buttons]]
+UI["121"] = Instance.new("Frame", UI["11a"])
+UI["121"]["ZIndex"] = 9
+UI["121"]["BorderSizePixel"] = 0
+UI["121"]["BackgroundColor3"] = Color3.fromRGB(17, 11, 23)
+UI["121"]["Size"] = UDim2.new(0.12907, 0, 0.17868, 0)
+UI["121"]["Position"] = UDim2.new(0.94718, 0, 0.82999, 0)
+UI["121"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["121"]["Name"] = [[Buttons]]
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.UICorner \\ --
-UI["120"] = Instance.new("UICorner", UI["11f"])
-UI["120"]["CornerRadius"] = UDim.new(0.15, 0)
+UI["122"] = Instance.new("UICorner", UI["121"])
+UI["122"]["CornerRadius"] = UDim.new(0.15, 0)
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.UIStroke \\ --
-UI["121"] = Instance.new("UIStroke", UI["11f"])
-UI["121"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
-UI["121"]["Thickness"] = 4
-UI["121"]["Color"] = Color3.fromRGB(26, 16, 35)
+UI["123"] = Instance.new("UIStroke", UI["121"])
+UI["123"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+UI["123"]["Thickness"] = 4
+UI["123"]["Color"] = Color3.fromRGB(26, 16, 35)
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole \\ --
-UI["122"] = Instance.new("Folder", UI["11f"])
-UI["122"]["Name"] = [[BottomConsole]]
+UI["124"] = Instance.new("Folder", UI["121"])
+UI["124"]["Name"] = [[BottomConsole]]
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Save \\ --
-UI["123"] = Instance.new("TextButton", UI["122"])
-UI["123"]["TextWrapped"] = true
-UI["123"]["BorderSizePixel"] = 0
-UI["123"]["TextSize"] = 15
-UI["123"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["123"]["TextScaled"] = true
-UI["123"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
-UI["123"]["Size"] = UDim2.new(0.08116, 0, 0.084, 0)
-UI["123"]["BackgroundTransparency"] = 1
-UI["123"]["Name"] = [[Save]]
-UI["123"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["123"]["Text"] = [[save]]
-UI["123"]["Visible"] = false
-UI["123"]["Position"] = UDim2.new(0.98386, 0, 0.90314, 0)
+UI["125"] = Instance.new("TextButton", UI["124"])
+UI["125"]["TextWrapped"] = true
+UI["125"]["BorderSizePixel"] = 0
+UI["125"]["TextSize"] = 15
+UI["125"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["125"]["TextScaled"] = true
+UI["125"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
+UI["125"]["Size"] = UDim2.new(0.08116, 0, 0.084, 0)
+UI["125"]["BackgroundTransparency"] = 1
+UI["125"]["Name"] = [[Save]]
+UI["125"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["125"]["Text"] = [[save]]
+UI["125"]["Visible"] = false
+UI["125"]["Position"] = UDim2.new(0.98386, 0, 0.90314, 0)
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Save.UITextSizeConstraint \\ --
-UI["124"] = Instance.new("UITextSizeConstraint", UI["123"])
-UI["124"]["MaxTextSize"] = 15
+UI["126"] = Instance.new("UITextSizeConstraint", UI["125"])
+UI["126"]["MaxTextSize"] = 15
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Clear \\ --
-UI["125"] = Instance.new("Frame", UI["122"])
-UI["125"]["ZIndex"] = 9
-UI["125"]["BorderSizePixel"] = 0
-UI["125"]["BackgroundColor3"] = Color3.fromRGB(24, 14, 37)
-UI["125"]["Size"] = UDim2.new(0.31933, 0, 0.38782, 0)
-UI["125"]["Position"] = UDim2.new(0.05099, 0, 0.05962, 0)
-UI["125"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["125"]["Name"] = [[Clear]]
+UI["127"] = Instance.new("Frame", UI["124"])
+UI["127"]["ZIndex"] = 9
+UI["127"]["BorderSizePixel"] = 0
+UI["127"]["BackgroundColor3"] = Color3.fromRGB(24, 14, 37)
+UI["127"]["Size"] = UDim2.new(0.31933, 0, 0.38782, 0)
+UI["127"]["Position"] = UDim2.new(0.05099, 0, 0.05962, 0)
+UI["127"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["127"]["Name"] = [[Clear]]
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Clear.UICorner \\ --
-UI["126"] = Instance.new("UICorner", UI["125"])
-UI["126"]["CornerRadius"] = UDim.new(0.34, 0)
+UI["128"] = Instance.new("UICorner", UI["127"])
+UI["128"]["CornerRadius"] = UDim.new(0.34, 0)
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Clear.TextLabel \\ --
-UI["127"] = Instance.new("TextLabel", UI["125"])
-UI["127"]["TextWrapped"] = true
-UI["127"]["BorderSizePixel"] = 0
-UI["127"]["TextScaled"] = true
-UI["127"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["127"]["TextSize"] = 13
-UI["127"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-UI["127"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["127"]["BackgroundTransparency"] = 1
-UI["127"]["Size"] = UDim2.new(1.55263, 0, 0.52632, 0)
-UI["127"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["127"]["Text"] = [[Clear]]
-UI["127"]["Position"] = UDim2.new(1.09464, 0, 0.23684, 0)
+UI["129"] = Instance.new("TextLabel", UI["127"])
+UI["129"]["TextWrapped"] = true
+UI["129"]["BorderSizePixel"] = 0
+UI["129"]["TextScaled"] = true
+UI["129"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["129"]["TextSize"] = 13
+UI["129"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["129"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["129"]["BackgroundTransparency"] = 1
+UI["129"]["Size"] = UDim2.new(1.55263, 0, 0.52632, 0)
+UI["129"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["129"]["Text"] = [[Clear]]
+UI["129"]["Position"] = UDim2.new(1.09464, 0, 0.23684, 0)
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Clear.TextLabel.UITextSizeConstraint \\ --
-UI["128"] = Instance.new("UITextSizeConstraint", UI["127"])
-UI["128"]["MaxTextSize"] = 13
+UI["12a"] = Instance.new("UITextSizeConstraint", UI["129"])
+UI["12a"]["MaxTextSize"] = 13
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Clear.ImageButton \\ --
-UI["129"] = Instance.new("ImageButton", UI["125"])
-UI["129"]["BorderSizePixel"] = 0
-UI["129"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["129"]["Image"] = [[rbxassetid://17371137758]]
-UI["129"]["Size"] = UDim2.new(0.841, 0, 0.737, 0)
-UI["129"]["BackgroundTransparency"] = 1
-UI["129"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["129"]["Position"] = UDim2.new(0.079, 0, 0.132, 0)
+UI["12b"] = Instance.new("ImageButton", UI["127"])
+UI["12b"]["BorderSizePixel"] = 0
+UI["12b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["12b"]["Image"] = [[rbxassetid://17371137758]]
+UI["12b"]["Size"] = UDim2.new(0.841, 0, 0.737, 0)
+UI["12b"]["BackgroundTransparency"] = 1
+UI["12b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["12b"]["Position"] = UDim2.new(0.079, 0, 0.132, 0)
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Clear.TextButton \\ --
-UI["12a"] = Instance.new("TextButton", UI["125"])
-UI["12a"]["BorderSizePixel"] = 0
-UI["12a"]["TextSize"] = 14
-UI["12a"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
-UI["12a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["12a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["12a"]["Size"] = UDim2.new(0, 126, 0, 43)
-UI["12a"]["BackgroundTransparency"] = 1
-UI["12a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["12a"]["Text"] = [[]]
-UI["12a"]["Position"] = UDim2.new(-0.01198, 0, 0, 0)
+UI["12c"] = Instance.new("TextButton", UI["127"])
+UI["12c"]["BorderSizePixel"] = 0
+UI["12c"]["TextSize"] = 14
+UI["12c"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["12c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["12c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["12c"]["Size"] = UDim2.new(0, 126, 0, 43)
+UI["12c"]["BackgroundTransparency"] = 1
+UI["12c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["12c"]["Text"] = [[]]
+UI["12c"]["Position"] = UDim2.new(-0.01198, 0, 0, 0)
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Copy \\ --
-UI["12b"] = Instance.new("Frame", UI["122"])
-UI["12b"]["BorderSizePixel"] = 0
-UI["12b"]["BackgroundColor3"] = Color3.fromRGB(24, 14, 37)
-UI["12b"]["Size"] = UDim2.new(0.31933, 0, 0.38782, 0)
-UI["12b"]["Position"] = UDim2.new(0.05099, 0, 0.55175, 0)
-UI["12b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["12b"]["Name"] = [[Copy]]
+UI["12d"] = Instance.new("Frame", UI["124"])
+UI["12d"]["BorderSizePixel"] = 0
+UI["12d"]["BackgroundColor3"] = Color3.fromRGB(24, 14, 37)
+UI["12d"]["Size"] = UDim2.new(0.31933, 0, 0.38782, 0)
+UI["12d"]["Position"] = UDim2.new(0.05099, 0, 0.55175, 0)
+UI["12d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["12d"]["Name"] = [[Copy]]
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Copy.UICorner \\ --
-UI["12c"] = Instance.new("UICorner", UI["12b"])
-UI["12c"]["CornerRadius"] = UDim.new(0.34, 0)
+UI["12e"] = Instance.new("UICorner", UI["12d"])
+UI["12e"]["CornerRadius"] = UDim.new(0.34, 0)
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Copy.TextLabel \\ --
-UI["12d"] = Instance.new("TextLabel", UI["12b"])
-UI["12d"]["TextWrapped"] = true
-UI["12d"]["BorderSizePixel"] = 0
-UI["12d"]["TextScaled"] = true
-UI["12d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["12d"]["TextSize"] = 13
-UI["12d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-UI["12d"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["12d"]["BackgroundTransparency"] = 1
-UI["12d"]["Size"] = UDim2.new(1.55263, 0, 0.52632, 0)
-UI["12d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["12d"]["Text"] = [[Copy]]
-UI["12d"]["Position"] = UDim2.new(1.09464, 0, 0.23684, 0)
+UI["12f"] = Instance.new("TextLabel", UI["12d"])
+UI["12f"]["TextWrapped"] = true
+UI["12f"]["BorderSizePixel"] = 0
+UI["12f"]["TextScaled"] = true
+UI["12f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["12f"]["TextSize"] = 13
+UI["12f"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["12f"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["12f"]["BackgroundTransparency"] = 1
+UI["12f"]["Size"] = UDim2.new(1.55263, 0, 0.52632, 0)
+UI["12f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["12f"]["Text"] = [[Copy]]
+UI["12f"]["Position"] = UDim2.new(1.09464, 0, 0.23684, 0)
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Copy.TextLabel.UITextSizeConstraint \\ --
-UI["12e"] = Instance.new("UITextSizeConstraint", UI["12d"])
-UI["12e"]["MaxTextSize"] = 13
+UI["130"] = Instance.new("UITextSizeConstraint", UI["12f"])
+UI["130"]["MaxTextSize"] = 13
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Copy.ImageButton \\ --
-UI["12f"] = Instance.new("ImageButton", UI["12b"])
-UI["12f"]["BorderSizePixel"] = 0
-UI["12f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["12f"]["Image"] = [[rbxassetid://17371207595]]
-UI["12f"]["Size"] = UDim2.new(0.841, 0, 0.737, 0)
-UI["12f"]["BackgroundTransparency"] = 1
-UI["12f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["12f"]["Position"] = UDim2.new(0.079, 0, 0.132, 0)
+UI["131"] = Instance.new("ImageButton", UI["12d"])
+UI["131"]["BorderSizePixel"] = 0
+UI["131"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["131"]["Image"] = [[rbxassetid://17371207595]]
+UI["131"]["Size"] = UDim2.new(0.841, 0, 0.737, 0)
+UI["131"]["BackgroundTransparency"] = 1
+UI["131"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["131"]["Position"] = UDim2.new(0.079, 0, 0.132, 0)
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.BottomConsole.Copy.TextButton \\ --
-UI["130"] = Instance.new("TextButton", UI["12b"])
-UI["130"]["BorderSizePixel"] = 0
-UI["130"]["TextSize"] = 14
-UI["130"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
-UI["130"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["130"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["130"]["Size"] = UDim2.new(0, 126, 0, 43)
-UI["130"]["BackgroundTransparency"] = 1
-UI["130"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["130"]["Text"] = [[]]
-UI["130"]["Position"] = UDim2.new(-0.01198, 0, 0, 0)
+UI["132"] = Instance.new("TextButton", UI["12d"])
+UI["132"]["BorderSizePixel"] = 0
+UI["132"]["TextSize"] = 14
+UI["132"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["132"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["132"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["132"]["Size"] = UDim2.new(0, 126, 0, 43)
+UI["132"]["BackgroundTransparency"] = 1
+UI["132"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["132"]["Text"] = [[]]
+UI["132"]["Position"] = UDim2.new(-0.01198, 0, 0, 0)
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.Modes \\ --
-UI["131"] = Instance.new("Folder", UI["11f"])
-UI["131"]["Name"] = [[Modes]]
+UI["133"] = Instance.new("Folder", UI["121"])
+UI["133"]["Name"] = [[Modes]]
 
 -- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Warn \\ --
-UI["132"] = Instance.new("TextButton", UI["131"])
-UI["132"]["TextWrapped"] = true
-UI["132"]["BorderSizePixel"] = 0
-UI["132"]["TextSize"] = 15
-UI["132"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["132"]["TextScaled"] = true
-UI["132"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
-UI["132"]["Size"] = UDim2.new(0.06876, 0, 0.10762, 0)
-UI["132"]["BackgroundTransparency"] = 1
-UI["132"]["Name"] = [[Warn]]
-UI["132"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["132"]["Text"] = [[warn: on]]
-UI["132"]["Visible"] = false
-UI["132"]["Position"] = UDim2.new(0.96567, 0, 0.54946, 0)
-
--- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Warn.UITextSizeConstraint \\ --
-UI["133"] = Instance.new("UITextSizeConstraint", UI["132"])
-UI["133"]["MaxTextSize"] = 15
-
--- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Print \\ --
-UI["134"] = Instance.new("TextButton", UI["131"])
+UI["134"] = Instance.new("TextButton", UI["133"])
 UI["134"]["TextWrapped"] = true
 UI["134"]["BorderSizePixel"] = 0
 UI["134"]["TextSize"] = 15
@@ -2610,18 +2600,18 @@ UI["134"]["TextScaled"] = true
 UI["134"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
 UI["134"]["Size"] = UDim2.new(0.06876, 0, 0.10762, 0)
 UI["134"]["BackgroundTransparency"] = 1
-UI["134"]["Name"] = [[Print]]
+UI["134"]["Name"] = [[Warn]]
 UI["134"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["134"]["Text"] = [[print: on]]
+UI["134"]["Text"] = [[warn: on]]
 UI["134"]["Visible"] = false
-UI["134"]["Position"] = UDim2.new(0.96567, 0, 0.44167, 0)
+UI["134"]["Position"] = UDim2.new(0.96567, 0, 0.54946, 0)
 
--- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Print.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Warn.UITextSizeConstraint \\ --
 UI["135"] = Instance.new("UITextSizeConstraint", UI["134"])
 UI["135"]["MaxTextSize"] = 15
 
--- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Error \\ --
-UI["136"] = Instance.new("TextButton", UI["131"])
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Print \\ --
+UI["136"] = Instance.new("TextButton", UI["133"])
 UI["136"]["TextWrapped"] = true
 UI["136"]["BorderSizePixel"] = 0
 UI["136"]["TextSize"] = 15
@@ -2630,18 +2620,18 @@ UI["136"]["TextScaled"] = true
 UI["136"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
 UI["136"]["Size"] = UDim2.new(0.06876, 0, 0.10762, 0)
 UI["136"]["BackgroundTransparency"] = 1
-UI["136"]["Name"] = [[Error]]
+UI["136"]["Name"] = [[Print]]
 UI["136"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["136"]["Text"] = [[error: on]]
+UI["136"]["Text"] = [[print: on]]
 UI["136"]["Visible"] = false
-UI["136"]["Position"] = UDim2.new(0.96567, 0, 0.65724, 0)
+UI["136"]["Position"] = UDim2.new(0.96567, 0, 0.44167, 0)
 
--- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Error.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Print.UITextSizeConstraint \\ --
 UI["137"] = Instance.new("UITextSizeConstraint", UI["136"])
 UI["137"]["MaxTextSize"] = 15
 
--- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Info \\ --
-UI["138"] = Instance.new("TextButton", UI["131"])
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Error \\ --
+UI["138"] = Instance.new("TextButton", UI["133"])
 UI["138"]["TextWrapped"] = true
 UI["138"]["BorderSizePixel"] = 0
 UI["138"]["TextSize"] = 15
@@ -2650,112 +2640,105 @@ UI["138"]["TextScaled"] = true
 UI["138"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
 UI["138"]["Size"] = UDim2.new(0.06876, 0, 0.10762, 0)
 UI["138"]["BackgroundTransparency"] = 1
-UI["138"]["Name"] = [[Info]]
+UI["138"]["Name"] = [[Error]]
 UI["138"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["138"]["Text"] = [[info: on]]
+UI["138"]["Text"] = [[error: on]]
 UI["138"]["Visible"] = false
-UI["138"]["Position"] = UDim2.new(0.96567, 0, 0.33388, 0)
+UI["138"]["Position"] = UDim2.new(0.96567, 0, 0.65724, 0)
 
--- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Info.UITextSizeConstraint \\ --
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Error.UITextSizeConstraint \\ --
 UI["139"] = Instance.new("UITextSizeConstraint", UI["138"])
 UI["139"]["MaxTextSize"] = 15
 
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Info \\ --
+UI["13a"] = Instance.new("TextButton", UI["133"])
+UI["13a"]["TextWrapped"] = true
+UI["13a"]["BorderSizePixel"] = 0
+UI["13a"]["TextSize"] = 15
+UI["13a"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["13a"]["TextScaled"] = true
+UI["13a"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66)
+UI["13a"]["Size"] = UDim2.new(0.06876, 0, 0.10762, 0)
+UI["13a"]["BackgroundTransparency"] = 1
+UI["13a"]["Name"] = [[Info]]
+UI["13a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["13a"]["Text"] = [[info: on]]
+UI["13a"]["Visible"] = false
+UI["13a"]["Position"] = UDim2.new(0.96567, 0, 0.33388, 0)
+
+-- // StarterGui.Cubix.UI.console.Console.Buttons.Modes.Info.UITextSizeConstraint \\ --
+UI["13b"] = Instance.new("UITextSizeConstraint", UI["13a"])
+UI["13b"]["MaxTextSize"] = 15
+
 -- // StarterGui.Cubix.UI.console.LocalScript \\ --
-UI["13a"] = Instance.new("LocalScript", UI["116"])
+UI["13c"] = Instance.new("LocalScript", UI["118"])
 
 
 -- // StarterGui.Cubix.ImageLabel \\ --
-UI["13b"] = Instance.new("ImageLabel", UI["1"])
-UI["13b"]["BorderSizePixel"] = 0
-UI["13b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["13b"]["ImageTransparency"] = 1
-UI["13b"]["Image"] = [[rbxassetid://17360996086]]
-UI["13b"]["Size"] = UDim2.new(1, 0, 1, 0)
-UI["13b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["13b"]["BackgroundTransparency"] = 1
+UI["13d"] = Instance.new("ImageLabel", UI["1"])
+UI["13d"]["BorderSizePixel"] = 0
+UI["13d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["13d"]["ImageTransparency"] = 1
+UI["13d"]["Image"] = [[rbxassetid://17360996086]]
+UI["13d"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["13d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["13d"]["BackgroundTransparency"] = 1
 
 -- // StarterGui.Cubix.CubiXIntro \\ --
-UI["13c"] = Instance.new("ScreenGui", UI["1"])
-UI["13c"]["IgnoreGuiInset"] = true
-UI["13c"]["Enabled"] = false
-UI["13c"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets
-UI["13c"]["Name"] = [[CubiXIntro]]
-UI["13c"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+UI["13e"] = Instance.new("ScreenGui", UI["1"])
+UI["13e"]["IgnoreGuiInset"] = true
+UI["13e"]["Enabled"] = false
+UI["13e"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets
+UI["13e"]["Name"] = [[CubiXIntro]]
+UI["13e"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
 
 -- // StarterGui.Cubix.CubiXIntro.Frame \\ --
-UI["13d"] = Instance.new("Frame", UI["13c"])
-UI["13d"]["BorderSizePixel"] = 0
-UI["13d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0)
-UI["13d"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
-UI["13d"]["Size"] = UDim2.new(2, 0, 2, 0)
-UI["13d"]["Position"] = UDim2.new(0.5, 0, 0.5, 0)
-UI["13d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["13f"] = Instance.new("Frame", UI["13e"])
+UI["13f"]["BorderSizePixel"] = 0
+UI["13f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0)
+UI["13f"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
+UI["13f"]["Size"] = UDim2.new(2, 0, 2, 0)
+UI["13f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0)
+UI["13f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
 -- // StarterGui.Cubix.CubiXIntro.Frame.LogoImage \\ --
-UI["13e"] = Instance.new("ImageLabel", UI["13d"])
-UI["13e"]["BorderSizePixel"] = 0
-UI["13e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["13e"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
-UI["13e"]["Image"] = [[rbxassetid://16646719798]]
-UI["13e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["13e"]["BackgroundTransparency"] = 1
-UI["13e"]["Rotation"] = 360
-UI["13e"]["Name"] = [[LogoImage]]
-UI["13e"]["Position"] = UDim2.new(0.49996, 0, 0.49957, 0)
-
--- // StarterGui.Cubix.CubiXIntro.Frame.LogoImage.UIAspectRatioConstraint \\ --
-UI["13f"] = Instance.new("UIAspectRatioConstraint", UI["13e"])
-
-
--- // StarterGui.Cubix.CubiXIntro.Frame.ImageLabel \\ --
-UI["140"] = Instance.new("ImageLabel", UI["13d"])
+UI["140"] = Instance.new("ImageLabel", UI["13f"])
 UI["140"]["BorderSizePixel"] = 0
 UI["140"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
 UI["140"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
 UI["140"]["Image"] = [[rbxassetid://16646719798]]
-UI["140"]["Size"] = UDim2.new(0.06562, 0, 0.12223, 0)
-UI["140"]["Visible"] = false
 UI["140"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["140"]["BackgroundTransparency"] = 1
-UI["140"]["Position"] = UDim2.new(0.45622, 0, 0.49957, 0)
+UI["140"]["Rotation"] = 360
+UI["140"]["Name"] = [[LogoImage]]
+UI["140"]["Position"] = UDim2.new(0.49996, 0, 0.49957, 0)
 
--- // StarterGui.Cubix.CubiXIntro.Frame.ImageLabel.UIAspectRatioConstraint \\ --
+-- // StarterGui.Cubix.CubiXIntro.Frame.LogoImage.UIAspectRatioConstraint \\ --
 UI["141"] = Instance.new("UIAspectRatioConstraint", UI["140"])
 
 
--- // StarterGui.Cubix.CubiXIntro.Frame.TextButton \\ --
-UI["142"] = Instance.new("TextLabel", UI["13d"])
-UI["142"]["TextWrapped"] = true
-UI["142"]["Active"] = true
+-- // StarterGui.Cubix.CubiXIntro.Frame.ImageLabel \\ --
+UI["142"] = Instance.new("ImageLabel", UI["13f"])
 UI["142"]["BorderSizePixel"] = 0
-UI["142"]["TextXAlignment"] = Enum.TextXAlignment.Left
-UI["142"]["TextScaled"] = true
 UI["142"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["142"]["TextSize"] = 46
-UI["142"]["FontFace"] = Font.new([[rbxassetid://11702779517]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-UI["142"]["TextColor3"] = Color3.fromRGB(246, 246, 246)
-UI["142"]["BackgroundTransparency"] = 1
 UI["142"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
-UI["142"]["Size"] = UDim2.new(0.11588, 0, 0.06068, 0)
+UI["142"]["Image"] = [[rbxassetid://16646719798]]
+UI["142"]["Size"] = UDim2.new(0.06562, 0, 0.12223, 0)
 UI["142"]["Visible"] = false
 UI["142"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["142"]["Text"] = [[CubiX]]
-UI["142"]["Selectable"] = true
-UI["142"]["Name"] = [[TextButton]]
-UI["142"]["Position"] = UDim2.new(0.54987, 0, 0.49957, 0)
+UI["142"]["BackgroundTransparency"] = 1
+UI["142"]["Position"] = UDim2.new(0.45622, 0, 0.49957, 0)
 
--- // StarterGui.Cubix.CubiXIntro.Frame.TextButton.UIGradient \\ --
-UI["143"] = Instance.new("UIGradient", UI["142"])
-UI["143"]["Rotation"] = 51
-UI["143"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(0.150, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(137, 137, 137))}
+-- // StarterGui.Cubix.CubiXIntro.Frame.ImageLabel.UIAspectRatioConstraint \\ --
+UI["143"] = Instance.new("UIAspectRatioConstraint", UI["142"])
 
--- // StarterGui.Cubix.CubiXIntro.Frame.LogoText \\ --
-UI["144"] = Instance.new("TextLabel", UI["13d"])
+
+-- // StarterGui.Cubix.CubiXIntro.Frame.TextButton \\ --
+UI["144"] = Instance.new("TextLabel", UI["13f"])
 UI["144"]["TextWrapped"] = true
 UI["144"]["Active"] = true
 UI["144"]["BorderSizePixel"] = 0
 UI["144"]["TextXAlignment"] = Enum.TextXAlignment.Left
-UI["144"]["TextTransparency"] = 1
 UI["144"]["TextScaled"] = true
 UI["144"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
 UI["144"]["TextSize"] = 46
@@ -2764,299 +2747,326 @@ UI["144"]["TextColor3"] = Color3.fromRGB(246, 246, 246)
 UI["144"]["BackgroundTransparency"] = 1
 UI["144"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
 UI["144"]["Size"] = UDim2.new(0.11588, 0, 0.06068, 0)
+UI["144"]["Visible"] = false
 UI["144"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["144"]["Text"] = [[]]
+UI["144"]["Text"] = [[CubiX]]
 UI["144"]["Selectable"] = true
-UI["144"]["Name"] = [[LogoText]]
-UI["144"]["Position"] = UDim2.new(0.54708, 0, 0.49957, 0)
+UI["144"]["Name"] = [[TextButton]]
+UI["144"]["Position"] = UDim2.new(0.54987, 0, 0.49957, 0)
 
--- // StarterGui.Cubix.CubiXIntro.Frame.LogoText.UIGradient \\ --
+-- // StarterGui.Cubix.CubiXIntro.Frame.TextButton.UIGradient \\ --
 UI["145"] = Instance.new("UIGradient", UI["144"])
 UI["145"]["Rotation"] = 51
 UI["145"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(0.150, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(137, 137, 137))}
 
+-- // StarterGui.Cubix.CubiXIntro.Frame.LogoText \\ --
+UI["146"] = Instance.new("TextLabel", UI["13f"])
+UI["146"]["TextWrapped"] = true
+UI["146"]["Active"] = true
+UI["146"]["BorderSizePixel"] = 0
+UI["146"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["146"]["TextTransparency"] = 1
+UI["146"]["TextScaled"] = true
+UI["146"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["146"]["TextSize"] = 46
+UI["146"]["FontFace"] = Font.new([[rbxassetid://11702779517]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["146"]["TextColor3"] = Color3.fromRGB(246, 246, 246)
+UI["146"]["BackgroundTransparency"] = 1
+UI["146"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
+UI["146"]["Size"] = UDim2.new(0.11588, 0, 0.06068, 0)
+UI["146"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["146"]["Text"] = [[]]
+UI["146"]["Selectable"] = true
+UI["146"]["Name"] = [[LogoText]]
+UI["146"]["Position"] = UDim2.new(0.54708, 0, 0.49957, 0)
+
+-- // StarterGui.Cubix.CubiXIntro.Frame.LogoText.UIGradient \\ --
+UI["147"] = Instance.new("UIGradient", UI["146"])
+UI["147"]["Rotation"] = 51
+UI["147"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(0.150, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(137, 137, 137))}
+
 -- // StarterGui.Cubix.CubiXIntro.LocalScript \\ --
-UI["146"] = Instance.new("LocalScript", UI["13c"])
+UI["148"] = Instance.new("LocalScript", UI["13e"])
 
 
 -- // StarterGui.Cubix.NFMessage \\ --
-UI["147"] = Instance.new("Folder", UI["1"])
-UI["147"]["Name"] = [[NFMessage]]
+UI["149"] = Instance.new("Folder", UI["1"])
+UI["149"]["Name"] = [[NFMessage]]
 
 -- // StarterGui.Cubix.NFMessage.LocalScript \\ --
-UI["148"] = Instance.new("LocalScript", UI["147"])
+UI["14a"] = Instance.new("LocalScript", UI["149"])
 
 
 -- // StarterGui.Cubix.NFMessage.Cln \\ --
-UI["149"] = Instance.new("Folder", UI["147"])
-UI["149"]["Name"] = [[Cln]]
+UI["14b"] = Instance.new("Folder", UI["149"])
+UI["14b"]["Name"] = [[Cln]]
 
 -- // StarterGui.Cubix.NFMessage.Cln.Nifocation \\ --
-UI["14a"] = Instance.new("Frame", UI["149"])
-UI["14a"]["BorderSizePixel"] = 0
-UI["14a"]["BackgroundColor3"] = Color3.fromRGB(30, 19, 41)
-UI["14a"]["Size"] = UDim2.new(0.42669, 0, 0.1331, 0)
-UI["14a"]["Position"] = UDim2.new(0.314, 0, -1, 0)
-UI["14a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["14a"]["Name"] = [[Nifocation]]
+UI["14c"] = Instance.new("Frame", UI["14b"])
+UI["14c"]["BorderSizePixel"] = 0
+UI["14c"]["BackgroundColor3"] = Color3.fromRGB(30, 19, 41)
+UI["14c"]["Size"] = UDim2.new(0.42669, 0, 0.1331, 0)
+UI["14c"]["Position"] = UDim2.new(0.314, 0, -1, 0)
+UI["14c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["14c"]["Name"] = [[Nifocation]]
 
 -- // StarterGui.Cubix.NFMessage.Cln.Nifocation.Frame \\ --
-UI["14b"] = Instance.new("Frame", UI["14a"])
-UI["14b"]["BorderSizePixel"] = 0
-UI["14b"]["BackgroundColor3"] = Color3.fromRGB(17, 11, 23)
-UI["14b"]["Size"] = UDim2.new(1, 0, 0.06024, 0)
-UI["14b"]["Position"] = UDim2.new(0, 0, 0.97925, 0)
-UI["14b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["14d"] = Instance.new("Frame", UI["14c"])
+UI["14d"]["BorderSizePixel"] = 0
+UI["14d"]["BackgroundColor3"] = Color3.fromRGB(17, 11, 23)
+UI["14d"]["Size"] = UDim2.new(1, 0, 0.06024, 0)
+UI["14d"]["Position"] = UDim2.new(0, 0, 0.97925, 0)
+UI["14d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 
 -- // StarterGui.Cubix.NFMessage.Cln.Nifocation.Message \\ --
-UI["14c"] = Instance.new("TextLabel", UI["14a"])
-UI["14c"]["TextWrapped"] = true
-UI["14c"]["BorderSizePixel"] = 0
-UI["14c"]["TextXAlignment"] = Enum.TextXAlignment.Left
-UI["14c"]["TextYAlignment"] = Enum.TextYAlignment.Top
-UI["14c"]["TextScaled"] = true
-UI["14c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["14c"]["TextSize"] = 35
-UI["14c"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-UI["14c"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["14c"]["BackgroundTransparency"] = 1
-UI["14c"]["RichText"] = true
-UI["14c"]["Size"] = UDim2.new(0.72305, 0, 0.80161, 0)
-UI["14c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["14c"]["Text"] = [[Youtube Channel I Click here to Copy the link]]
-UI["14c"]["Name"] = [[Message]]
-UI["14c"]["Position"] = UDim2.new(0.26016, 0, 0.0755, 0)
+UI["14e"] = Instance.new("TextLabel", UI["14c"])
+UI["14e"]["TextWrapped"] = true
+UI["14e"]["BorderSizePixel"] = 0
+UI["14e"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["14e"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["14e"]["TextScaled"] = true
+UI["14e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["14e"]["TextSize"] = 35
+UI["14e"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["14e"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["14e"]["BackgroundTransparency"] = 1
+UI["14e"]["RichText"] = true
+UI["14e"]["Size"] = UDim2.new(0.72305, 0, 0.80161, 0)
+UI["14e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["14e"]["Text"] = [[Youtube Channel I Click here to Copy the link]]
+UI["14e"]["Name"] = [[Message]]
+UI["14e"]["Position"] = UDim2.new(0.26016, 0, 0.0755, 0)
 
 -- // StarterGui.Cubix.NFMessage.Cln.Nifocation.Message.UITextSizeConstraint \\ --
-UI["14d"] = Instance.new("UITextSizeConstraint", UI["14c"])
-UI["14d"]["MaxTextSize"] = 35
+UI["14f"] = Instance.new("UITextSizeConstraint", UI["14e"])
+UI["14f"]["MaxTextSize"] = 35
 
 -- // StarterGui.Cubix.NFMessage.Cln.Nifocation.Image \\ --
-UI["14e"] = Instance.new("ImageLabel", UI["14a"])
-UI["14e"]["BorderSizePixel"] = 0
-UI["14e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["14e"]["Image"] = [[rbxassetid://17363232722]]
-UI["14e"]["Size"] = UDim2.new(0.31448, 0, 1.06031, 0)
-UI["14e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["14e"]["BackgroundTransparency"] = 1
-UI["14e"]["Name"] = [[Image]]
-UI["14e"]["Position"] = UDim2.new(-0.08286, 0, -0.00191, 0)
+UI["150"] = Instance.new("ImageLabel", UI["14c"])
+UI["150"]["BorderSizePixel"] = 0
+UI["150"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["150"]["Image"] = [[rbxassetid://17363232722]]
+UI["150"]["Size"] = UDim2.new(0.31448, 0, 1.06031, 0)
+UI["150"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["150"]["BackgroundTransparency"] = 1
+UI["150"]["Name"] = [[Image]]
+UI["150"]["Position"] = UDim2.new(-0.08286, 0, -0.00191, 0)
 
 -- // StarterGui.Cubix.NFMessage.Cln.Nifocation.Image.UICorner \\ --
-UI["14f"] = Instance.new("UICorner", UI["14e"])
+UI["151"] = Instance.new("UICorner", UI["150"])
 
 
 -- // StarterGui.Cubix.NFMessage.Cln.Nifocation.Button \\ --
-UI["150"] = Instance.new("Frame", UI["14a"])
-UI["150"]["BorderSizePixel"] = 0
-UI["150"]["BackgroundColor3"] = Color3.fromRGB(18, 11, 28)
-UI["150"]["Size"] = UDim2.new(0.0833, 0, 0.47332, 0)
-UI["150"]["Position"] = UDim2.new(0.89844, 0, 0.39516, 0)
-UI["150"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["150"]["Name"] = [[Button]]
+UI["152"] = Instance.new("Frame", UI["14c"])
+UI["152"]["BorderSizePixel"] = 0
+UI["152"]["BackgroundColor3"] = Color3.fromRGB(18, 11, 28)
+UI["152"]["Size"] = UDim2.new(0.0833, 0, 0.47332, 0)
+UI["152"]["Position"] = UDim2.new(0.89844, 0, 0.39516, 0)
+UI["152"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["152"]["Name"] = [[Button]]
 
 -- // StarterGui.Cubix.NFMessage.Cln.Nifocation.Button.UICorner \\ --
-UI["151"] = Instance.new("UICorner", UI["150"])
-UI["151"]["CornerRadius"] = UDim.new(0.34, 0)
+UI["153"] = Instance.new("UICorner", UI["152"])
+UI["153"]["CornerRadius"] = UDim.new(0.34, 0)
 
 -- // StarterGui.Cubix.NFMessage.Cln.Nifocation.Button.Copy \\ --
-UI["152"] = Instance.new("ImageButton", UI["150"])
-UI["152"]["BorderSizePixel"] = 0
-UI["152"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["152"]["Image"] = [[rbxassetid://17371144983]]
-UI["152"]["Size"] = UDim2.new(0.841, 0, 0.737, 0)
-UI["152"]["BackgroundTransparency"] = 1
-UI["152"]["Name"] = [[Copy]]
-UI["152"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["152"]["Position"] = UDim2.new(0.079, 0, 0.132, 0)
+UI["154"] = Instance.new("ImageButton", UI["152"])
+UI["154"]["BorderSizePixel"] = 0
+UI["154"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["154"]["Image"] = [[rbxassetid://17371144983]]
+UI["154"]["Size"] = UDim2.new(0.841, 0, 0.737, 0)
+UI["154"]["BackgroundTransparency"] = 1
+UI["154"]["Name"] = [[Copy]]
+UI["154"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["154"]["Position"] = UDim2.new(0.079, 0, 0.132, 0)
 
 -- // StarterGui.Cubix.left \\ --
-UI["153"] = Instance.new("Frame", UI["1"])
-UI["153"]["Visible"] = false
-UI["153"]["ZIndex"] = 999999999
-UI["153"]["BorderSizePixel"] = 0
-UI["153"]["BackgroundColor3"] = Color3.fromRGB(17, 11, 23)
-UI["153"]["Size"] = UDim2.new(0.99926, 0, 0.07519, 0)
-UI["153"]["Position"] = UDim2.new(-0.48156, 0, 0.35714, 0)
-UI["153"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["153"]["Name"] = [[left]]
-UI["153"]["Rotation"] = 90
+UI["155"] = Instance.new("Frame", UI["1"])
+UI["155"]["Visible"] = false
+UI["155"]["ZIndex"] = 999999999
+UI["155"]["BorderSizePixel"] = 0
+UI["155"]["BackgroundColor3"] = Color3.fromRGB(17, 11, 23)
+UI["155"]["Size"] = UDim2.new(0.99926, 0, 0.07519, 0)
+UI["155"]["Position"] = UDim2.new(-0.48156, 0, 0.35714, 0)
+UI["155"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["155"]["Name"] = [[left]]
+UI["155"]["Rotation"] = 90
 
 -- // StarterGui.Cubix.left.Executor \\ --
-UI["154"] = Instance.new("Frame", UI["153"])
-UI["154"]["ZIndex"] = 999
-UI["154"]["BorderSizePixel"] = 0
-UI["154"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
-UI["154"]["Size"] = UDim2.new(0.034, 0, 0.735, 0)
-UI["154"]["Position"] = UDim2.new(0.47324, 0, 0.15088, 0)
-UI["154"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["154"]["Name"] = [[Executor]]
-UI["154"]["Rotation"] = -90
-UI["154"]["BackgroundTransparency"] = 1
+UI["156"] = Instance.new("Frame", UI["155"])
+UI["156"]["ZIndex"] = 999
+UI["156"]["BorderSizePixel"] = 0
+UI["156"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
+UI["156"]["Size"] = UDim2.new(0.034, 0, 0.735, 0)
+UI["156"]["Position"] = UDim2.new(0.47324, 0, 0.15088, 0)
+UI["156"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["156"]["Name"] = [[Executor]]
+UI["156"]["Rotation"] = -90
+UI["156"]["BackgroundTransparency"] = 1
 
 -- // StarterGui.Cubix.left.Executor.ImageButton \\ --
-UI["155"] = Instance.new("ImageButton", UI["154"])
-UI["155"]["BorderSizePixel"] = 0
-UI["155"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
-UI["155"]["Image"] = [[rbxassetid://17370961088]]
-UI["155"]["Size"] = UDim2.new(0.8, 0, 0.8, 0)
-UI["155"]["BackgroundTransparency"] = 1
-UI["155"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["155"]["Position"] = UDim2.new(0.1, 0, 0.1, 0)
+UI["157"] = Instance.new("ImageButton", UI["156"])
+UI["157"]["BorderSizePixel"] = 0
+UI["157"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
+UI["157"]["Image"] = [[rbxassetid://17370961088]]
+UI["157"]["Size"] = UDim2.new(0.8, 0, 0.8, 0)
+UI["157"]["BackgroundTransparency"] = 1
+UI["157"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["157"]["Position"] = UDim2.new(0.1, 0, 0.1, 0)
 
 -- // StarterGui.Cubix.left.Executor.UICorner \\ --
-UI["156"] = Instance.new("UICorner", UI["154"])
-UI["156"]["CornerRadius"] = UDim.new(0.3, 0)
-
--- // StarterGui.Cubix.left.ScriptHub \\ --
-UI["157"] = Instance.new("Frame", UI["153"])
-UI["157"]["ZIndex"] = 999
-UI["157"]["BorderSizePixel"] = 0
-UI["157"]["BackgroundColor3"] = Color3.fromRGB(24, 20, 30)
-UI["157"]["Size"] = UDim2.new(0.03411, 0, 0.73496, 0)
-UI["157"]["Position"] = UDim2.new(0.56929, 0, 0.15088, 0)
-UI["157"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["157"]["Name"] = [[ScriptHub]]
-UI["157"]["Rotation"] = -90
-UI["157"]["BackgroundTransparency"] = 1
-
--- // StarterGui.Cubix.left.ScriptHub.UICorner \\ --
-UI["158"] = Instance.new("UICorner", UI["157"])
+UI["158"] = Instance.new("UICorner", UI["156"])
 UI["158"]["CornerRadius"] = UDim.new(0.3, 0)
 
--- // StarterGui.Cubix.left.ScriptHub.ImageButton \\ --
-UI["159"] = Instance.new("ImageButton", UI["157"])
+-- // StarterGui.Cubix.left.ScriptHub \\ --
+UI["159"] = Instance.new("Frame", UI["155"])
+UI["159"]["ZIndex"] = 999
 UI["159"]["BorderSizePixel"] = 0
-UI["159"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
-UI["159"]["Image"] = [[rbxassetid://17396048026]]
-UI["159"]["Size"] = UDim2.new(0.59, 0, 0.6, 0)
-UI["159"]["BackgroundTransparency"] = 1
+UI["159"]["BackgroundColor3"] = Color3.fromRGB(24, 20, 30)
+UI["159"]["Size"] = UDim2.new(0.03411, 0, 0.73496, 0)
+UI["159"]["Position"] = UDim2.new(0.56929, 0, 0.15088, 0)
 UI["159"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["159"]["Position"] = UDim2.new(0.19549, 0, 0.17611, 0)
+UI["159"]["Name"] = [[ScriptHub]]
+UI["159"]["Rotation"] = -90
+UI["159"]["BackgroundTransparency"] = 1
+
+-- // StarterGui.Cubix.left.ScriptHub.UICorner \\ --
+UI["15a"] = Instance.new("UICorner", UI["159"])
+UI["15a"]["CornerRadius"] = UDim.new(0.3, 0)
+
+-- // StarterGui.Cubix.left.ScriptHub.ImageButton \\ --
+UI["15b"] = Instance.new("ImageButton", UI["159"])
+UI["15b"]["BorderSizePixel"] = 0
+UI["15b"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
+UI["15b"]["Image"] = [[rbxassetid://17396048026]]
+UI["15b"]["Size"] = UDim2.new(0.59, 0, 0.6, 0)
+UI["15b"]["BackgroundTransparency"] = 1
+UI["15b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["15b"]["Position"] = UDim2.new(0.19549, 0, 0.17611, 0)
 
 -- // StarterGui.Cubix.left.ScriptCloud \\ --
-UI["15a"] = Instance.new("Frame", UI["153"])
-UI["15a"]["ZIndex"] = 999
-UI["15a"]["BorderSizePixel"] = 0
-UI["15a"]["BackgroundColor3"] = Color3.fromRGB(24, 20, 30)
-UI["15a"]["Size"] = UDim2.new(0.034, 0, 0.735, 0)
-UI["15a"]["Position"] = UDim2.new(0.5225, 0, 0.16567, 0)
-UI["15a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["15a"]["Name"] = [[ScriptCloud]]
-UI["15a"]["Rotation"] = -90
-UI["15a"]["BackgroundTransparency"] = 1
+UI["15c"] = Instance.new("Frame", UI["155"])
+UI["15c"]["ZIndex"] = 999
+UI["15c"]["BorderSizePixel"] = 0
+UI["15c"]["BackgroundColor3"] = Color3.fromRGB(24, 20, 30)
+UI["15c"]["Size"] = UDim2.new(0.034, 0, 0.735, 0)
+UI["15c"]["Position"] = UDim2.new(0.5225, 0, 0.16567, 0)
+UI["15c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["15c"]["Name"] = [[ScriptCloud]]
+UI["15c"]["Rotation"] = -90
+UI["15c"]["BackgroundTransparency"] = 1
 
 -- // StarterGui.Cubix.left.ScriptCloud.UICorner \\ --
-UI["15b"] = Instance.new("UICorner", UI["15a"])
-UI["15b"]["CornerRadius"] = UDim.new(0.3, 0)
+UI["15d"] = Instance.new("UICorner", UI["15c"])
+UI["15d"]["CornerRadius"] = UDim.new(0.3, 0)
 
 -- // StarterGui.Cubix.left.ScriptCloud.ImageButton \\ --
-UI["15c"] = Instance.new("ImageButton", UI["15a"])
-UI["15c"]["BorderSizePixel"] = 0
-UI["15c"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
-UI["15c"]["Image"] = [[rbxassetid://17371007130]]
-UI["15c"]["Size"] = UDim2.new(1, 0, 0.8, 0)
-UI["15c"]["BackgroundTransparency"] = 1
-UI["15c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["15c"]["Position"] = UDim2.new(0, 0, 0.1, 0)
-
--- // StarterGui.Cubix.left.Settings \\ --
-UI["15d"] = Instance.new("Frame", UI["153"])
-UI["15d"]["BorderSizePixel"] = 0
-UI["15d"]["BackgroundColor3"] = Color3.fromRGB(24, 20, 30)
-UI["15d"]["Size"] = UDim2.new(0.03693, 0, 0.83333, 0)
-UI["15d"]["Position"] = UDim2.new(0.8, 0, 0.053, 0)
-UI["15d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["15d"]["Name"] = [[Settings]]
-UI["15d"]["Rotation"] = -90
-UI["15d"]["BackgroundTransparency"] = 1
-
--- // StarterGui.Cubix.left.Settings.ImageButton \\ --
-UI["15e"] = Instance.new("ImageButton", UI["15d"])
+UI["15e"] = Instance.new("ImageButton", UI["15c"])
 UI["15e"]["BorderSizePixel"] = 0
 UI["15e"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
-UI["15e"]["Image"] = [[rbxassetid://17371011329]]
-UI["15e"]["Size"] = UDim2.new(0.9, 0, 0.8, 0)
+UI["15e"]["Image"] = [[rbxassetid://17371007130]]
+UI["15e"]["Size"] = UDim2.new(1, 0, 0.8, 0)
 UI["15e"]["BackgroundTransparency"] = 1
 UI["15e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["15e"]["Position"] = UDim2.new(0.1, 0, 0.1, 0)
+UI["15e"]["Position"] = UDim2.new(0, 0, 0.1, 0)
+
+-- // StarterGui.Cubix.left.Settings \\ --
+UI["15f"] = Instance.new("Frame", UI["155"])
+UI["15f"]["BorderSizePixel"] = 0
+UI["15f"]["BackgroundColor3"] = Color3.fromRGB(24, 20, 30)
+UI["15f"]["Size"] = UDim2.new(0.03693, 0, 0.83333, 0)
+UI["15f"]["Position"] = UDim2.new(0.8, 0, 0.053, 0)
+UI["15f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["15f"]["Name"] = [[Settings]]
+UI["15f"]["Rotation"] = -90
+UI["15f"]["BackgroundTransparency"] = 1
+
+-- // StarterGui.Cubix.left.Settings.ImageButton \\ --
+UI["160"] = Instance.new("ImageButton", UI["15f"])
+UI["160"]["BorderSizePixel"] = 0
+UI["160"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
+UI["160"]["Image"] = [[rbxassetid://17371011329]]
+UI["160"]["Size"] = UDim2.new(0.9, 0, 0.8, 0)
+UI["160"]["BackgroundTransparency"] = 1
+UI["160"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["160"]["Position"] = UDim2.new(0.1, 0, 0.1, 0)
 
 -- // StarterGui.Cubix.left.Folder \\ --
-UI["15f"] = Instance.new("Folder", UI["153"])
+UI["161"] = Instance.new("Folder", UI["155"])
 
 
 -- // StarterGui.Cubix.left.Folder.Frame \\ --
-UI["160"] = Instance.new("Frame", UI["15f"])
-UI["160"]["BorderSizePixel"] = 0
-UI["160"]["BackgroundColor3"] = Color3.fromRGB(22, 18, 28)
-UI["160"]["Size"] = UDim2.new(0.03323, 0, 0.75, 0)
-UI["160"]["Position"] = UDim2.new(0.29, 0, 0.119, 0)
-UI["160"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["160"]["Rotation"] = -90
+UI["162"] = Instance.new("Frame", UI["161"])
+UI["162"]["BorderSizePixel"] = 0
+UI["162"]["BackgroundColor3"] = Color3.fromRGB(22, 18, 28)
+UI["162"]["Size"] = UDim2.new(0.03323, 0, 0.75, 0)
+UI["162"]["Position"] = UDim2.new(0.29, 0, 0.119, 0)
+UI["162"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["162"]["Rotation"] = -90
 
 -- // StarterGui.Cubix.left.Folder.Frame.UICorner \\ --
-UI["161"] = Instance.new("UICorner", UI["160"])
-UI["161"]["CornerRadius"] = UDim.new(0.3, 0)
+UI["163"] = Instance.new("UICorner", UI["162"])
+UI["163"]["CornerRadius"] = UDim.new(0.3, 0)
 
 -- // StarterGui.Cubix.left.Folder.Frame.TextLabel \\ --
-UI["162"] = Instance.new("TextLabel", UI["160"])
-UI["162"]["TextWrapped"] = true
-UI["162"]["BorderSizePixel"] = 0
-UI["162"]["TextScaled"] = true
-UI["162"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["162"]["TextSize"] = 20
-UI["162"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-UI["162"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["162"]["BackgroundTransparency"] = 1
-UI["162"]["Size"] = UDim2.new(3.02222, 0, 0.44444, 0)
-UI["162"]["Visible"] = false
-UI["162"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["162"]["Text"] = [[Cubix Android]]
-UI["162"]["Position"] = UDim2.new(1.31335, 0, 0.28538, 0)
+UI["164"] = Instance.new("TextLabel", UI["162"])
+UI["164"]["TextWrapped"] = true
+UI["164"]["BorderSizePixel"] = 0
+UI["164"]["TextScaled"] = true
+UI["164"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["164"]["TextSize"] = 20
+UI["164"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["164"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["164"]["BackgroundTransparency"] = 1
+UI["164"]["Size"] = UDim2.new(3.02222, 0, 0.44444, 0)
+UI["164"]["Visible"] = false
+UI["164"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["164"]["Text"] = [[Cubix Android]]
+UI["164"]["Position"] = UDim2.new(1.31335, 0, 0.28538, 0)
 
 -- // StarterGui.Cubix.left.Folder.Frame.TextLabel.UITextSizeConstraint \\ --
-UI["163"] = Instance.new("UITextSizeConstraint", UI["162"])
-UI["163"]["MaxTextSize"] = 20
+UI["165"] = Instance.new("UITextSizeConstraint", UI["164"])
+UI["165"]["MaxTextSize"] = 20
 
 -- // StarterGui.Cubix.left.Folder.Frame.ImageButton \\ --
-UI["164"] = Instance.new("ImageButton", UI["160"])
-UI["164"]["BorderSizePixel"] = 0
-UI["164"]["BackgroundColor3"] = Color3.fromRGB(22, 18, 28)
-UI["164"]["Image"] = [[rbxassetid://17363232722]]
-UI["164"]["Size"] = UDim2.new(2.067, 0, 1.178, 0)
-UI["164"]["BackgroundTransparency"] = 1
-UI["164"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["164"]["Position"] = UDim2.new(-0.533, 0, -0.089, 0)
+UI["166"] = Instance.new("ImageButton", UI["162"])
+UI["166"]["BorderSizePixel"] = 0
+UI["166"]["BackgroundColor3"] = Color3.fromRGB(22, 18, 28)
+UI["166"]["Image"] = [[rbxassetid://17363232722]]
+UI["166"]["Size"] = UDim2.new(2.067, 0, 1.178, 0)
+UI["166"]["BackgroundTransparency"] = 1
+UI["166"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["166"]["Position"] = UDim2.new(-0.533, 0, -0.089, 0)
 
 -- // StarterGui.Cubix.left.Folder.Frame.UIAspectRatioConstraint \\ --
-UI["165"] = Instance.new("UIAspectRatioConstraint", UI["160"])
-UI["165"]["AspectRatio"] = 1.04059
+UI["167"] = Instance.new("UIAspectRatioConstraint", UI["162"])
+UI["167"]["AspectRatio"] = 1.04059
 
 -- // StarterGui.Cubix.left.Console \\ --
-UI["166"] = Instance.new("Frame", UI["153"])
-UI["166"]["ZIndex"] = 999
-UI["166"]["BorderSizePixel"] = 0
-UI["166"]["BackgroundColor3"] = Color3.fromRGB(24, 20, 30)
-UI["166"]["Size"] = UDim2.new(0.03411, 0, 0.73496, 0)
-UI["166"]["Position"] = UDim2.new(0.61067, 0, 0.15088, 0)
-UI["166"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["166"]["Name"] = [[Console]]
-UI["166"]["Rotation"] = -90
-UI["166"]["BackgroundTransparency"] = 1
+UI["168"] = Instance.new("Frame", UI["155"])
+UI["168"]["ZIndex"] = 999
+UI["168"]["BorderSizePixel"] = 0
+UI["168"]["BackgroundColor3"] = Color3.fromRGB(24, 20, 30)
+UI["168"]["Size"] = UDim2.new(0.03411, 0, 0.73496, 0)
+UI["168"]["Position"] = UDim2.new(0.61067, 0, 0.15088, 0)
+UI["168"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["168"]["Name"] = [[Console]]
+UI["168"]["Rotation"] = -90
+UI["168"]["BackgroundTransparency"] = 1
 
 -- // StarterGui.Cubix.left.Console.UICorner \\ --
-UI["167"] = Instance.new("UICorner", UI["166"])
-UI["167"]["CornerRadius"] = UDim.new(0.3, 0)
+UI["169"] = Instance.new("UICorner", UI["168"])
+UI["169"]["CornerRadius"] = UDim.new(0.3, 0)
 
 -- // StarterGui.Cubix.left.Console.ImageButton \\ --
-UI["168"] = Instance.new("ImageButton", UI["166"])
-UI["168"]["BorderSizePixel"] = 0
-UI["168"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
-UI["168"]["Image"] = [[rbxassetid://17666162409]]
-UI["168"]["Size"] = UDim2.new(0.59, 0, 0.6, 0)
-UI["168"]["BackgroundTransparency"] = 1
-UI["168"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["168"]["Position"] = UDim2.new(0.19549, 0, 0.17611, 0)
+UI["16a"] = Instance.new("ImageButton", UI["168"])
+UI["16a"]["BorderSizePixel"] = 0
+UI["16a"]["BackgroundColor3"] = Color3.fromRGB(55, 46, 69)
+UI["16a"]["Image"] = [[rbxassetid://17666162409]]
+UI["16a"]["Size"] = UDim2.new(0.59, 0, 0.6, 0)
+UI["16a"]["BackgroundTransparency"] = 1
+UI["16a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["16a"]["Position"] = UDim2.new(0.19549, 0, 0.17611, 0)
 
 -- // StarterGui.Cubix.UI.Executor.ExecutorPage.ScrollingFrame.Frame.LocalScript \\ --
 local function SCRIPT_4e()
@@ -3781,8 +3791,8 @@ local function SCRIPT_102()
 end
 task.spawn(SCRIPT_102)
 -- // StarterGui.Cubix.UI.Settings.language.LocalScript \\ --
-local function SCRIPT_115()
-	local script = UI["115"]
+local function SCRIPT_116()
+	local script = UI["116"]
 	local scrolling = script.Parent.Languages
 	local bt = scrolling.ButtonClone.languagebutton
 	local gametexts = scrolling.GameTexts
@@ -3915,14 +3925,25 @@ local function SCRIPT_115()
 
 	local function got(Url, Method, Body)
 		Method = Method or "GET"
-		local res = request({
-			["Url"] = Url,
-			["Method"] = Method,
-			["Headers"] = {
-				["cookie"] = "CONSENT=YES+"
-			},
-			["Body"] = Body
-		})
+		local res
+		if Method == "POST" then
+			res = request({
+				["Url"] = Url,
+				["Method"] = Method,
+				["Headers"] = {
+					["cookie"] = "CONSENT=YES+"
+				},
+				["Body"] = Body
+			})
+		else
+			res = request({
+				["Url"] = Url,
+				["Method"] = Method,
+				["Headers"] = {
+					["cookie"] = "CONSENT=YES+"
+				}
+			})
+		end
 
 		if res.Body:match("https://consent.google.com/s") then
 			res = syn.request({
@@ -4066,10 +4087,10 @@ local function SCRIPT_115()
 		TranslateFrom = TranslateFrom
 	}
 end
-task.spawn(SCRIPT_115)
+task.spawn(SCRIPT_116)
 -- // StarterGui.Cubix.UI.console.LocalScript \\ --
-local function SCRIPT_13a()
-	local script = UI["13a"]
+local function SCRIPT_13c()
+	local script = UI["13c"]
 	local function randomstr()
 		local str = ""
 		for i = 1, math.random(3,7) do
@@ -4185,10 +4206,10 @@ local function SCRIPT_13a()
 		writefile("Log_" .. tostring(game.PlaceId) .. "_" .. randomstr(), str)
 	end)
 end
-task.spawn(SCRIPT_13a)
+task.spawn(SCRIPT_13c)
 -- // StarterGui.Cubix.CubiXIntro.LocalScript \\ --
-local function SCRIPT_146()
-	local script = UI["146"]
+local function SCRIPT_148()
+	local script = UI["148"]
 	local loading = true
 
 	if loading then
@@ -4239,10 +4260,10 @@ local function SCRIPT_146()
 	script.Parent:Destroy()
 
 end
-task.spawn(SCRIPT_146)
+task.spawn(SCRIPT_148)
 -- // StarterGui.Cubix.NFMessage.LocalScript \\ --
-local function SCRIPT_148()
-	local script = UI["148"]
+local function SCRIPT_14a()
+	local script = UI["14a"]
 	local function tweenFrame(frame, startPos, endPos, duration)
 		local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Linear)
 		local tween = game:GetService("TweenService"):Create(frame, tweenInfo, {Position = UDim2.new(startPos[1], startPos[2], endPos[1], endPos[2])})
@@ -4290,9 +4311,10 @@ local function SCRIPT_148()
 	)
 
 end
-task.spawn(SCRIPT_148)
+task.spawn(SCRIPT_14a)
 
 return UI["1"], require;
+
 end
 
 return {
