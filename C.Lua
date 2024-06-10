@@ -4347,7 +4347,6 @@ local Languages = {
 	hi = "Hindi",
 	hmn = "Hmong",
 	hu = "Hungarian",
-	is = "Icelandic",
 	ig = "Igbo",
 	id = "Indonesian",
 	ga = "Irish",
