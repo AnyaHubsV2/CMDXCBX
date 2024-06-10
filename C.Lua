@@ -4395,7 +4395,6 @@ local function SCRIPT_11b()
 		sk = "Slovak",
 		sl = "Slovenian",
 		so = "Somali",
-		--es = "Spanish",
 		su = "Sundanese",
 		sw = "Swahili",
 		sv = "Swedish",
