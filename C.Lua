@@ -4421,30 +4421,36 @@ local function SCRIPT_11b()
 	local rootURL = "https://Translate.google.com/"
 	local CurrentLang = "en"
 
-	local function got(Url, Method, Body)
-		Method = Method or "GET"
+local function got(Url, Method, Body)
+	Method = Method or "GET"
 
-		local res = request({
+	local requestParams = {
+		["Url"] = Url,
+		["Method"] = Method,
+		["Headers"] = {
+			["cookie"] = "CONSENT=YES+"
+		}
+	}
+
+	if Method ~= "GET" and Method ~= "HEAD" then
+		requestParams["Body"] = Body
+	end
+
+	local res = request(requestParams)
+
+	if res.Body:match("https://consent.google.com/s") then
+		res = syn.request({
 			["Url"] = Url,
-			["Method"] = Method,
+			["Method"] = "GET",
 			["Headers"] = {
 				["cookie"] = "CONSENT=YES+"
-			},
-			["Body"] = Body
+			}
 		})
-
-		if res.Body:match("https://consent.google.com/s") then
-			res = syn.request({
-				["Url"] = Url,
-				["Method"] = "GET",
-				["Headers"] = {
-					["cookie"] = "CONSENT=YES+"
-				}
-			})
-		end
-
-		return res
 	end
+
+	return res
+end
+
 
 	local function find(Lang)
 		Lang = Lang:lower()
