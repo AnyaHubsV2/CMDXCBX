@@ -1,22 +1,4 @@
 local function loadUI()
-	local UI = {}
-
-	local function generateRandomName(length)
-		local chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-		local randomName = ""
-		for i = 1, length do
-			local randomIndex = math.random(1, #chars)
-			randomName = randomName .. string.sub(chars, randomIndex, randomIndex)
-		end
-		return randomName
-	end
-
-	local chatii = Instance.new("TextChatCommand")
-	chatii.PrimaryAlias = "/Cubix"
-	chatii.Parent = game.TextChatService
-	chatii.Enabled = true
-	chatii.Name = generateRandomName(10)
-
 local UI = {}
 
 -- // StarterGui.Cubix \\ --
@@ -4437,7 +4419,7 @@ local function SCRIPT_11b()
 	local reqid = 1000
 	local executeURL = "https://Translate.google.com/_/TranslateWebserverUi/data/batchexecute"
 	local rootURL = "https://Translate.google.com/"
-	local CurrentLang = "en"
+	local CurrentLang = "auto"  -- Change to auto to automatically detect the source language
 
 	local function got(Url, Method, Body)
 		Method = Method or "GET"
@@ -4568,14 +4550,17 @@ local function SCRIPT_11b()
 
 	local function createLanguageButtons()
 		for code, name in pairs(Languages) do
+			print("Creating button for:", code, name)
 			local newButton = buttonTemplate:Clone()
 			newButton.Parent = scrolling
 			newButton.Name = code
 			newButton.Text = name
 			newButton.Visible = true
 			newButton.MouseButton1Click:Connect(function()
+				print("Button clicked for:", code)
 				translateAllTexts(code)
 			end)
+			print("Button created for:", code)
 		end
 	end
 
@@ -4593,6 +4578,23 @@ task.spawn(SCRIPT_11b)
 -- // StarterGui.Cubix.UI.Settings.more.more.LocalScript \\ --
 local function SCRIPT_14e()
 	local script = UI["14e"]
+	local function generateRandomName(length)
+		local chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+		local randomName = ""
+		for i = 1, length do
+			local randomIndex = math.random(1, #chars)
+			randomName = randomName .. string.sub(chars, randomIndex, randomIndex)
+		end
+		return randomName
+	end
+
+	local chatii = Instance.new("TextChatCommand")
+	chatii.PrimaryAlias = "/Cubix"
+	chatii.Parent = game.TextChatService
+	chatii.Enabled = true
+	chatii.Name = generateRandomName(10)
+
+
 	local TweenService = game:GetService("TweenService")
 	local HttpService = game:GetService("HttpService")
 
@@ -4706,9 +4708,10 @@ local function SCRIPT_14e()
 		end
 	end)
 
+	task.wait(2)
 	local isCommandUIShown = false
 
-	chaii.Triggered:Connect(function()
+	chatii.Triggered:Connect(function()
 		if jsonfileforsave.command.value then 
 			if isCommandUIShown then
 				TweenService:Create(ll.Parent.Parent.down, TweenInfo.new(1), {Position = UDim2.new(0, 0, 1, 0)}):Play()
