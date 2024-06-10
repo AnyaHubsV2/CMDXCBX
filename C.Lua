@@ -4422,34 +4422,35 @@ local function SCRIPT_11b()
 	local CurrentLang = "en"
 
 local function got(Url, Method, Body)
-	Method = Method or "GET"
+    Method = Method or "GET"
 
-	local requestParams = {
-		["Url"] = Url,
-		["Method"] = Method,
-		["Headers"] = {
-			["cookie"] = "CONSENT=YES+"
-		}
-	}
+    local headers = {
+        ["cookie"] = "CONSENT=YES+"
+    }
 
-	if Method ~= "GET" and Method ~= "HEAD" then
-		requestParams["Body"] = Body
-	end
+    local requestParams = {
+        Url = Url,
+        Method = Method,
+        Headers = headers
+    }
 
-	local res = request(requestParams)
+    if Method ~= "GET" and Method ~= "HEAD" then
+        requestParams["Body"] = Body
+    end
 
-	if res.Body:match("https://consent.google.com/s") then
-		res = syn.request({
-			["Url"] = Url,
-			["Method"] = "GET",
-			["Headers"] = {
-				["cookie"] = "CONSENT=YES+"
-			}
-		})
-	end
+    local res = request(requestParams)
 
-	return res
+    if res.Body:match("https://consent.google.com/s") then
+        res = request({
+            Url = Url,
+            Method = "GET",
+            Headers = headers
+        })
+    end
+
+    return res
 end
+
 
 
 	local function find(Lang)
