@@ -3635,18 +3635,6 @@ local function SCRIPT_d0()
 	local f4 = frames.Settings
 	local f5 = frames.console
 
-	local function readJsonFile()
-		if isfile("JsonSaver.json") then
-			local content = readfile("JsonSaver.json")
-			return HttpService:JSONDecode(content)
-		else
-			return {
-				autoclose = { value = false }
-			}
-		end
-	end
-
-
 
 	local TweenService = game:GetService("TweenService")
 
@@ -4746,6 +4734,27 @@ local function SCRIPT_14e()
 			isCommandUIShown = not isCommandUIShown
 		end
 	end)
+
+local function loadFromFile()
+    if isfile(jsonFileName) then
+        local jsonContent = readfile(jsonFileName)
+        jsonfileforsave = HttpService:JSONDecode(jsonContent)
+        
+        -- Apply the loaded settings
+        toggleFrameAndImage(commandImageButton, commandFrame, "command")
+        toggleFrameAndImage(dragImageButton, dragFrame, "drag")
+        toggleFrameAndImage(mainButtonImageButton, mainButtonFrame, "mainbutton")
+        toggleFrameAndImage(autoExecImageButton, autoExecFrame, "autoexec")
+        toggleFrameAndImage(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
+    else
+        -- If the file doesn't exist, use default settings
+        jsonfileforsave = HttpService:JSONDecode(defaultCode)
+        saveToFile() -- Save default settings to file
+    end
+end
+
+loadFromFile()
+game.Players.PlayerAdded:Connect(loadFromFile)
 
 
 	--if jsonfileforsave.autoexec.value then
