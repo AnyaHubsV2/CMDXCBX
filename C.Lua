@@ -1,8 +1,9 @@
 local function loadUI()
+
 local UI = {}
 
 -- // StarterGui.Cubix \\ --
-UI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"))
+UI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))
 UI["1"]["IgnoreGuiInset"] = true
 UI["1"]["Enabled"] = false
 UI["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets
@@ -4298,6 +4299,13 @@ local function SCRIPT_11b()
 	local scrolling = script.Parent.Languages
 	local buttonTemplate = scrolling.ButtonClone
 
+	local HttpService = game:GetService("HttpService")
+	local Players = game:GetService("Players")
+	local CoreGui = game:GetService("CoreGui")
+
+	local Player = Players.LocalPlayer
+	local CubixGui = CoreGui:WaitForChild("Cubix")
+
 	local Languages = {
 		auto = "Automatic",
 		af = "Afrikaans",
@@ -4406,57 +4414,13 @@ local function SCRIPT_11b()
 		zu = "Zulu"
 	}
 
-	local HttpService = game:GetService("HttpService")
-	local Players = game:GetService("Players")
-
-	local Player = Players.LocalPlayer
-
-	local function Encode(Source) return HttpService:JSONEncode(Source) end
-	local function Decode(Source) return HttpService:JSONDecode(Source) end
-
-	local request = request or http_request or HttpPost or syn.request
-
-	local reqid = 1000
-	local executeURL = "https://Translate.google.com/_/TranslateWebserverUi/data/batchexecute"
-	local rootURL = "https://Translate.google.com/"
-	local CurrentLang = "auto"  -- Change to auto to automatically detect the source language
-
-	local function got(Url, Method, Body)
-		Method = Method or "GET"
-
-		local res = request({
-			["Url"] = Url,
-			["Method"] = Method,
-			["Headers"] = {
-				["cookie"] = "CONSENT=YES+"
-			},
-			["Body"] = Body
-		})
-
-		if res.Body:match("https://consent.google.com/s") then
-			res = request({
-				["Url"] = Url,
-				["Method"] = "GET",
-				["Headers"] = {
-					["cookie"] = "CONSENT=YES+"
-				}
-			})
-		end
-
-		return res
-	end
-
-	local function find(Lang)
+	local function getISOCode(Lang)
 		Lang = Lang:lower()
 		for Ind, Val in pairs(Languages) do
-			if Ind == Lang or Val == Lang then
+			if Ind == Lang or Val:lower() == Lang then
 				return Ind
 			end
 		end
-	end
-
-	local function getISOCode(Lang)
-		return find(Lang)
 	end
 
 	local function stringifyQuery(Fields)
@@ -4470,8 +4434,7 @@ local function SCRIPT_11b()
 				data = data .. ("&%s=%s"):format(HttpService:UrlEncode(Ind), HttpService:UrlEncode(Val1))
 			end
 		end
-		data = data:sub(2)
-		return data
+		return data:sub(2)
 	end
 
 	local function Translate(str, to, from)
@@ -4479,99 +4442,65 @@ local function SCRIPT_11b()
 		to = to and getISOCode(to) or "en"
 
 		local data = {{str, from, to, true}, {nil}}
+		local freq = {{{"MkEWBc", HttpService:JSONEncode(data), nil, "generic"}}}
 
-		local freq = {{{"MkEWBc", Encode(data), nil, "generic"}}}
+		local executeURL = "https://translate.google.com/_/TranslateWebserverUi/data/batchexecute"
+		local url = executeURL.."?"..stringifyQuery{rpcids = "MkEWBc", ["f.sid"] = "", bl = "", hl="en", _reqid = 0, rt = "c"}
+		local body = stringifyQuery{["f.req"] = HttpService:JSONEncode(freq)}
 
-		local url = executeURL .. "?" .. stringifyQuery { rpcids = "MkEWBc", ["f.sid"] = "", bl = "", hl = "en", _reqid = 0, rt = "c" }
-		local body = stringifyQuery { ["f.req"] = Encode(freq) }
-		local req = got(url, "POST", body)
+		local response = HttpService:PostAsync(url, body, Enum.HttpContentType.ApplicationUrlEncoded, false, {cookie = "CONSENT=YES+"})
+		local body = HttpService:JSONDecode(response:match("%[.-%]\n"))
+		local translationData = HttpService:JSONDecode(body[1][3])
 
-		local body = Decode(req.Body:match "%[.-%]\n")
-		local translationData = Decode(body[1][3])
 		local result = {
-			text = "",
+			text = translationData[2][1][1][6][1][1],
 			from = {
-				language = "",
-				text = ""
+				language = translationData[3],
+				text = translationData[2][5][1]
 			},
-			raw = ""
+			raw = translationData
 		}
-
-		result.raw = translationData
-		result.text = translationData[2][1][1][6][1][1]
-
-		result.from.language = translationData[3]
-		result.from.text = translationData[2][5][1]
 
 		return result
 	end
 
-	local function TranslateFrom(Message)
-		local result = Translate(Message, CurrentLang)
+	local function translateTexts(targetLang)
+		local targetLangCode = getISOCode(targetLang)
+		if not targetLangCode then return end
 
-		local text
-		if result.from.language ~= CurrentLang then
-			text = result.text
-		end
-
-		return ({
-			["text"] = text,
-			["lang"] = result.from.language
-		})
-	end
-
-	local function TranslateTo(Message, Target)
-		return Translate(Message, Target:lower(), "auto").text
-	end
-
-	local function SetLang(NewLang)
-		CurrentLang = NewLang
-	end
-
-	if not game:IsLoaded() then
-		game.Loaded:Wait()
-	end
-
-	local function translateAllTexts(targetLang)
-		local function translateTextObject(obj)
-			if obj:IsA("TextLabel") or obj:IsA("TextButton") or obj:IsA("TextBox") then
-				local translatedText = TranslateTo(obj.Text, targetLang)
-				obj.Text = translatedText
-			end
-			for _, child in pairs(obj:GetChildren()) do
-				translateTextObject(child)
+		for _, instance in pairs(CubixGui:GetDescendants()) do
+			if instance:IsA("TextBox") or instance:IsA("TextLabel") or instance:IsA("TextButton") then
+				local translatedText = Translate(instance.Text, targetLangCode).text
+				instance.Text = translatedText
 			end
 		end
+	end
 
-		for _, descendant in pairs(game.StarterGui:GetDescendants()) do
-			translateTextObject(descendant)
+	local function createLanguageButton(languageName)
+		local scrolling = scrolling
+		local buttonTemplate = buttonTemplate
+
+		local newButton = buttonTemplate:Clone()
+		newButton.Name = languageName
+		newButton.Text = languageName
+		newButton.Visible = true
+		newButton.Parent = scrolling
+
+		newButton.MouseButton1Click:Connect(function()
+			translateTexts(languageName)
+		end)
+	end
+
+	local function setupLanguageButtons()
+		for langCode, langName in pairs(Languages) do
+			if langCode ~= "auto" then
+				createLanguageButton(langName)
+			end
 		end
 	end
 
-	local function createLanguageButtons()
-		for code, name in pairs(Languages) do
-			print("Creating button for:", code, name)
-			local newButton = buttonTemplate:Clone()
-			newButton.Parent = scrolling
-			newButton.Name = code
-			newButton.Text = name
-			newButton.Visible = true
-			newButton.MouseButton1Click:Connect(function()
-				print("Button clicked for:", code)
-				translateAllTexts(code)
-			end)
-			print("Button created for:", code)
-		end
-	end
-
-	createLanguageButtons()
-
-	return ({
-		SetLang = SetLang,
-		Translate = Translate,
-		TranslateTo = TranslateTo,
-		TranslateFrom = TranslateFrom
-	})
+	-- البدء بإعداد الأزرار لكل لغة
+	setupLanguageButtons()
 
 end
 task.spawn(SCRIPT_11b)
@@ -4631,9 +4560,8 @@ local function SCRIPT_14e()
 	end
 
 	local function saveToFile()
-		writefile(jsonFileName)
+		writefile(jsonFileName, HttpService:JSONEncode(jsonfileforsave))
 	end
-
 	local function toggleFrameAndImage(button, frame, key)
 		local state = not jsonfileforsave[key].value
 		jsonfileforsave[key].value = state
