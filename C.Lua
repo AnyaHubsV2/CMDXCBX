@@ -1,9 +1,10 @@
 local function loadUI()
 
+print("Last Version")
 local UI = {}
 
 -- // StarterGui.Cubix \\ --
-UI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))
+UI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"))
 UI["1"]["IgnoreGuiInset"] = true
 UI["1"]["Enabled"] = false
 UI["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets
