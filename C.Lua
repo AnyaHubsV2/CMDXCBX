@@ -1,6 +1,6 @@
 local function loadUI()
 
-print("Last Version")
+print("Last Version: 1.0")
 
 local UI = {}
 
