@@ -4770,20 +4770,30 @@ local function SCRIPT_14e()
 
 	game.Workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(checkScreenSize)
 
-if jsonfileforsave.command.value == true then
+if jsonfileforsave.command.value then
     toggleFrameAndImage(commandImageButton, commandFrame, "command")
+    else
+    print("command is false")
 end
-if jsonfileforsave.drag.value == true then
+if jsonfileforsave.drag.value then
     toggleFrameAndImage(dragImageButton, dragFrame, "drag")
+    else
+    print("drag is false")
 end
-if jsonfileforsave.mainbutton.value == true then
+if jsonfileforsave.mainbutton.value then
     toggleFrameAndImage(mainButtonImageButton, mainButtonFrame, "mainbutton")
+    else
+    print("mainbutton is false")
 end
-if jsonfileforsave.autoexec.value == true then
+if jsonfileforsave.autoexec.value == then
     toggleFrameAndImage(autoExecImageButton, autoExecFrame, "autoexec")
+    else
+    print("autoexec is false")
 end
-if jsonfileforsave.autoclose.value == true then
+if jsonfileforsave.autoclose.value == then
     toggleFrameAndImage(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
+    else
+    print("autoclose is false")
 end
 
 
