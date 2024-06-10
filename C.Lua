@@ -4373,7 +4373,6 @@ local Languages = {
 	my = "Myanmar (Burmese)",
 	ne = "Nepali",
 	no = "Norwegian",
-	ps = "Pashto",
 	fa = "Persian",
 	pl = "Polish",
 	pt = "Portuguese",
