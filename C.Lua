@@ -1,5 +1,5 @@
 local function loadUI()
-print("UPDATED V6")
+print("UPDATED V7")
 local UI = {}
 
 -- // StarterGui.Cubix \\ --
