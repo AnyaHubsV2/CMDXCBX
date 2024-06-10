@@ -1,10 +1,10 @@
 local Loader = loadstring(game:HttpGet("https://raw.githubusercontent.com/AnyaHubsV2/CMDXCBX/main/C.Lua"))()
 
-Loader.loadUI()
-
 if game.CoreGui:FindFirstChild("Cubix") then
     game.CoreGui:FindFirstChild("Cubix"):Destroy()
 end
+
+Loader.loadUI()
 
 --CustomFunctions
 getgenv().CustomMSG = function(MSG, CopyMessage, timer)
