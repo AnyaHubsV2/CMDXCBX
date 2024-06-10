@@ -4663,26 +4663,34 @@ end
 		saveToFile()
 	end
 
-local function AnyaDEVBruh(button, frame, key)
-    local state = false -- Set state to false
+local function AnyaDEVBruh(button, frame, key, toggle)
+    local state = toggle
 
-    local targetFrameColor = state and backgroundFrameColorTrue or backgroundFrameColorFalse
-    local targetImageColor = state and backgroundImageColorTrue or backgroundImageColorFalse
-    local targetImageId = state and imageIdForTrue or imageIdForFalse
-    local targetStrokeColor = state and uistrokecolortrue or uistrokecolorfalse
+    local backgroundFrameFalse = Color3.fromRGB(26, 16, 36)
+    local backgroundFrameTrue = Color3.fromRGB(54, 33, 75)
+    local backgroundImageFalse = Color3.fromRGB(26, 16, 36)
+    local backgroundImageTrue = Color3.fromRGB(184, 113, 255)
+    local imageIdForTrue = "rbxassetid://17806303588"
+    local imageIdForFalse = ""
+    local uistrokecolorfalse = Color3.fromRGB(44, 27, 61)
+    local uistrokecolortrue = Color3.fromRGB(108, 66, 150)
 
-    TweenService:Create(frame, TweenInfo.new(1), {BackgroundColor3 = targetFrameColor}):Play()
-
-    TweenService:Create(button, TweenInfo.new(1), {ImageColor3 = targetImageColor}):Play()
-
-    button.Image = targetImageId
-
-    if button:FindFirstChild("UIStroke") then
-        TweenService:Create(button.UIStroke, TweenInfo.new(1), {Color = targetStrokeColor}):Play()
+    if state then 
+        TweenService:Create(frame, TweenInfo.new(1), {BackgroundColor3 = backgroundFrameTrue }):Play()
+        TweenService:Create(button, TweenInfo.new(1), {ImageColor3 = backgroundImageTrue }):Play()
+        button.Image = imageIdForTrue 
+        if button:FindFirstChild("UIStroke") then
+            TweenService:Create(button.UIStroke, TweenInfo.new(1), {Color = uistrokecolortrue}):Play()
+        end
+    else
+        TweenService:Create(frame, TweenInfo.new(1), {BackgroundColor3 = backgroundFrameFalse }):Play()
+        TweenService:Create(button, TweenInfo.new(1), {ImageColor3 = backgroundImageFalse }):Play()
+        button.Image = imageIdForFalse 
+        if button:FindFirstChild("UIStroke") then
+            TweenService:Create(button.UIStroke, TweenInfo.new(1), {Color = uistrokecolorfalse}):Play()
+        end
     end
 end
-
-
 
 	local mm = script.Parent
 
@@ -4756,36 +4764,37 @@ end
 		end
 	end)
 
-    if jsonfileforsave.command.value then
-    AnyaDEVBruh(commandImageButton, commandFrame, "command")
-    AnyaDEVBruh(commandImageButton, commandFrame, "command")
-    else
+-- Toggle buttons based on JSON values
+if jsonfileforsave.command.value then
+    AnyaDEVBruh(commandImageButton, commandFrame, "command", true)
+else
     print("command is false")
 end
+
 if jsonfileforsave.drag.value then
-    AnyaDEVBruh(dragImageButton, dragFrame, "drag")
-    AnyaDEVBruh(dragImageButton, dragFrame, "drag")
-    else
+    AnyaDEVBruh(dragImageButton, dragFrame, "drag", true)
+else
     print("drag is false")
 end
+
 if jsonfileforsave.mainbutton.value then
-    AnyaDEVBruh(mainButtonImageButton, mainButtonFrame, "mainbutton")
-    AnyaDEVBruh(mainButtonImageButton, mainButtonFrame, "mainbutton")
-    else
+    AnyaDEVBruh(mainButtonImageButton, mainButtonFrame, "mainbutton", true)
+else
     print("mainbutton is false")
 end
+
 if jsonfileforsave.autoexec.value then
-    AnyaDEVBruh(autoExecImageButton, autoExecFrame, "autoexec")
-    AnyaDEVBruh(autoExecImageButton, autoExecFrame, "autoexec")
-    else
+    AnyaDEVBruh(autoExecImageButton, autoExecFrame, "autoexec", true)
+else
     print("autoexec is false")
 end
+
 if jsonfileforsave.autoclose.value then
-    AnyaDEVBruh(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
-    AnyaDEVBruh(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
-    else
+    AnyaDEVBruh(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose", true)
+else
     print("autoclose is false")
 end
+
 
 
 	--if jsonfileforsave.autoexec.value then
