@@ -2,6 +2,10 @@ local Loader = loadstring(game:HttpGet("https://raw.githubusercontent.com/AnyaHu
 
 Loader.loadUI()
 
+if game.CoreGui:FindFirstChild("Cubix") then
+    game.CoreGui:FindFirstChild("Cubix"):Destroy()
+end
+
 --CustomFunctions
 getgenv().CustomMSG = function(MSG, CopyMessage, timer)
 	local function tweenFrame(frame, startPos, endPos, duration)
