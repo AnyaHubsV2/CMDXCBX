@@ -4735,6 +4735,33 @@ local function SCRIPT_14e()
 		end
 	end)
 
+    if jsonfileforsave.command.value then
+    toggleFrameAndImage(commandImageButton, commandFrame, "command")
+    else
+    print("command is false")
+end
+if jsonfileforsave.drag.value then
+    toggleFrameAndImage(dragImageButton, dragFrame, "drag")
+    else
+    print("drag is false")
+end
+if jsonfileforsave.mainbutton.value then
+    toggleFrameAndImage(mainButtonImageButton, mainButtonFrame, "mainbutton")
+    else
+    print("mainbutton is false")
+end
+if jsonfileforsave.autoexec.value then
+    toggleFrameAndImage(autoExecImageButton, autoExecFrame, "autoexec")
+    else
+    print("autoexec is false")
+end
+if jsonfileforsave.autoclose.value then
+    toggleFrameAndImage(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
+    else
+    print("autoclose is false")
+end
+
+
 	--if jsonfileforsave.autoexec.value then
 	--	for _, file in ipairs(listfiles("/Autoexec")) do
 	--			Phantom.schedule_script(readfile(file))
@@ -4769,33 +4796,6 @@ local function SCRIPT_14e()
 	checkScreenSize()
 
 	game.Workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(checkScreenSize)
-
-if jsonfileforsave.command.value then
-    toggleFrameAndImage(commandImageButton, commandFrame, "command")
-    else
-    print("command is false")
-end
-if jsonfileforsave.drag.value then
-    toggleFrameAndImage(dragImageButton, dragFrame, "drag")
-    else
-    print("drag is false")
-end
-if jsonfileforsave.mainbutton.value then
-    toggleFrameAndImage(mainButtonImageButton, mainButtonFrame, "mainbutton")
-    else
-    print("mainbutton is false")
-end
-if jsonfileforsave.autoexec.value == then
-    toggleFrameAndImage(autoExecImageButton, autoExecFrame, "autoexec")
-    else
-    print("autoexec is false")
-end
-if jsonfileforsave.autoclose.value == then
-    toggleFrameAndImage(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
-    else
-    print("autoclose is false")
-end
-
 
 end
 task.spawn(SCRIPT_14e)
