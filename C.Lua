@@ -4344,7 +4344,6 @@ local function SCRIPT_11b()
 		ht = "Haitian Creole",
 		ha = "Hausa",
 		haw = "Hawaiian",
-		iw = "Hebrew",
 		hi = "Hindi",
 		hmn = "Hmong",
 		hu = "Hungarian",
