@@ -1,7 +1,5 @@
 local function loadUI()
 
-print("Last Version: 1.2")
-
 local UI = {}
 
 -- // StarterGui.Cubix \\ --
@@ -2322,7 +2320,6 @@ UI["114"]["Name"] = [[languagebutton]]
 UI["114"]["ClipsDescendants"] = true
 UI["114"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["114"]["Text"] = [[language]]
-UI["114"]["Visible"] = false
 UI["114"]["Position"] = UDim2.new(0.40535, 0, 0.87901, 0)
 
 -- // StarterGui.Cubix.UI.Settings.language.Languages.ButtonClone.languagebutton.UICorner \\ --
@@ -4298,204 +4295,280 @@ task.spawn(SCRIPT_10f)
 -- // StarterGui.Cubix.UI.Settings.language.LocalScript \\ --
 local function SCRIPT_11b()
 	local script = UI["11b"]
-local scrolling = script.Parent.Languages
-local buttonTemplate = scrolling.ButtonClone
+	local scrolling = script.Parent.Languages
+	local buttonTemplate = scrolling.ButtonClone.languagebutton
 
-local HttpService = game:GetService("HttpService")
-local Players = game:GetService("Players")
-local Player = Players.LocalPlayer
-local CubixGui = script.Parent.Parent.Parent.Parent
-print(CubixGui.Name .. ": Loaded!")
-
-local Languages = {
-	auto = "Automatic",
-	af = "Afrikaans",
-	sq = "Albanian",
-	am = "Amharic",
-	ar = "Arabic",
-	hy = "Armenian",
-	az = "Azerbaijani",
-	eu = "Basque",
-	be = "Belarusian",
-	bn = "Bengali",
-	bs = "Bosnian",
-	bg = "Bulgarian",
-	ca = "Catalan",
-	ceb = "Cebuano",
-	ny = "Chichewa",
-	["zh-cn"] = "Chinese Simplified",
-	["zh-tw"] = "Chinese Traditional",
-	hr = "Croatian",
-	cs = "Czech",
-	da = "Danish",
-	nl = "Dutch",
-	en = "English",
-	eo = "Esperanto",
-	et = "Estonian",
-	tl = "Filipino",
-	fi = "Finnish",
-	fr = "French",
-	fy = "Frisian",
-	gl = "Galician",
-	ka = "Georgian",
-	de = "German",
-	el = "Greek",
-	gu = "Gujarati",
-	ht = "Haitian Creole",
-	ha = "Hausa",
-	haw = "Hawaiian",
-	hi = "Hindi",
-	hmn = "Hmong",
-	hu = "Hungarian",
-	ig = "Igbo",
-	id = "Indonesian",
-	ga = "Irish",
-	it = "Italian",
-	ja = "Japanese",
-	kn = "Kannada",
-	kk = "Kazakh",
-	km = "Khmer",
-	ko = "Korean",
-	ku = "Kurdish (Kurmanji)",
-	ky = "Kyrgyz",
-	lo = "Lao",
-	la = "Latin",
-	lv = "Latvian",
-	lt = "Lithuanian",
-	lb = "Luxembourgish",
-	mk = "Macedonian",
-	mg = "Malagasy",
-	ml = "Malayalam",
-	mt = "Maltese",
-	mi = "Maori",
-	mr = "Marathi",
-	mn = "Mongolian",
-	my = "Myanmar (Burmese)",
-	ne = "Nepali",
-	no = "Norwegian",
-	fa = "Persian",
-	pl = "Polish",
-	pt = "Portuguese",
-	pa = "Punjabi",
-	ro = "Romanian",
-	ru = "Russian",
-	sm = "Samoan",
-	gd = "Scots Gaelic",
-	sr = "Serbian",
-	st = "Sesotho",
-	sn = "Shona",
-	sd = "Sindhi",
-	si = "Sinhala",
-	sk = "Slovak",
-	sl = "Slovenian",
-	so = "Somali",
-	su = "Sundanese",
-	sw = "Swahili",
-	sv = "Swedish",
-	tg = "Tajik",
-	ta = "Tamil",
-	te = "Telugu",
-	th = "Thai",
-	tr = "Turkish",
-	uk = "Ukrainian",
-	ur = "Urdu",
-	uz = "Uzbek",
-	vi = "Vietnamese",
-	cy = "Welsh",
-	xh = "Xhosa",
-	yi = "Yiddish",
-	yo = "Yoruba",
-	zu = "Zulu"
-}
-
-local function getISOCode(Lang)
-	Lang = Lang:lower()
-	for Ind, Val in pairs(Languages) do
-		if Ind == Lang or Val:lower() == Lang then
-			return Ind
-		end
-	end
-end
-
-local function stringifyQuery(Fields)
-	local data = ""
-	for Ind, Val1 in pairs(Fields) do
-		if type(Val1) == "table" then
-			for _, Val2 in pairs(Val1) do
-				data = data .. ("&%s=%s"):format(HttpService:UrlEncode(Ind), HttpService:UrlEncode(Val2))
-			end
-		else
-			data = data .. ("&%s=%s"):format(HttpService:UrlEncode(Ind), HttpService:UrlEncode(Val1))
-		end
-	end
-	return data:sub(2)
-end
-
-local function Translate(str, to, from)
-	from = from and getISOCode(from) or "auto"
-	to = to and getISOCode(to) or "en"
-
-	local data = {{str, from, to, true}, {nil}}
-	local freq = {{{"MkEWBc", HttpService:JSONEncode(data), nil, "generic"}}}
-
-	local executeURL = "https://translate.google.com/_/TranslateWebserverUi/data/batchexecute"
-	local url = executeURL.."?"..stringifyQuery{rpcids = "MkEWBc", ["f.sid"] = "", bl = "", hl="en", _reqid = 0, rt = "c"}
-	local body = stringifyQuery{["f.req"] = HttpService:JSONEncode(freq)}
-
-	local response = HttpService:HttpPostAsync(url, body, Enum.HttpContentType.ApplicationUrlEncoded, false, {cookie = "CONSENT=YES+"})
-	local body = HttpService:JSONDecode(response:match("%[.-%]\n"))
-	local translationData = HttpService:JSONDecode(body[1][3])
-
-	local result = {
-		text = translationData[2][1][1][6][1][1],
-		from = {
-			language = translationData[3],
-			text = translationData[2][5][1]
-		},
-		raw = translationData
+	local Languages = {
+		auto = "Automatic",
+		af = "Afrikaans",
+		sq = "Albanian",
+		am = "Amharic",
+		ar = "Arabic",
+		hy = "Armenian",
+		az = "Azerbaijani",
+		eu = "Basque",
+		be = "Belarusian",
+		bn = "Bengali",
+		bs = "Bosnian",
+		bg = "Bulgarian",
+		ca = "Catalan",
+		ceb = "Cebuano",
+		ny = "Chichewa",
+		["zh-cn"] = "Chinese Simplified",
+		["zh-tw"] = "Chinese Traditional",
+		co = "Corsican",
+		hr = "Croatian",
+		cs = "Czech",
+		da = "Danish",
+		nl = "Dutch",
+		en = "English",
+		eo = "Esperanto",
+		et = "Estonian",
+		tl = "Filipino",
+		fi = "Finnish",
+		fr = "French",
+		fy = "Frisian",
+		gl = "Galician",
+		ka = "Georgian",
+		de = "German",
+		el = "Greek",
+		gu = "Gujarati",
+		ht = "Haitian Creole",
+		ha = "Hausa",
+		haw = "Hawaiian",
+		iw = "Hebrew",
+		hi = "Hindi",
+		hmn = "Hmong",
+		hu = "Hungarian",
+		is = "Icelandic",
+		ig = "Igbo",
+		id = "Indonesian",
+		ga = "Irish",
+		it = "Italian",
+		ja = "Japanese",
+		jw = "Javanese",
+		kn = "Kannada",
+		kk = "Kazakh",
+		km = "Khmer",
+		ko = "Korean",
+		ku = "Kurdish (Kurmanji)",
+		ky = "Kyrgyz",
+		lo = "Lao",
+		la = "Latin",
+		lv = "Latvian",
+		lt = "Lithuanian",
+		lb = "Luxembourgish",
+		mk = "Macedonian",
+		mg = "Malagasy",
+		ms = "Malay",
+		ml = "Malayalam",
+		mt = "Maltese",
+		mi = "Maori",
+		mr = "Marathi",
+		mn = "Mongolian",
+		my = "Myanmar (Burmese)",
+		ne = "Nepali",
+		no = "Norwegian",
+		ps = "Pashto",
+		fa = "Persian",
+		pl = "Polish",
+		pt = "Portuguese",
+		pa = "Punjabi",
+		ro = "Romanian",
+		ru = "Russian",
+		sm = "Samoan",
+		gd = "Scots Gaelic",
+		sr = "Serbian",
+		st = "Sesotho",
+		sn = "Shona",
+		sd = "Sindhi",
+		si = "Sinhala",
+		sk = "Slovak",
+		sl = "Slovenian",
+		so = "Somali",
+		es = "Spanish",
+		su = "Sundanese",
+		sw = "Swahili",
+		sv = "Swedish",
+		tg = "Tajik",
+		ta = "Tamil",
+		te = "Telugu",
+		th = "Thai",
+		tr = "Turkish",
+		uk = "Ukrainian",
+		ur = "Urdu",
+		uz = "Uzbek",
+		vi = "Vietnamese",
+		cy = "Welsh",
+		xh = "Xhosa",
+		yi = "Yiddish",
+		yo = "Yoruba",
+		zu = "Zulu"
 	}
 
-	return result
-end
+	local HttpService = game:GetService("HttpService")
+	local Players = game:GetService("Players")
 
-local function translateTexts(targetLang)
-	local targetLangCode = getISOCode(targetLang)
-	if not targetLangCode then return end
+	local Player = Players.LocalPlayer
 
-	for _, instance in pairs(CubixGui:GetDescendants()) do
-		if instance:IsA("TextBox") or instance:IsA("TextLabel") or instance:IsA("TextButton") then
-			if instance.Text then
-				local translatedText = Translate(instance.Text, targetLangCode).text
-				instance.Text = translatedText
-			else
-				print(instance.Name .. ": Text is not a valid member")
+	local function Encode(Source)return HttpService:JSONEncode(Source)end
+	local function Decode(Source)return HttpService:JSONDecode(Source)end
+
+	local request = request or http_request or HttpPost or syn.request
+
+	local reqid = 1000
+	local executeURL = "https://Translate.google.com/_/TranslateWebserverUi/data/batchexecute"
+	local rootURL = "https://Translate.google.com/"
+	local CurrentLang = "en"
+
+	local function got(Url, Method, Body)
+		Method = Method or "GET"
+
+		local res = request({
+			["Url"] = Url,
+			["Method"] = Method,
+			["Headers"] = {
+				["cookie"] = "CONSENT=YES+"
+			},
+			["Body"] = Body
+		})
+
+		if res.Body:match("https://consent.google.com/s") then
+			res = syn.request({
+				["Url"] = Url,
+				["Method"] = "GET",
+				["Headers"] = {
+					["cookie"] = "CONSENT=YES+"
+				}
+			})
+		end
+
+		return res
+	end
+
+	local function find(Lang)
+		Lang = Lang:lower()
+		for Ind,Val in pairs(Languages) do
+			if Ind == Lang or Val == Lang then
+				return Ind
 			end
 		end
 	end
-end
 
-local function createLanguageButton(languageName)
-	local newButton = buttonTemplate:Clone()
-	newButton.Name = languageName
-	newButton.Text = languageName
-	newButton.Visible = true
-	newButton.Parent = scrolling
+	local function getISOCode(Lang)
+		return find(Lang)
+	end
 
-	newButton.MouseButton1Click:Connect(function()
-		translateTexts(languageName)
-	end)
-end
-
-local function setupLanguageButtons()
-	for langCode, langName in pairs(Languages) do
-		if langCode ~= "auto" then
-			createLanguageButton(langName)
+	local function stringifyQuery(Fields)
+		local data = ""
+		for Ind,Val1 in pairs(Fields) do
+			if type(Val1) == "table" then
+				for _,Val2 in pairs(Val1) do
+					data = data .. ("&%s=%s"):format(HttpService:UrlEncode(Ind), HttpService:UrlEncode(Val2))
+				end
+			else
+				data = data .. ("&%s=%s"):format(HttpService:UrlEncode(Ind), HttpService:UrlEncode(Val1))
+			end
 		end
-		end
-end
+		data = data:sub(2)
+		return data
+	end
 
--- البدء بإعداد الأزرار لكل لغة
-setupLanguageButtons()
+	local function Translate(str, to, from)
+		from = from and getISOCode(from) or "auto"
+		to = to and getISOCode(to) or "en"
+
+		local data = {{str, from, to, true}, {nil}}
+
+		local freq = {{{"MkEWBc", Encode(data), nil, "generic"}}}
+
+		local url = executeURL.."?"..stringifyQuery{rpcids = "MkEWBc", ["f.sid"] = "", bl = "", hl="en", _reqid = 0, rt = "c"}
+		local body = stringifyQuery{["f.req"] = Encode(freq)}
+		local req = got(url, "POST", body)
+
+		local body = Decode(req.Body:match"%[.-%]\n")
+		local translationData = Decode(body[1][3])
+		local result = {
+			text = "",
+			from = {
+				language = "",
+				text = ""
+			},
+			raw = ""
+		}
+
+		result.raw = translationData
+		result.text = translationData[2][1][1][6][1][1]
+
+		result.from.language = translationData[3]
+		result.from.text = translationData[2][5][1]
+
+		return result
+	end
+
+	local function TranslateFrom(Message)
+		local result = Translate(Message, CurrentLang)
+
+		local text
+		if result.from.language ~= CurrentLang then 
+			text = result.text
+		end
+
+		return ({
+			["text"] = text,
+			["lang"] = result.from.language
+		})
+	end
+
+	local function TranslateTo(Message, Target)
+		return Translate(Message, Target:lower(), "auto").text
+	end
+
+	local function SetLang(NewLang)
+		CurrentLang = NewLang
+	end
+
+	if not game:IsLoaded() then
+		game.Loaded:Wait()
+	end
+
+	local function translateAllTexts(targetLang)
+		local function translateTextObject(obj)
+			if obj:IsA("TextLabel") or obj:IsA("TextButton") or obj:IsA("TextBox") then
+				local translatedText = TranslateTo(obj.Text, targetLang)
+				obj.Text = translatedText
+			end
+			for _, child in pairs(obj:GetChildren()) do
+				translateTextObject(child)
+			end
+		end
+
+		for _, descendant in pairs(game.StarterGui:GetDescendants()) do
+			translateTextObject(descendant)
+		end
+	end
+
+	local function createLanguageButtons()
+		for code, name in pairs(Languages) do
+			local newButton = buttonTemplate:Clone()
+			newButton.Parent = scrolling
+			newButton.Name = code
+			newButton.Text = name
+			newButton.Visible = true
+			newButton.MouseButton1Click:Connect(function()
+				translateAllTexts(code)
+			end)
+		end
+	end
+
+	createLanguageButtons()
+
+	return ({
+		SetLang = SetLang,
+		Translate = Translate,
+		TranslateTo = TranslateTo,
+		TranslateFrom = TranslateFrom
+	})
 
 end
 task.spawn(SCRIPT_11b)
