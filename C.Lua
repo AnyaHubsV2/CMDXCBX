@@ -1,6 +1,7 @@
 local function loadUI()
 
 print("Last Version")
+
 local UI = {}
 
 -- // StarterGui.Cubix \\ --
@@ -4394,7 +4395,7 @@ local function SCRIPT_11b()
 		sk = "Slovak",
 		sl = "Slovenian",
 		so = "Somali",
-		es = "Spanish",
+		--es = "Spanish",
 		su = "Sundanese",
 		sw = "Swahili",
 		sv = "Swedish",
