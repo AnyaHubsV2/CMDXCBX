@@ -4325,7 +4325,6 @@ local function SCRIPT_11b()
 		ny = "Chichewa",
 		["zh-cn"] = "Chinese Simplified",
 		["zh-tw"] = "Chinese Traditional",
-		co = "Corsican",
 		hr = "Croatian",
 		cs = "Czech",
 		da = "Danish",
