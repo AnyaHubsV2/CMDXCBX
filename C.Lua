@@ -4763,6 +4763,8 @@ local function loadFromFile()
     end
 end
 
+loadFromFile()
+
 	--if jsonfileforsave.autoexec.value then
 	--	for _, file in ipairs(listfiles("/Autoexec")) do
 	--			Phantom.schedule_script(readfile(file))
