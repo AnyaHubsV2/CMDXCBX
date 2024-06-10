@@ -4735,36 +4735,6 @@ local function SCRIPT_14e()
 		end
 	end)
 
-local function loadFromFile()
-    if isfile(jsonFileName) then
-        local jsonContent = readfile(jsonFileName)
-        jsonfileforsave = HttpService:JSONDecode(jsonContent)
-        
-        -- Check each setting value and toggle the frame and image if it's true
-        if jsonfileforsave.command.value then
-            toggleFrameAndImage(commandImageButton, commandFrame, "command")
-        end
-        if jsonfileforsave.drag.value then
-            toggleFrameAndImage(dragImageButton, dragFrame, "drag")
-        end
-        if jsonfileforsave.mainbutton.value then
-            toggleFrameAndImage(mainButtonImageButton, mainButtonFrame, "mainbutton")
-        end
-        if jsonfileforsave.autoexec.value then
-            toggleFrameAndImage(autoExecImageButton, autoExecFrame, "autoexec")
-        end
-        if jsonfileforsave.autoclose.value then
-            toggleFrameAndImage(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
-        end
-    else
-        -- If the file doesn't exist, use default settings
-        jsonfileforsave = HttpService:JSONDecode(defaultCode)
-        saveToFile() -- Save default settings to file
-    end
-end
-
-loadFromFile()
-
 	--if jsonfileforsave.autoexec.value then
 	--	for _, file in ipairs(listfiles("/Autoexec")) do
 	--			Phantom.schedule_script(readfile(file))
@@ -4799,6 +4769,23 @@ loadFromFile()
 	checkScreenSize()
 
 	game.Workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(checkScreenSize)
+
+if jsonfileforsave.command.value == true then
+    toggleFrameAndImage(commandImageButton, commandFrame, "command")
+end
+if jsonfileforsave.drag.value == true then
+    toggleFrameAndImage(dragImageButton, dragFrame, "drag")
+end
+if jsonfileforsave.mainbutton.value == true then
+    toggleFrameAndImage(mainButtonImageButton, mainButtonFrame, "mainbutton")
+end
+if jsonfileforsave.autoexec.value == true then
+    toggleFrameAndImage(autoExecImageButton, autoExecFrame, "autoexec")
+end
+if jsonfileforsave.autoclose.value == true then
+    toggleFrameAndImage(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
+end
+
 
 end
 task.spawn(SCRIPT_14e)
