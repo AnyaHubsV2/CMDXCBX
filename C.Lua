@@ -16,8 +16,10 @@ local function loadUI()
 	chatii.Parent = game.TextChatService
 	chatii.Enabled = true
 	chatii.Name = generateRandomName(10)
-	
-	
+
+local UI = {}
+
+-- // StarterGui.Cubix \\ --
 UI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"))
 UI["1"]["IgnoreGuiInset"] = true
 UI["1"]["Enabled"] = false
@@ -3668,13 +3670,13 @@ local function SCRIPT_d0()
 
 	close.MouseButton1Click:Connect(function()
 		game.TweenService:Create(down, TweenInfo.new(1), {Position = UDim2.new(0, 0,1, 0)}):Play()
-		TweenService:Create(down, TweenInfo.new(1), {Position = UDim2.new(-0.66, 0,0.353, 0)}):Play()
+		TweenService:Create(left, TweenInfo.new(1), {Position = UDim2.new(-0.66, 0,0.353, 0)}):Play()
 		game.TweenService:Create(frames, TweenInfo.new(1), {Position = UDim2.new(0, 0,-1, 0)}):Play()
 		game.TweenService:Create(show.Parent, TweenInfo.new(1), {Position = UDim2.new(0.948, 0,0.157, 0)}):Play()
 	end)
 	closel.MouseButton1Click:Connect(function()
 		game.TweenService:Create(down, TweenInfo.new(1), {Position = UDim2.new(0, 0,1, 0)}):Play()
-		TweenService:Create(down, TweenInfo.new(1), {Position = UDim2.new(-0.66, 0,0.353, 0)}):Play()
+		TweenService:Create(left, TweenInfo.new(1), {Position = UDim2.new(-0.66, 0,0.353, 0)}):Play()
 		game.TweenService:Create(frames, TweenInfo.new(1), {Position = UDim2.new(0, 0,-1, 0)}):Play()
 		game.TweenService:Create(show.Parent, TweenInfo.new(1), {Position = UDim2.new(0.948, 0,0.157, 0)}):Play()
 	end)
@@ -4427,8 +4429,8 @@ local function SCRIPT_11b()
 
 	local Player = Players.LocalPlayer
 
-	local function Encode(Source)return HttpService:JSONEncode(Source)end
-	local function Decode(Source)return HttpService:JSONDecode(Source)end
+	local function Encode(Source) return HttpService:JSONEncode(Source) end
+	local function Decode(Source) return HttpService:JSONDecode(Source) end
 
 	local request = request or http_request or HttpPost or syn.request
 
@@ -4464,7 +4466,7 @@ local function SCRIPT_11b()
 
 	local function find(Lang)
 		Lang = Lang:lower()
-		for Ind,Val in pairs(Languages) do
+		for Ind, Val in pairs(Languages) do
 			if Ind == Lang or Val == Lang then
 				return Ind
 			end
@@ -4477,9 +4479,9 @@ local function SCRIPT_11b()
 
 	local function stringifyQuery(Fields)
 		local data = ""
-		for Ind,Val1 in pairs(Fields) do
+		for Ind, Val1 in pairs(Fields) do
 			if type(Val1) == "table" then
-				for _,Val2 in pairs(Val1) do
+				for _, Val2 in pairs(Val1) do
 					data = data .. ("&%s=%s"):format(HttpService:UrlEncode(Ind), HttpService:UrlEncode(Val2))
 				end
 			else
@@ -4498,11 +4500,11 @@ local function SCRIPT_11b()
 
 		local freq = {{{"MkEWBc", Encode(data), nil, "generic"}}}
 
-		local url = executeURL.."?"..stringifyQuery{rpcids = "MkEWBc", ["f.sid"] = "", bl = "", hl="en", _reqid = 0, rt = "c"}
-		local body = stringifyQuery{["f.req"] = Encode(freq)}
+		local url = executeURL .. "?" .. stringifyQuery { rpcids = "MkEWBc", ["f.sid"] = "", bl = "", hl = "en", _reqid = 0, rt = "c" }
+		local body = stringifyQuery { ["f.req"] = Encode(freq) }
 		local req = got(url, "POST", body)
 
-		local body = Decode(req.Body:match"%[.-%]\n")
+		local body = Decode(req.Body:match "%[.-%]\n")
 		local translationData = Decode(body[1][3])
 		local result = {
 			text = "",
@@ -4526,7 +4528,7 @@ local function SCRIPT_11b()
 		local result = Translate(Message, CurrentLang)
 
 		local text
-		if result.from.language ~= CurrentLang then 
+		if result.from.language ~= CurrentLang then
 			text = result.text
 		end
 
@@ -4614,6 +4616,7 @@ local function SCRIPT_14e()
 	}
 	]]
 
+
 	local jsonFileName = "JsonSaver.json"
 	local jsonfileforsave
 
@@ -4626,7 +4629,7 @@ local function SCRIPT_14e()
 	end
 
 	local function saveToFile()
-		writefile(jsonFileName, HttpService:JSONEncode(jsonfileforsave))
+		writefile(jsonFileName)
 	end
 
 	local function toggleFrameAndImage(button, frame, key)
@@ -4639,13 +4642,18 @@ local function SCRIPT_14e()
 		local targetStrokeColor = state and uistrokecolortrue or uistrokecolorfalse
 
 		TweenService:Create(frame, TweenInfo.new(1), {BackgroundColor3 = targetFrameColor}):Play()
-		TweenService:Create(button, TweenInfo.new(1), {ImageColor3 = targetImageColor, Image = targetImageId}):Play()
+
+		TweenService:Create(button, TweenInfo.new(1), {ImageColor3 = targetImageColor}):Play()
+
+		button.Image = targetImageId
+
 		if button:FindFirstChild("UIStroke") then
 			TweenService:Create(button.UIStroke, TweenInfo.new(1), {Color = targetStrokeColor}):Play()
 		end
 
 		saveToFile()
 	end
+
 
 	local mm = script.Parent
 
@@ -4685,11 +4693,12 @@ local function SCRIPT_14e()
 	end)
 
 	local ll = script.Parent.Parent.Parent.Parent.Executor
-	local executeButton = ll.Buttons.Execute.ImageButton
+	local executeButton = ll.Buttons.Execute.TextButton
 	local scriptBox = ll.ExecutorPage.ScrollingFrame.Source
 
 	executeButton.MouseButton1Click:Connect(function()
 		Phantom.schedule_script(scriptBox.Text)
+
 		if jsonfileforsave.autoclose.value then
 			TweenService:Create(ll.Parent.Parent.down, TweenInfo.new(1), {Position = UDim2.new(0, 0, 1, 0)}):Play()
 			TweenService:Create(ll.Parent.Parent.UI, TweenInfo.new(1), {Position = UDim2.new(0, 0, -1, 0)}):Play()
@@ -4699,7 +4708,7 @@ local function SCRIPT_14e()
 
 	local isCommandUIShown = false
 
-	chatii.Triggered:Connect(function()
+	chaii.Triggered:Connect(function()
 		if jsonfileforsave.command.value then 
 			if isCommandUIShown then
 				TweenService:Create(ll.Parent.Parent.down, TweenInfo.new(1), {Position = UDim2.new(0, 0, 1, 0)}):Play()
@@ -4848,7 +4857,7 @@ local function SCRIPT_178()
 	modes.Warn.MouseButton1Click:Connect(function() warnExcluded = not warnExcluded changething(modes.Warn, warnExcluded) end)
 	modes.Error.MouseButton1Click:Connect(function() errorExcluded = not errorExcluded changething(modes.Error, errorExcluded) end)
 
-	bottom.Clear.TextButton.ImageButton.MouseButton1Click:Connect(function()
+	bottom.Clear.TextButton.MouseButton1Click:Connect(function()
 		for i, v in pairs(scroller:GetChildren()) do
 			if v:IsA("TextLabel") and v.Name ~= "_Line_" then v:Destroy() end
 		end
