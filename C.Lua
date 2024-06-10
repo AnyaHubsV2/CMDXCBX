@@ -1,5 +1,5 @@
 local function loadUI()
-print("UPDATED")
+print("UPDATED V1")
 local UI = {}
 
 -- // StarterGui.Cubix \\ --
@@ -4735,6 +4735,12 @@ local function SCRIPT_14e()
 		end
 	end)
 
+local function loadFromFile()
+    if isfile(jsonFileName) then
+        local jsonContent = readfile(jsonFileName)
+        jsonfileforsave = HttpService:JSONDecode(jsonContent)
+        
+        -- Check each setting value and toggle the frame and image if it's true
         if jsonfileforsave.command.value then
             toggleFrameAndImage(commandImageButton, commandFrame, "command")
         end
@@ -4750,6 +4756,12 @@ local function SCRIPT_14e()
         if jsonfileforsave.autoclose.value then
             toggleFrameAndImage(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
         end
+    else
+        -- If the file doesn't exist, use default settings
+        jsonfileforsave = HttpService:JSONDecode(defaultCode)
+        saveToFile() -- Save default settings to file
+    end
+end
 
 	--if jsonfileforsave.autoexec.value then
 	--	for _, file in ipairs(listfiles("/Autoexec")) do
