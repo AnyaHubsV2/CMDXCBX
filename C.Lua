@@ -4430,34 +4430,39 @@ local function got(Url, Method, Body)
         ["cookie"] = "CONSENT=YES+"
     }
 
-    local requestParams = {
-        Url = Url,
-        Method = Method,
-        Headers = headers
-    }
+    local success, res = pcall(function()
+        if Method == "POST" then
+            return game:HttpPost(Url, Body, headers)
+        else
+            local requestParams = {
+                Url = Url,
+                Method = Method,
+                Headers = headers
+            }
+            return request(requestParams)
+        end
+    end)
 
-    local res
-    if Method == "GET" or Method == "HEAD" then
-        res = HttpService:RequestAsync({
-            Url = Url,
-            Method = Method,
-            Headers = headers
-        })
-    else
-        res = HttpService:RequestAsync({
-            Url = Url,
-            Method = Method,
-            Headers = headers,
-            Body = Body
-        })
+    if not success then
+        print("Error occurred:", res)
+        return nil
     end
 
     if res.Body:match("https://consent.google.com/s") then
-        res = HttpService:RequestAsync({
-            Url = Url,
-            Method = "GET",
-            Headers = headers
-        })
+        local successGet, resGet = pcall(function()
+            return request({
+                Url = Url,
+                Method = "GET",
+                Headers = headers
+            })
+        end)
+        
+        if not successGet then
+            print("Error occurred during GET request:", resGet)
+            return nil
+        end
+
+        return resGet
     end
 
     return res
