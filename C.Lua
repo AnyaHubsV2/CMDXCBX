@@ -4735,27 +4735,21 @@ local function SCRIPT_14e()
 		end
 	end)
 
-local function loadFromFile()
-    if isfile(jsonFileName) then
-        local jsonContent = readfile(jsonFileName)
-        jsonfileforsave = HttpService:JSONDecode(jsonContent)
-        
-        -- Apply the loaded settings
-        toggleFrameAndImage(commandImageButton, commandFrame, "command")
-        toggleFrameAndImage(dragImageButton, dragFrame, "drag")
-        toggleFrameAndImage(mainButtonImageButton, mainButtonFrame, "mainbutton")
-        toggleFrameAndImage(autoExecImageButton, autoExecFrame, "autoexec")
-        toggleFrameAndImage(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
-    else
-        -- If the file doesn't exist, use default settings
-        jsonfileforsave = HttpService:JSONDecode(defaultCode)
-        saveToFile() -- Save default settings to file
-    end
-end
-
-loadFromFile()
-game.Players.PlayerAdded:Connect(loadFromFile)
-
+        if jsonfileforsave.command.value then
+            toggleFrameAndImage(commandImageButton, commandFrame, "command")
+        end
+        if jsonfileforsave.drag.value then
+            toggleFrameAndImage(dragImageButton, dragFrame, "drag")
+        end
+        if jsonfileforsave.mainbutton.value then
+            toggleFrameAndImage(mainButtonImageButton, mainButtonFrame, "mainbutton")
+        end
+        if jsonfileforsave.autoexec.value then
+            toggleFrameAndImage(autoExecImageButton, autoExecFrame, "autoexec")
+        end
+        if jsonfileforsave.autoclose.value then
+            toggleFrameAndImage(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
+        end
 
 	--if jsonfileforsave.autoexec.value then
 	--	for _, file in ipairs(listfiles("/Autoexec")) do
