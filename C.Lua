@@ -4355,7 +4355,6 @@ local function SCRIPT_11b()
 		ga = "Irish",
 		it = "Italian",
 		ja = "Japanese",
-		jw = "Javanese",
 		kn = "Kannada",
 		kk = "Kazakh",
 		km = "Khmer",
