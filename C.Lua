@@ -4421,6 +4421,8 @@ local function SCRIPT_11b()
 	local rootURL = "https://Translate.google.com/"
 	local CurrentLang = "en"
 
+local HttpService = game:GetService("HttpService")
+
 local function got(Url, Method, Body)
     Method = Method or "GET"
 
@@ -4434,14 +4436,24 @@ local function got(Url, Method, Body)
         Headers = headers
     }
 
-    if Method ~= "GET" and Method ~= "HEAD" then
-        requestParams["Body"] = Body
+    local res
+    if Method == "GET" or Method == "HEAD" then
+        res = HttpService:RequestAsync({
+            Url = Url,
+            Method = Method,
+            Headers = headers
+        })
+    else
+        res = HttpService:RequestAsync({
+            Url = Url,
+            Method = Method,
+            Headers = headers,
+            Body = Body
+        })
     end
 
-    local res = request(requestParams)
-
     if res.Body:match("https://consent.google.com/s") then
-        res = request({
+        res = HttpService:RequestAsync({
             Url = Url,
             Method = "GET",
             Headers = headers
@@ -4450,8 +4462,6 @@ local function got(Url, Method, Body)
 
     return res
 end
-
-
 
 	local function find(Lang)
 		Lang = Lang:lower()
