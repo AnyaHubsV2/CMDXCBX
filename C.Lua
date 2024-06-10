@@ -4365,7 +4365,6 @@ local Languages = {
 	lb = "Luxembourgish",
 	mk = "Macedonian",
 	mg = "Malagasy",
-	ms = "Malay",
 	ml = "Malayalam",
 	mt = "Maltese",
 	mi = "Maori",
