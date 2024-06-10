@@ -1,5 +1,5 @@
 local function loadUI()
-
+print("UPDATED")
 local UI = {}
 
 -- // StarterGui.Cubix \\ --
