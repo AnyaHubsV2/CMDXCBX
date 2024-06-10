@@ -4758,25 +4758,30 @@ end
 
     if jsonfileforsave.command.value then
     AnyaDEVBruh(commandImageButton, commandFrame, "command")
+    AnyaDEVBruh(commandImageButton, commandFrame, "command")
     else
     print("command is false")
 end
 if jsonfileforsave.drag.value then
+    AnyaDEVBruh(dragImageButton, dragFrame, "drag")
     AnyaDEVBruh(dragImageButton, dragFrame, "drag")
     else
     print("drag is false")
 end
 if jsonfileforsave.mainbutton.value then
     AnyaDEVBruh(mainButtonImageButton, mainButtonFrame, "mainbutton")
+    AnyaDEVBruh(mainButtonImageButton, mainButtonFrame, "mainbutton")
     else
     print("mainbutton is false")
 end
 if jsonfileforsave.autoexec.value then
     AnyaDEVBruh(autoExecImageButton, autoExecFrame, "autoexec")
+    AnyaDEVBruh(autoExecImageButton, autoExecFrame, "autoexec")
     else
     print("autoexec is false")
 end
 if jsonfileforsave.autoclose.value then
+    AnyaDEVBruh(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
     AnyaDEVBruh(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
     else
     print("autoclose is false")
