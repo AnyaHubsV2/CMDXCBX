@@ -3,7 +3,7 @@ local function loadUI()
 local UI = {}
 
 -- // StarterGui.Cubix \\ --
-UI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"))
+UI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))
 UI["1"]["IgnoreGuiInset"] = true
 UI["1"]["Enabled"] = false
 UI["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets
@@ -3986,7 +3986,7 @@ local function SCRIPT_d0()
 		local frameSize = scrollingFrame.AbsoluteSize
 
 		if frameSize.X < thresholdX and frameSize.Y < thresholdY then
-			print("Screen is smaller than thresholds. Reducing text size.")
+			--print("Screen is smaller than thresholds. Reducing text size.")
 
 			for _, descendant in ipairs(scrollingFrame:GetDescendants()) do
 				if descendant:IsA("TextLabel") or descendant:IsA("TextBox") then
@@ -3994,8 +3994,8 @@ local function SCRIPT_d0()
 				end
 			end
 		else
-			print("Screen is larger than thresholds.")
-			print("Screen Size:", frameSize.X, "x", frameSize.Y)
+			--print("Screen is larger than thresholds.")
+			--print("Screen Size:", frameSize.X, "x", frameSize.Y)
 		end
 	end
 
@@ -4057,7 +4057,7 @@ local function SCRIPT_d0()
 	end
 
 
-	print("bugs founded (0)!")
+	--print("bugs founded (0)!")
 
 	for i,v in pairs(exeframe.ExecutorPage.ScrollingFrame:GetDescendants()) do
 		if v:IsA("TextBox") or v:IsA("TextLabel") then 
@@ -4301,10 +4301,9 @@ local function SCRIPT_11b()
 
 	local HttpService = game:GetService("HttpService")
 	local Players = game:GetService("Players")
-	local CoreGui = game:GetService("CoreGui")
-
 	local Player = Players.LocalPlayer
-	local CubixGui = CoreGui:WaitForChild("Cubix")
+	local CubixGui = script.Parent.Parent.Parent.Parent
+	print(CubixGui.Name .. ": Loaded!")
 
 	local Languages = {
 		auto = "Automatic",
@@ -4448,7 +4447,7 @@ local function SCRIPT_11b()
 		local url = executeURL.."?"..stringifyQuery{rpcids = "MkEWBc", ["f.sid"] = "", bl = "", hl="en", _reqid = 0, rt = "c"}
 		local body = stringifyQuery{["f.req"] = HttpService:JSONEncode(freq)}
 
-		local response = HttpService:PostAsync(url, body, Enum.HttpContentType.ApplicationUrlEncoded, false, {cookie = "CONSENT=YES+"})
+		local response = HttpService:HttpPostAsync(url, body, Enum.HttpContentType.ApplicationUrlEncoded, false, {cookie = "CONSENT=YES+"})
 		local body = HttpService:JSONDecode(response:match("%[.-%]\n"))
 		local translationData = HttpService:JSONDecode(body[1][3])
 
