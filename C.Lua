@@ -1,5 +1,5 @@
 local function loadUI()
-print("UPDATED V4")
+print("UPDATED V5")
 local UI = {}
 
 -- // StarterGui.Cubix \\ --
@@ -4629,13 +4629,14 @@ local function SCRIPT_14e()
 	local jsonFileName = "JsonSaver.json"
 	local jsonfileforsave
 
-	if isfile(jsonFileName) then
-		local jsonContent = readfile(jsonFileName)
-		jsonfileforsave = HttpService:JSONDecode(jsonContent)
-	else
-		jsonfileforsave = HttpService:JSONDecode(defaultCode)
-		writefile(jsonFileName, defaultCode)
-	end
+if isfile(jsonFileName) then
+    local jsonContent = readfile(jsonFileName)
+    jsonfileforsave = HttpService:JSONDecode(jsonContent)
+else
+    jsonfileforsave = HttpService:JSONDecode(defaultCode)
+    writefile(jsonFileName, defaultCode)
+end
+
 
 	local function saveToFile()
 		writefile(jsonFileName, HttpService:JSONEncode(jsonfileforsave))
@@ -4661,6 +4662,26 @@ local function SCRIPT_14e()
 
 		saveToFile()
 	end
+
+local function AnyaDEVBruh(button, frame, key)
+    local state = false -- Set state to false
+
+    local targetFrameColor = state and backgroundFrameColorTrue or backgroundFrameColorFalse
+    local targetImageColor = state and backgroundImageColorTrue or backgroundImageColorFalse
+    local targetImageId = state and imageIdForTrue or imageIdForFalse
+    local targetStrokeColor = state and uistrokecolortrue or uistrokecolorfalse
+
+    TweenService:Create(frame, TweenInfo.new(1), {BackgroundColor3 = targetFrameColor}):Play()
+
+    TweenService:Create(button, TweenInfo.new(1), {ImageColor3 = targetImageColor}):Play()
+
+    button.Image = targetImageId
+
+    if button:FindFirstChild("UIStroke") then
+        TweenService:Create(button.UIStroke, TweenInfo.new(1), {Color = targetStrokeColor}):Play()
+    end
+end
+
 
 
 	local mm = script.Parent
@@ -4736,27 +4757,27 @@ local function SCRIPT_14e()
 	end)
 
     if jsonfileforsave.command.value then
-    toggleFrameAndImage(commandImageButton, commandFrame, "command")
+    AnyaDEVBruh(commandImageButton, commandFrame, "command")
     else
     print("command is false")
 end
 if jsonfileforsave.drag.value then
-    toggleFrameAndImage(dragImageButton, dragFrame, "drag")
+    AnyaDEVBruh(dragImageButton, dragFrame, "drag")
     else
     print("drag is false")
 end
 if jsonfileforsave.mainbutton.value then
-    toggleFrameAndImage(mainButtonImageButton, mainButtonFrame, "mainbutton")
+    AnyaDEVBruh(mainButtonImageButton, mainButtonFrame, "mainbutton")
     else
     print("mainbutton is false")
 end
 if jsonfileforsave.autoexec.value then
-    toggleFrameAndImage(autoExecImageButton, autoExecFrame, "autoexec")
+    AnyaDEVBruh(autoExecImageButton, autoExecFrame, "autoexec")
     else
     print("autoexec is false")
 end
 if jsonfileforsave.autoclose.value then
-    toggleFrameAndImage(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
+    AnyaDEVBruh(autoCloseAfterExecuteImageButton, autoCloseAfterExecuteFrame, "autoclose")
     else
     print("autoclose is false")
 end
