@@ -1,0 +1,1 @@
+print("kids team")
