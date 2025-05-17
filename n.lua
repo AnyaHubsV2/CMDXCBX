@@ -25,26 +25,28 @@ local ss = {
 }
 
 local function cc()
-	local foundInstances = {}
-	local notFound = {}
-	local resultLog = {}
+	local found = {}
+	local missing = {}
 
 	for _, ssname in ipairs(ss) do
 		local ok, result = pcall(function()
 			return game:FindService(ssname)
 		end)
 		if ok and result ~= nil then
-			table.insert(foundInstances, ssname)
-			table.insert(resultLog, "✔️ " .. ssname)
+			table.insert(found, ssname)
 		else
-			table.insert(notFound, {name = ssname, error = result})
-			table.insert(resultLog, "✖️ " .. ssname .. " -> " .. tostring(result))
+			table.insert(missing, ssname)
 		end
 	end
 
-	local finalResult = "✅ Found instances: " .. #foundInstances .. "/" .. #ss .. "\n"
-	for _, line in ipairs(resultLog) do
-		finalResult = finalResult .. line .. "\n"
+	local finalResult = "✅ Found Services (" .. #found .. "):\n"
+	for i, name in ipairs(found) do
+		finalResult = finalResult .. i .. ". " .. name .. "\n"
+	end
+
+	finalResult = finalResult .. "\n❌ Missing Services (" .. #missing .. "):\n"
+	for i, name in ipairs(missing) do
+		finalResult = finalResult .. i .. ". " .. name .. "\n"
 	end
 
 	print(finalResult)
